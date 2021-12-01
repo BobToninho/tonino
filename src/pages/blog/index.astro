@@ -9,8 +9,14 @@ const slugs = mdFiles.map(fileName => fileName.replace(/.md$/, ''))
 const blogPostNames = slugs.map(startCase)
 ---
 
-<PostLayout>
-	{blogPostNames.map((post, index) => (
-			<li><a href={`/blog/${slugs[index]}`}>{post}</a></li>
-	))}
-</PostLayout>
+<head>
+  <!-- load styles from src/styles/utils.css using Astro.resolve() -->
+  <link rel="stylesheet" type="text/css" href={Astro.resolve('../../styles/reset.scss')} />
+</head>
+<body>
+	<PostLayout>
+		{blogPostNames.map((post, index) => (
+				<li><a href={`/blog/${slugs[index]}`}>{post}</a></li>
+		))}
+	</PostLayout>
+</body>

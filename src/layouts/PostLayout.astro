@@ -19,12 +19,17 @@ const { content } = Astro.props
 }
 </style>
 
-<BaseLayout>
-	<section class="centered">
-		<h1 class="title">{content.title}</h1>
+<head>
+  <link rel="stylesheet" type="text/css" href={Astro.resolve('../styles/reset.scss')} />
+</head>
+<body>
+	<BaseLayout>
+		<section class="centered">
+			<h1 class="title">{content.title}</h1>
 
-		<article class="post">
-			<slot />
-		</article>
-	</section>
-</BaseLayout>
+			<article class="post">
+				<slot />
+			</article>
+		</section>
+	</BaseLayout>
+</body>
