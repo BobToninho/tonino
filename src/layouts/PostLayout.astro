@@ -1,0 +1,30 @@
+---
+import BaseLayout from './BaseLayout.astro'
+
+const { content } = Astro.props
+---
+
+<style lang="scss">
+.title {
+	max-width: 28ch;
+}
+
+.post {
+	max-width: 56ch;
+}
+
+.centered {
+	display: grid;
+	place-content: center;
+}
+</style>
+
+<BaseLayout>
+	<section class="centered">
+		<h1 class="title">{content.title}</h1>
+
+		<article class="post">
+			<slot />
+		</article>
+	</section>
+</BaseLayout>

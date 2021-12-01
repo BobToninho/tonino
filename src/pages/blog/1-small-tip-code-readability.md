@@ -1,6 +1,9 @@
-# 1 small tip to improve your code readability
+---
+title: 1 small tip to improve your code readability
+layout: ../../layouts/PostLayout.astro
+---
 
-([Kevin Du](https://www.pexels.com/it-it/@kevin-ku-92347) photo on [Pexels](https://www.pexels.com/))
+<!-- ([Kevin Du](https://www.pexels.com/it-it/@kevin-ku-92347) photo on [Pexels](https://www.pexels.com/)) -->
 
 Code readability is important.
 
