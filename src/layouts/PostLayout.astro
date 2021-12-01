@@ -5,22 +5,22 @@ const { content } = Astro.props
 ---
 
 <style lang="scss">
-.title {
-	max-width: 28ch;
-}
+	.title {
+		max-width: 28ch;
+	}
 
-.post {
-	max-width: 56ch;
-}
+	.post {
+		max-width: 56ch;
+	}
 
-.centered {
-	display: grid;
-	place-content: center;
-}
+	.centered {
+		display: grid;
+		place-content: center;
+	}
 </style>
 
 <head>
-  <link rel="stylesheet" type="text/css" href={Astro.resolve('../styles/reset.scss')} />
+	<link rel="stylesheet" type="text/css" href={Astro.resolve('../styles/reset.scss')} />
 </head>
 <body>
 	<BaseLayout>
