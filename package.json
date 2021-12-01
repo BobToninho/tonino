@@ -1,0 +1,14 @@
+{
+  "name": "tonino",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "astro": "^0.21.6"
+  }
+}
