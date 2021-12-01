@@ -1,3 +1,5 @@
 node_modules
 .yarn
 yarn.lock
+.yarnrc.yml
+.yarnrc
