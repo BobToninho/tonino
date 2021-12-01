@@ -12,10 +12,8 @@
     "@types/lodash-es": "^4",
     "@types/sass": "^1",
     "astro": "0.21.6",
+    "lodash-es": "4.17.21",
     "sass": "1.44.0",
     "standard-version": "9.3.2"
-  },
-  "dependencies": {
-    "lodash-es": "4.17.21"
   }
 }
