@@ -1,0 +1,16 @@
+---
+import { readdirSync } from 'fs'
+import { startCase } from 'lodash-es'
+import PostLayout from '../../layouts/PostLayout.astro'
+
+const blogDirContent = readdirSync('./src/pages/blog')
+const mdFiles = blogDirContent.filter(fileName => fileName.endsWith('.md'))
+const slugs = mdFiles.map(fileName => fileName.replace(/.md$/, ''))
+const blogPostNames = slugs.map(startCase)
+---
+
+<PostLayout>
+	{blogPostNames.map((post, index) => (
+			<li><a href={`/blog/${slugs[index]}`}>{post}</a></li>
+	))}
+</PostLayout>
