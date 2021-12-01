@@ -7,7 +7,8 @@
 		"start": "astro dev",
 		"build": "yarn format && astro build",
 		"preview": "astro preview",
-		"format": "yarn prettier -w ."
+		"format": "yarn prettier -w .",
+		"release" : "standard-version"
 	},
 	"devDependencies": {
 		"@types/lodash-es": "^4",
