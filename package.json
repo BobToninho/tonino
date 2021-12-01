@@ -9,6 +9,10 @@
     "preview": "astro preview"
   },
   "devDependencies": {
+    "@types/lodash-es": "^4",
     "astro": "0.21.6"
+  },
+  "dependencies": {
+    "lodash-es": "4.17.21"
   }
 }
