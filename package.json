@@ -1,23 +1,23 @@
 {
-  "name": "tonino",
-  "version": "0.2.0",
-  "private": true,
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
+	"name": "tonino",
+	"version": "0.2.0",
+	"private": true,
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
 		"format": "yarn prettier -w ."
-  },
-  "devDependencies": {
-    "@types/lodash-es": "^4",
-    "@types/prettier": "^2",
-    "@types/sass": "^1",
-    "astro": "0.21.6",
-    "lodash-es": "4.17.21",
-    "prettier": "2.5.0",
-    "prettier-plugin-astro": "0.0.11",
-    "sass": "1.44.0",
-    "standard-version": "9.3.2"
-  }
+	},
+	"devDependencies": {
+		"@types/lodash-es": "^4",
+		"@types/prettier": "^2",
+		"@types/sass": "^1",
+		"astro": "0.21.6",
+		"lodash-es": "4.17.21",
+		"prettier": "2.5.0",
+		"prettier-plugin-astro": "0.0.11",
+		"sass": "1.44.0",
+		"standard-version": "9.3.2"
+	}
 }

@@ -10,13 +10,15 @@ const blogPostNames = slugs.map(startCase)
 ---
 
 <head>
-  <!-- load styles from src/styles/utils.css using Astro.resolve() -->
-  <link rel="stylesheet" type="text/css" href={Astro.resolve('../../styles/reset.scss')} />
+	<!-- load styles from src/styles/utils.css using Astro.resolve() -->
+	<link rel="stylesheet" type="text/css" href={Astro.resolve('../../styles/reset.scss')} />
 </head>
 <body>
 	<PostLayout>
 		{blogPostNames.map((post, index) => (
-				<li><a href={`/blog/${slugs[index]}`}>{post}</a></li>
+			<li>
+				<a href={`/blog/${slugs[index]}`}>{post}</a>
+			</li>
 		))}
 	</PostLayout>
 </body>
