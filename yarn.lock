@@ -726,7 +726,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/sass@npm:^1.16.0":
+"@types/sass@npm:^1, @types/sass@npm:^1.16.0":
   version: 1.43.1
   resolution: "@types/sass@npm:1.43.1"
   dependencies:
@@ -4656,7 +4656,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.43.4":
+"sass@npm:1.44.0, sass@npm:^1.43.4":
   version: 1.44.0
   resolution: "sass@npm:1.44.0"
   dependencies:
@@ -5143,8 +5143,10 @@ __metadata:
   resolution: "tonino@workspace:."
   dependencies:
     "@types/lodash-es": ^4
+    "@types/sass": ^1
     astro: 0.21.6
     lodash-es: 4.17.21
+    sass: 1.44.0
   languageName: unknown
   linkType: soft
 

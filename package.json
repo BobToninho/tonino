@@ -10,7 +10,9 @@
   },
   "devDependencies": {
     "@types/lodash-es": "^4",
-    "astro": "0.21.6"
+    "@types/sass": "^1",
+    "astro": "0.21.6",
+    "sass": "1.44.0"
   },
   "dependencies": {
     "lodash-es": "4.17.21"
