@@ -1,30 +1,35 @@
 const colorTextBase = 'colors.gray.200'
 
-module.exports = theme => ({
-	DEFAULT: {
-		css: {
-			color: theme(colorTextBase),
-			strong: {
-				color: theme('colors.primary.DEFAULT')
-			},
-			a: {
-				color: theme('colors.primary.DEFAULT')
-			},
-			'a:hover': {
-				color: theme('colors.primary.dark')
-			},
-			h1: {
-				color: theme(colorTextBase)
-			},
-			h2: {
-				color: theme(colorTextBase)
-			},
-			h3: {
-				color: theme(colorTextBase)
-			},
-			h4: {
-				color: theme(colorTextBase)
+module.exports = theme => {
+	// const base = theme(colorTextBase)
+	const base = 'var(--foreground)'
+
+	return {
+		DEFAULT: {
+			css: {
+				color: base,
+				strong: {
+					color: theme('colors.primary.600')
+				},
+				a: {
+					color: theme('colors.primary.600')
+				},
+				'a:hover': {
+					color: theme('colors.primary.dark')
+				},
+				h1: {
+					color: base
+				},
+				h2: {
+					color: base
+				},
+				h3: {
+					color: base
+				},
+				h4: {
+					color: base
+				}
 			}
 		}
 	}
-})
+}

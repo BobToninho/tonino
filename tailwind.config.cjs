@@ -24,6 +24,9 @@ module.exports = {
 				800: 'hsl(0, 0%, 80%)',
 				900: 'hsl(0, 0%, 90%)'
 			},
+			primary: {
+				600: 'var(--color-primary)'
+			},
 			foreground: 'var(--foreground)'
 		},
 		extend: {
