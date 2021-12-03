@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/BobToninho/tonino2/compare/v0.3.0...v0.4.0) (2021-12-03)
+
+### ⚠ BREAKING CHANGES
+
+- used correctly typography plugin
+- added tailwind typography and basic theme
+
+### workflow
+
+- added tailwind typography and basic theme ([a861091](https://github.com/BobToninho/tonino2/commit/a8610918c4615888d2b583297397bbc3654f5bc0))
+
+- used correctly typography plugin ([fd6d20f](https://github.com/BobToninho/tonino2/commit/fd6d20f742d0cd7cee375848056a6f57971d318c))
+
 ## [0.3.0](https://github.com/BobToninho/tonino2/compare/v0.2.1...v0.3.0) (2021-12-03)
 
 ### ⚠ BREAKING CHANGES
