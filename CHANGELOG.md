@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.6.0](https://github.com/BobToninho/tonino2/compare/v0.5.0...v0.6.0) (2021-12-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* added raw logo
+
+### Features
+
+* added raw logo ([3e696d7](https://github.com/BobToninho/tonino2/commit/3e696d7fbddc5e974a268ef2f14e54da3989b01e))
+
 ## [0.5.0](https://github.com/BobToninho/tonino2/compare/v0.4.0...v0.5.0) (2021-12-03)
 
 
