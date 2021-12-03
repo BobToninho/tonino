@@ -60,7 +60,7 @@ function doSomething() {
 }
 ```
 
-The difference is **slight** but **significant**. By using this approach, you'll have (at least) 2 advantages:
+The difference is **slight** but **significant**. By using this approach, you will have (at least) 2 advantages:
 
 1. 1 less indentation level, that is always good;
 2. Your condition is shrinked in 1 line of code, making the code easier to read in future reviews.
