@@ -5,6 +5,7 @@
 	--color-accent: hsla(350, 50%, 50%, 1);
 	--color-accent-secondary: hsla(50, 50%, 50%, 1);
 
+	/* Default theme */
 	--color-foreground: hsla(0, 0%, 90%, 1);
 	--color-background: hsla(230, 50%, 13%, 1);
 }
@@ -26,14 +27,9 @@
 	/* Only supported on Chromium-based browsers and Safari */
 	// font-family: system-ui;
 	// font-family: Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif;
-	font-family: Heebo,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+	font-family: Heebo, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+		Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
-
-// h1,
-// h2,
-// h3 {
-// 	font-family: Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif;
-// }
 
 h1 {
 	font-size: 3rem;
