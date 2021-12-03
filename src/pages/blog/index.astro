@@ -1,7 +1,8 @@
 ---
 import { readdirSync } from 'fs'
 import { startCase } from 'lodash-es'
-import PostLayout from '../../layouts/PostLayout.astro'
+import BaseHead from '../../components/BaseHead.astro'
+import BaseLayout from '../../layouts/BaseLayout.astro'
 
 const blogDirContent = readdirSync('./src/pages/blog')
 const mdFiles = blogDirContent.filter(fileName => fileName.endsWith('.md'))
@@ -10,15 +11,14 @@ const blogPostNames = slugs.map(startCase)
 ---
 
 <head>
-	<!-- load styles from src/styles/utils.css using Astro.resolve() -->
-	<link rel="stylesheet" type="text/css" href={Astro.resolve('../../styles/reset.scss')} />
+	<BaseHead />
 </head>
 <body>
-	<PostLayout>
+	<BaseLayout>
 		{blogPostNames.map((post, index) => (
 			<li>
 				<a href={`/blog/${slugs[index]}`}>{post}</a>
 			</li>
 		))}
-	</PostLayout>
+	</BaseLayout>
 </body>

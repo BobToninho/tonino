@@ -1,5 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro'
+import BaseHead from '../components/BaseHead.astro'
 
 const { content } = Astro.props
 ---
@@ -20,7 +21,7 @@ const { content } = Astro.props
 </style>
 
 <head>
-	<link rel="stylesheet" type="text/css" href={Astro.resolve('../styles/reset.scss')} />
+	<BaseHead />
 </head>
 <body>
 	<BaseLayout>
