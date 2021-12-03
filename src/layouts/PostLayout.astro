@@ -4,28 +4,12 @@ import BaseHead from '../components/BaseHead.astro'
 
 const { content } = Astro.props
 ---
-
-<style lang="scss">
-	.title {
-		max-width: 28ch;
-	}
-
-	.post {
-		max-width: 56ch;
-	}
-
-	.centered {
-		display: grid;
-		place-content: center;
-	}
-</style>
-
 <head>
 	<BaseHead />
 </head>
 <body>
 	<BaseLayout>
-		<section class="centered prose prose-primary sm:mx-auto">
+		<section class="px-8 pt-8 prose md:prose-lg xl:prose-xl sm:mx-auto">
 			<h1 class="title">{content.title}</h1>
 
 			<article class="post">
