@@ -8,8 +8,7 @@
 		"build": "yarn format && astro build",
 		"preview": "astro preview",
 		"format": "yarn prettier -w .",
-		"release": "standard-version",
-		"prepare": "husky install"
+		"release": "yarn format && standard-version"
 	},
 	"devDependencies": {
 		"@types/lodash-es": "^4",
