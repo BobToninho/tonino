@@ -16,9 +16,14 @@
 		"@types/sass": "^1",
 		"astro": "0.21.6",
 		"lodash-es": "4.17.21",
+		"postcss": "8.4.4",
 		"prettier": "2.5.0",
 		"prettier-plugin-astro": "0.0.11",
 		"sass": "1.44.0",
-		"standard-version": "9.3.2"
+		"standard-version": "9.3.2",
+		"tailwindcss": "2.2.19"
+	},
+	"dependencies": {
+		"autoprefixer": "10.4.0"
 	}
 }
