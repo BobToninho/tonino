@@ -8,13 +8,15 @@
 		"build": "yarn format && astro build",
 		"preview": "astro preview",
 		"format": "yarn prettier -w .",
-		"release": "standard-version"
+		"release": "standard-version",
+		"prepare": "husky install"
 	},
 	"devDependencies": {
 		"@types/lodash-es": "^4",
 		"@types/prettier": "^2",
 		"@types/sass": "^1",
 		"astro": "0.21.6",
+		"husky": "7.0.4",
 		"lodash-es": "4.17.21",
 		"postcss": "8.4.4",
 		"prettier": "2.5.0",
