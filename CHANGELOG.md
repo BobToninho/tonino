@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/BobToninho/tonino2/compare/v0.4.0...v0.5.0) (2021-12-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* removed old font sizes
+
+* removed old font sizes ([4845739](https://github.com/BobToninho/tonino2/commit/4845739d2f0df06c1f08206885cb11882af00701))
+
 ## [0.4.0](https://github.com/BobToninho/tonino2/compare/v0.3.0...v0.4.0) (2021-12-03)
 
 ### ⚠ BREAKING CHANGES
