@@ -31,6 +31,6 @@
 		"autoprefixer": "10.4.0"
 	},
 	"lint-staged": {
-		"*.{js,css,md}": "prettier --write"
+		"*.{js,cjs,mjs,css,scss,md,astro}": "prettier --write"
 	}
 }
