@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.2](https://github.com/BobToninho/tonino2/compare/v0.6.1...v0.6.2) (2021-12-04)
+
+
+### Bug Fixes
+
+* logo raster not being loaded correctly ([155f805](https://github.com/BobToninho/tonino2/commit/155f80535af426cc7a9d0567eb57d308a65dd60b))
+* prettier not ignoring dist folder ([53b0552](https://github.com/BobToninho/tonino2/commit/53b0552ee32c685537c21f685935a7441149058e))
+
 ### [0.6.1](https://github.com/BobToninho/tonino2/compare/v0.6.0...v0.6.1) (2021-12-04)
 
 
