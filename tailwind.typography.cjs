@@ -28,6 +28,9 @@ module.exports = theme => {
 				},
 				h4: {
 					color: base
+				},
+				code: {
+					color: theme('colors.primary.600')
 				}
 			}
 		}
