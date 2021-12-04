@@ -15,10 +15,20 @@ const blogPostNames = slugs.map(startCase)
 </head>
 <body>
 	<BaseLayout>
-		{blogPostNames.map((post, index) => (
-			<li>
-				<a href={`/blog/${slugs[index]}`}>{post}</a>
-			</li>
-		))}
+		<section class="container mb-8">
+			<p>This is still under construction :)</p>
+		</section>
+
+		<section class="container">
+			<h2>Blog posts</h2>
+
+			<ul>
+				{blogPostNames.map((post, index) => (
+					<li>
+						<a href={`/blog/${slugs[index]}`}>{post}</a>
+					</li>
+				))}
+			</ul>
+		</section>
 	</BaseLayout>
 </body>
