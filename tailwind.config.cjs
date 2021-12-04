@@ -2,6 +2,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 const typography = require('./tailwind.typography.cjs')
 
+/** @type {import("@types/tailwindcss/tailwind-config").TailwindConfig } */
 module.exports = {
 	mode: 'jit',
 	purge: ['./public/**/*.html', './src/**/*.{astro,js,jsx,svelte,ts,tsx,vue}'],

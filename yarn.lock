@@ -812,6 +812,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/tailwindcss@npm:2.2.4":
+  version: 2.2.4
+  resolution: "@types/tailwindcss@npm:2.2.4"
+  checksum: 024fb3cfc63164390db9a1d10f4bd65c06a280f115394106dc5085db5fef9a0679c3cc45ec1196c79aaa3b45cedab101ac49767b409eb49b0ee9e16dd6aed3e7
+  languageName: node
+  linkType: hard
+
 "@types/unist@npm:*, @types/unist@npm:^2.0.0":
   version: 2.0.6
   resolution: "@types/unist@npm:2.0.6"
@@ -7481,6 +7488,7 @@ __metadata:
     "@types/lodash-es": ^4
     "@types/prettier": ^2
     "@types/sass": ^1
+    "@types/tailwindcss": 2.2.4
     astro: 0.21.6
     autoprefixer: 10.4.0
     husky: 7.0.4
