@@ -16,18 +16,16 @@ meta:
 layout: ../../layouts/PostLayout.astro
 ---
 
-> Nota: questo articolo è stato tradotto dall'aricolo originale "[TypeScript Function Syntaxes](https://kentcdodds.com/blog/typescript-function-syntaxes)"
+_Nota 1: questo articolo è stato tradotto dall'aricolo originale "[TypeScript Function Syntaxes](https://kentcdodds.com/blog/typescript-function-syntaxes)" di [Kent C. Dodds](https://twitter.com/kentcdodds)._
+
+_Nota 2: gli snippet di codice non vengono tradotti, in quanto considero lo scrivere codice in italiano una bad practice :)_
 
 In JavaScript esistono molti modi di scrivere le funzioni. Aggiungici TypeScript e all'improvviso c'è molto a cui pensare. Dunque, con l'aiuto di [qualche](https://gist.github.com/kentcdodds/61176c067ec5250b5bd3c7fe57a0120d)
 [amico](https://twitter.com/kentcdodds/status/1365046763892084736), ho messo insieme questa lista di varie forme di funzioni che solitamente ti serviranno, insieme a semplici esempi.
 
-Keep in mind that there are TONS of combinations of different syntaxes. I only
-include those which are less obvious combinations or unique in some way.
+Tieni a mente che ci sono MOLTISSIME combinazioni di sintassi differenti. Includerò soltanto le combinazioni meno ovvie o in qualche maniera uniche.
 
-First, the biggest confusion I always have with the syntax of things is where to
-put the return type. When do I use `:` and when do I use `=>`. Here are a few
-quick examples that might help speed you up if you're using this post as a quick
-reference:
+Prima di tutto, la confusione più grande che ho per quanto riguarda la sintassi delle cose è dove mettere il _return type_ dalla funzione. Quando devo usare `:` e quando devo usare `=>`. Qua sotto ci sono un paio di esempi veloci che potrebbero velocizzarti se stai usando questo post come reference:
 
 ```ts
 // Simple type for a function, use =>
@@ -46,14 +44,11 @@ const fnImplementation = (arg: ArgType): ReturnType => {
 }
 ```
 
-I think that was the biggest source of confusion for me. Having written this,
-now I know that the only time I use `=> ReturnType` is when I'm defining a
-function type as a type in itself. Any other time, use `: ReturnType`.
+Penso che questa fosse una delle maggiori fonti di confusioni per me. Avendo scritto ciò, ora so che l'unica volta che uso `=> ReturnType` è quando sto definendo un _function type_ come tipo indipendente. In qualsiasi altro caso, usa `: ReturnType`.
 
-Continue reading for a bunch of examples of how this plays out in typical code
-examples.
+Continua a leggere per qualche esempio su come questo entra in gioco in tipici esempi di codice.
 
-## Function declarations
+## Function declarations (dichiarazioni di funzioni)
 
 ```ts
 // inferred return type
@@ -69,10 +64,9 @@ function sum(a: number, b: number): number {
 }
 ```
 
-In the examples below, we'll be using explicit return types, but you technically
-don't have to specify this.
+Nei seguenti esempio, useremo _return types_ specifici, ma tecnicamente non è necessario specificarli.
 
-## Function Expression
+## Function Expression (espressioni di funzioni)
 
 ```ts
 // named function expression
@@ -105,21 +99,20 @@ const sum = (a: number, b: number): number => a + b
 const sum = (a: number, b: number): { result: number } => ({ result: a + b })
 ```
 
-You can also add a type annotation next to the variable, and then the function
-itself will assume those types:
+Puoi anche aggiungere le _type annotations_ vicine alla variabile, così facendo la funzione prenderà quei tipi:
 
 ```ts
 const sum: (a: number, b: number) => number = (a, b) => a + b
 ```
 
-And you can extract that type:
+E puoi estrarre quel tipo:
 
 ```ts
 type MathFn = (a: number, b: number) => number
 const sum: MathFn = (a, b) => a + b
 ```
 
-Or you can use the object type syntax:
+Oppure puoi usare la _object type syntax_:
 
 ```ts
 type MathFn = {
@@ -128,7 +121,7 @@ type MathFn = {
 const sum: MathFn = (a, b) => a + b
 ```
 
-Which can be useful if you want to add a typed property to the function:
+Che può risultare utile se tu volessi aggiungere una proprietà tipizzata alla funzione:
 
 ```ts
 type MathFn = {
@@ -139,7 +132,7 @@ const sum: MathFn = (a, b) => a + b
 sum.operator = '+'
 ```
 
-This can also be done with an interface:
+Ciò può essere fatto anche con un'interfaccia
 
 ```ts
 interface MathFn {
@@ -150,11 +143,7 @@ const sum: MathFn = (a, b) => a + b
 sum.operator = '+'
 ```
 
-And then there's `declare function` and `declare namespace` which are intended
-to say: "Hey, there exist a variable with this name and type". We can use that
-to create the type and then use `typeof` to assign that type to our function.
-You'll often find `declare` used in `.d.ts` files to declare types for
-libraries.
+Ci sono poi `declare function` e `declare namespace` che vogliono dire: "Hey, esiste una variabile con questo nome e questo tipo". Possiamo usare ciò per creare il tipo e poi utilizzare `typeof` per assegnare quel tipo alla nostra funzione. Troverai usato spesso `declare` in file `.d.ts` per dichiarare i tipi delle librerie.
 
 ```ts
 declare function MathFn(a: number, b: number): number
@@ -165,34 +154,25 @@ const sum: typeof MathFn = (a, b) => a + b
 sum.operator = '+'
 ```
 
-Given the choice between `type`, `interface`, and `declare function`, I think I
-prefer `type` personally, unless I need the extensibility that `interface`
-offers. I'd only really use `declare` if I really _did_ want to tell the
-compiler about something that it doesn't already know about (like a library).
+Se dovessi scegliere tra `type`, `interface`, e `declare function`, personalmente preferisco `type`, a meno che io non abbia bisogno dell'estensibilità offertami da `interface`. Userei `declare` soltanto se volessi _veramente_ comunicare al compilatore che qualcosa esiste e del quale lui non ne è a conoscenza (come ad esempio una libreria).
 
-## Optional/Default params
+## Parametri opzionali / di default
 
-Optional parameter:
+Parametro opzionale:
 
 ```ts
 const sum = (a: number, b?: number): number => a + (b ?? 0)
 ```
 
-Note that order matters here. If you make one parameter optional, all following
-parameters need to be optional as well. This is because it's possible to call
-`sum(1)` but not possible to call `sum(, 2)`. However, it _is_ possible to call
-`sum(undefined, 2)` and if that's what you want to enable, then you can do that
-too:
+Nota che l'ordine qui è importante. Se rendi un parametro opzionale, tutti i parametri seguenti **devono** essere opzionali. Questo accade perché è possibile chiamare `sum(1)` ma non `sum(, 2)`. Tuttavia, è possibile chiamare `sum(undefined, 2)` e se è ciò che vuoi rendere possibile, allora puoi farlo:
 
 ```ts
 const sum = (a: number | undefined, b: number): number => (a ?? 0) + b
 ```
 
-**Default params**
+**Parametri opzionali**
 
-When I was writing this, I thought it would be useless to use default params
-without making that param optional, but it turns out that when you have a
-default value, TypeScript treats it like an optional param. So this works:
+Mentre stavo scrivendo ciò, pensavo che fosse inutile usare parametri di default senza rendere quel parametro opzionale, ma a quanto pare quando ha un valore di default, TypeScript lo tratta come un parametro opzionale. Di conseguenza, questo funziona:
 
 ```ts
 const sum = (a: number, b: number = 0): number => a + b
@@ -200,37 +180,31 @@ sum(1) // results in 1
 sum(2, undefined) // results in 2
 ```
 
-So that example is functionally equivalent to:
+Di conseguenza quell'esempio è equialente a:
 
 ```ts
 const sum = (a: number, b: number | undefined = 0): number => a + b
 ```
 
-TIL.
+Oggi ho imparato qualcosa.
 
-Interestingly, this also means that if you want the first argument to be
-optional but the second to be required, you can do that without using
-`| undefined`:
+Curiosamente, questo significa che se vuoi che il primo argomento sia opzionale ma il secondo richiesto, puoi farlo senza utilizzare `| undefined`:
 
 ```ts
 const sum = (a: number = 0, b: number): number => a + b
 sum(undefined, 3) // results in 3
 ```
 
-However, when you extract the type, you will need to add the `| undefined`
-manually, because `= 0` is a JavaScript expression, not a type.
+Tuttavia, quando estrai quel tipo, avrai bisogno di aggiungere `| undefined` a mano, dato che `= 0` è un _expression_, non un tipo.
 
 ```ts
 type MathFn = (a: number | undefined, b: number) => number
 const sum: MathFn = (a = 0, b) => a + b
 ```
 
-## Rest params
+## Rest params (parametri rest)
 
-Rest params is a JavaScript feature that allows you to collect the "rest" of the
-arguments of a function call into an array. You can use them at any parameter
-position (first, second, third, etc.). The only requirement is that it's the
-_last_ parameter.
+I parametri rest sono una feature di JavaScript che ti permette di raggruppare il "resto" degli argomenti di una chiamata di funzione in un array. Puoi usarli in qualsiasi posizione (primi, secondi, ecc...). L'unico requisito è che siano gli _ultimi_ parametri.
 
 ```ts
 const sum = (a: number = 0, ...rest: Array<number>): number => {
@@ -238,14 +212,14 @@ const sum = (a: number = 0, ...rest: Array<number>): number => {
 }
 ```
 
-And you can extract the type:
+E puoi estrarre il tipo:
 
 ```ts
 type MathFn = (a?: number, ...rest: Array<number>) => number
 const sum: MathFn = (a = 0, ...rest) => rest.reduce((acc, n) => acc + n, a)
 ```
 
-## Object properties and Methods
+## Object properties e metodi
 
 Object method:
 
@@ -257,7 +231,7 @@ const math = {
 }
 ```
 
-Property as function expression:
+Proprietà come una _function expression_:
 
 ```ts
 const math = {
@@ -267,7 +241,7 @@ const math = {
 }
 ```
 
-Property as arrow function expression (with implicit return):
+Proprietà come una _arrow function expression_ (con return implicito):
 
 ```ts
 const math = {
@@ -275,9 +249,7 @@ const math = {
 }
 ```
 
-Unfortunately, to extract the type you can't type the function itself, you have
-to type the enclosing object. You can't annotate the function with a type by
-itself when it's defined within the object literal:
+Sfortunatamente, per estrarre quel tipo non puoi tipizzare la funzione stessa, ma devi tipizzare l'oggetto. Non puoi annotare la funzione con un tipo quando è definita in un _object literal_.
 
 ```ts
 type MathFn = (a: number, b: number) => number
