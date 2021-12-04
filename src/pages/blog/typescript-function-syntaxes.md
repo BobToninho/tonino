@@ -14,6 +14,7 @@ meta:
     - function type annotations
 bannerCloudinaryId: unsplash/photo-1488554378835-f7acf46e6c98
 bannerCredit: Photo by [hao wang](https://unsplash.com/photos/pVq6YhmDPtk)
+layout: ../../layouts/PostLayout.astro
 ---
 
 In JavaScript itself, there are lots of ways to write functions. Add TypeScript

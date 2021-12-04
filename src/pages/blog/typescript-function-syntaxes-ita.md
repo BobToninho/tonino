@@ -1,8 +1,7 @@
 ---
-title: TypeScript Function Syntaxes
+title: Sintassi delle funzioni Typescript
 date: 2021-02-25
-description: The syntax for various functions and function types in TypeScript with simple
-  examples.
+description: La sintassi per varie funzioni e tipi di funzioni in TypeScript con l'aggiunta di semplici esempi.
 categories:
   - typescript
 meta:
@@ -12,16 +11,15 @@ meta:
     - type definitions
     - type declarations
     - function type annotations
-bannerCloudinaryId: unsplash/photo-1488554378835-f7acf46e6c98
-bannerCredit: Photo by [hao wang](https://unsplash.com/photos/pVq6YhmDPtk)
+# bannerCloudinaryId: unsplash/photo-1488554378835-f7acf46e6c98
+# bannerCredit: Photo by [hao wang](https://unsplash.com/photos/pVq6YhmDPtk)
+layout: ../../layouts/PostLayout.astro
 ---
 
-In JavaScript itself, there are lots of ways to write functions. Add TypeScript
-to the mix and all of a sudden it's a lot to think about. So with the help of
-[some](https://gist.github.com/kentcdodds/61176c067ec5250b5bd3c7fe57a0120d)
-[friends](https://twitter.com/kentcdodds/status/1365046763892084736), I've put
-together this list of various function forms you'll typically need/run into with
-simple examples.
+> Nota: questo articolo è stato tradotto dall'aricolo originale "[TypeScript Function Syntaxes](https://kentcdodds.com/blog/typescript-function-syntaxes)"
+
+In JavaScript esistono molti modi di scrivere le funzioni. Aggiungici TypeScript e all'improvviso c'è molto a cui pensare. Dunque, con l'aiuto di [qualche](https://gist.github.com/kentcdodds/61176c067ec5250b5bd3c7fe57a0120d)
+[amico](https://twitter.com/kentcdodds/status/1365046763892084736), ho messo insieme questa lista di varie forme di funzioni che solitamente ti serviranno, insieme a semplici esempi.
 
 Keep in mind that there are TONS of combinations of different syntaxes. I only
 include those which are less obvious combinations or unique in some way.
