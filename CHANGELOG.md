@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.1](https://github.com/BobToninho/tonino2/compare/v0.6.0...v0.6.1) (2021-12-04)
+
+
+### Features
+
+* blog homepage ([cc18436](https://github.com/BobToninho/tonino2/commit/cc18436aabc03b19d4258339af8589ec4443e115))
+* lint staging more file types ([78a6bd1](https://github.com/BobToninho/tonino2/commit/78a6bd16f0e45ac1555d01cedc1e2a6e36389456))
+* logo raster as alternative to svg ([43a38fb](https://github.com/BobToninho/tonino2/commit/43a38fb0d7d990c451ad11febc3e3a8ca9bab9bd))
+
 ## [0.6.0](https://github.com/BobToninho/tonino2/compare/v0.5.0...v0.6.0) (2021-12-03)
 
 
