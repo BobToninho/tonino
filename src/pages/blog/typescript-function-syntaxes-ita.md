@@ -259,9 +259,7 @@ const math: { sum: MathFn } = {
 }
 ```
 
-Furthermore, if you want to add a property on it like some of the above
-examples, that is impossible to do within the object literal. You have to
-extract the function definition completely:
+Inoltre, se volessi aggiungere una proprietà come alcuni degli esempi precedenti, è impossibile da fare nell'_object literal_. Devi estrarre la funzione completamente:
 
 ```ts
 type MathFn = {
@@ -274,17 +272,13 @@ sum.operator = '+'
 const math = { sum }
 ```
 
-You may have noticed that this example is identical to an example above with
-only the addition of the `const math = {sum}`. So yeah, there's no way to do all
-this inline with the object declaration.
+Potresti aver notato che questo semplice esempio è identico ad un altro esempio qui sopra, con la sola aggiunta di `const math = {sum}`. Quindi si, non c'è alcun modo di fare tutto questo in linea on la _object declaration_.
 
-## Classes
+## Classi
 
-Classes themselves are functions, but they're special (have to be invoked with
-`new`), but this section will talk about how functions are defined within the
-class body.
+Le classi sono loro stesse funzioni, ma sono speciali (devono essere invocate con `new`), ma questa sezione discuterà di come le funzioni sono definite nel corpo della classe.
 
-Here's a regular method, the most common form of a function in a class body:
+Qua sotto c'è un metodo, la forma più comune di funzione nel corpo di una classe:
 
 ```ts
 class MathUtils {
@@ -297,8 +291,7 @@ const math = new MathUtils()
 math.sum(1, 2)
 ```
 
-You can also use a class field if you want the function to be bound to the
-specific instance of the class:
+Puoi anche usare un membro della classe se vuoi che la funzione sia legata alla specifica istanza della classe:
 
 ```ts
 class MathUtils {
@@ -316,8 +309,7 @@ sum(1, 2)
 // by going with a class over a regular object factor so...
 ```
 
-And then, you can extract these types. Here's what it looks like for the method
-version in the first example:
+Poi, puoi estrarre questi tipi. Questo è il risultato per la versione del metodo del primo esempio:
 
 ```ts
 interface MathUtilsInterface {
