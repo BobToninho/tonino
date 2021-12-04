@@ -29,7 +29,8 @@
 	},
 	"dependencies": {
 		"@tailwindcss/typography": "0.4.1",
-		"autoprefixer": "10.4.0"
+		"autoprefixer": "10.4.0",
+		"prism-themes": "1.9.0"
 	},
 	"lint-staged": {
 		"*.{js,cjs,mjs,css,scss,md,astro}": "prettier --write"
