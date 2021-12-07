@@ -323,29 +323,22 @@ class MathUtils implements MathUtilsInterface {
 }
 ```
 
-Interestingly, it looks like you still have to define the types for the
-function, even though those are a part of the interface it's supposed to
-implement 🤔 🤷‍♂️
+Curiosamente, sembra che tu debba comunque definire i tipi per la funzione, nonstante siamo parte dell'interfaccia che dovrebbe implementare 🤔 🤷‍♂️
 
-One final note. In TypeScript, you also get `public`, `private`, and
-`protected`. I personally don't use classes all that often and I don't like
-using those particular TypeScript features. JavaScript will soon get special
-syntax for `private` members which is neat
-([learn more](https://github.com/tc39/proposal-class-fields)).
+Una nota finale. In TypeScript, puoi anche usare `public`, `private`, e
+`protected`. Personalmente non uso classi così spesso e non mi piace utilizzare queste specifiche feature di TypeScript. JavaScript otterrà presto una sintassi dedicata ai membri `private`, il che è ottimo.
+([Approfondsci qui](https://github.com/tc39/proposal-class-fields)).
 
-## Modules
+## Moduli
 
-Importing and exporting function definitions works the same way as it does with
-anything else. Where things get unique for TypeScript is if you want to write a
-`.d.ts` file with a module declaration. Let's take our `sum` function for
-example:
+Importare ed esportare definizioni di funzioni funziona allo stesso modo di tutto il resto. Le cose diventano uniche per quanto riguarda TypeScript se vuoi scrivere un file `.d.ts` con una _module declaration_. Prendiamo come esempio la nostra funzione `sum`:
 
 ```ts
 const sum = (a: number, b: number): number => a + b
 sum.operator = '+'
 ```
 
-Here's what we'd do assuming we export it as the default:
+Questo è quello che faremmo, assumendo che l'export sia default:
 
 ```ts
 declare const sum: {
@@ -355,7 +348,7 @@ declare const sum: {
 export default sum
 ```
 
-And if we want it to be a named export:
+E se vogliamo che sia un _named export_:
 
 ```ts
 declare const sum: {
@@ -365,11 +358,11 @@ declare const sum: {
 export { sum }
 ```
 
-## Overloads
+## Overload
 
-I've written about this especially and you can read that:
-[Define function overload types with TypeScript](/blog/define-function-overload-types-with-type-script).
-Here's the example from that post:
+Ho scritto specificatamente di questo e puoi leggerlo:
+[Define function overload types with TypeScript](https://kentcdodds.com/blog/define-function-overload-types-with-type-script).
+Qui sotto troviamo l'esempio in quel post:
 
 ```ts
 type asyncSumCb = (result: number) => void
@@ -387,15 +380,11 @@ function asyncSum(a: number, b: number, cb?: asyncSumCb) {
 }
 ```
 
-Basically what you do is define the function multiple times and only actually
-implement it the last time. It's important that the types for the implementation
-supports all the override types, which is why the `cb` is optional above`.
+In pratica quello che fai è definire la funzione più volte e implementarla soltanto l'ultima volta. È importante che i tipi dell'implementazione supportino tutti i tipi che vengono sovrascritti, che è il motivo per il quale `cb` qua sopra è opzionale.
 
-## Generators
+## Generatori
 
-I've not once used a generator in production code... But when I played around
-with it a bit in the TypeScript playground there wasn't much to it for the
-simple case:
+Non ho mai usato un generatore in codice rilasciato in produzione... Ma quando ci ho giocato un po' nel playground di TypeScript non c'era molto da dire per il caso semplice:
 
 ```ts
 function* generator(start: number) {
@@ -409,8 +398,7 @@ console.log(iterator.next()) // { value: 2, done: false }
 console.log(iterator.next()) // { value: undefined, done: true }
 ```
 
-TypeScript correctly infers that `iterator.next()` returns an object with the
-following type:
+TypeScript inferisce correttamente che `iterator.next()` ritorna un oggetto della seguente forma:
 
 ```ts
 type IteratorNextType = {
@@ -419,8 +407,7 @@ type IteratorNextType = {
 }
 ```
 
-If you want type safety for the `yield` expression completion value, add a type
-annotation to the variable you assign it to:
+Se vuoi _type safety_ per il valore di completamento dell'espressione `yield`, aggiungi una _type annotation_ alla variabile a cui lo assegni:
 
 ```ts [2]
 function* generator(start: number) {
@@ -434,14 +421,11 @@ console.log(iterator.next(3)) // { value: 5, done: false }
 console.log(iterator.next()) // { value: undefined, done: true }
 ```
 
-And now if you try to call `iterator.next('3')` instead of the
-`iterator.next(3)` you'll get a compilation error 🎉
+E ora se provi ad invocare `iterator.next('3')` invece di `iterator.next(3)` avrai un errore di compilazione 🎉
 
 ## Async
 
-`async/await` functions in TypeScript work exactly the same as they do in
-JavaScript and the _only_ difference in typing them is the return type will
-_always_ be a `Promise` generic.
+Le funzioni `async/await` in TypeScript funzionano esattamente come in JavaScript e l'_unica_ differenza nella loro tipizzazione è che il _return type_ sarà sempre un _generic_ di una `Promise`.
 
 ```ts
 const sum = async (a: number, b: number): Promise<number> => a + b
@@ -453,9 +437,9 @@ async function sum(a: number, b: number): Promise<number> {
 }
 ```
 
-## Generics
+## Generic
 
-With a function declaration:
+Con una dichiarazione di funzione:
 
 ```ts
 function arrayify2<Type>(a: Type): Array<Type> {
@@ -463,49 +447,36 @@ function arrayify2<Type>(a: Type): Array<Type> {
 }
 ```
 
-Unfortunately, with an arrow function (when TypeScript is configured for JSX),
-the opening `<` of the function is ambiguous to the compiler. "Is that generic
-syntax? Or is that JSX?" So you have to add a little something to help it
-disambiguate it. I think the most straightforward thing to do is to have it
-`extends unknown`:
+Sfortunatamente, con un'_arrow function_ (quando TypeScript è configurato per usare JSX), l'iniziale `<` della funzione è ambiguo per il compilatore. "È una sintassi per un generic? Oppure è JSX?" Devi quindi aggiungere qualcosa per aiutarlo nella disambiguazione. Penso che la soluzione più semplice sia usare `extends unknown`:
 
 ```ts
 const arrayify = <Type extends unknown>(a: Type): Array<Type> => [a]
 ```
 
-Which conveniently shows us the syntax for `extends` in generics, so there you
-go.
+Che mostra in modo conveniente la sintessi per `extends` nei _generic_.
 
-## Type Guards
+## Type Guard
 
-A type guard is a mechanism for doing type narrowing. For example, it allows you
-to narrow something that is `string | number` down to either a `string` or a
-`number`. There are built-in mechanisms for this (like `typeof x === 'string'`),
-but you can make your own too. Here's one of my favorites (hat tip to
-[my friend Peter](https://twitter.com/aprillion0042) who originally showed this
-to me):
+Una _type guard_ è un meccanismo per fare _type narrowing_. Per esempio, ti permette di restringere qualcosa che è `string | number` in qualcosa che sia `string` oppure `number`. Ci sono meccanismi builtin per ciò (come `typeof x === 'string'`), ma puoi anche crearne uno tuo. Qui trovi uno dei miei preferiti (alzo il cappello al
+[mio amico Peter](https://twitter.com/aprillion0042) che me l'ha mostrato):
 
-You have an array with some falsy values and you want those gone:
+Hai un array con dei tipi _falsy_ e vuoi che se ne vadano:
 
 ```ts
 // Array<number | undefined>
 const arrayWithFalsyValues = [1, undefined, 0, 2]
 ```
 
-In regular JavaScript you can do:
+In JavaScript normale puoi fare:
 
 ```ts
 // Array<number | undefined>
 const arrayWithoutFalsyValues = arrayWithFalsyValues.filter(Boolean)
 ```
 
-Unfortunately, TypeScript doesn't consider this a type narrowing guard, so the
-type is still `Array<number | undefined>` (no narrowing applied).
+Sfortunatamente, TypeScript non considera questa una _type narrowing guard_, dunque il tipo rimane `Array<number | undefined>` (nessun _narrowing_ applicato).
 
-So we can write our own function and tell the compiler that it returns
-true/false for whether the given argument is a specific type. For us, we'll say
-that our function returns true if the given argument's type is not included in
-one of the falsy value types.
+Possiamo quindi scrivere la nostra funzione e dire al compilatore che ritorna `true`/`false` se l'argomento è di un tipo specifico. Per noi, diremo che la nostra funzione ritorna `true` se il tipo dell'argomento non è incluso in uno dei tipi falsy.
 
 ```ts
 type FalsyType = false | null | undefined | '' | 0
@@ -514,7 +485,7 @@ function typedBoolean<ValueType>(value: ValueType): value is Exclude<ValueType, 
 }
 ```
 
-And with that we can do this:
+E con esso possiamo fare questo:
 
 ```ts
 // Array<number>
@@ -523,12 +494,9 @@ const arrayWithoutFalsyValues = arrayWithFalsyValues.filter(typedBoolean)
 
 Woo!
 
-## Assertion functions
+## Assertion function
 
-You know how sometimes you do runtime checking to be extra-sure of something?
-Like, when an object can have a property with a value or `null` you want to
-check if it's `null` and maybe throw an error if it is `null`. Here's how you
-might do something like that:
+Hai present come ogni tanto fai dei controlli a runtime per essere super sicuro di qualcosa? Ad esempio, quando un oggetto può avere una proprietà con valore `null` vuoi controllare se è `null` e in caso _throware_ un errore se è `null`. Qua si vede come potresti fare una cosa del genere:
 
 ```ts
 type User = {
@@ -542,9 +510,7 @@ function logUserDisplayNameUpper(user: User) {
 }
 ```
 
-TypeScript is fine with `user.displayName.toUpperCase()` because the `if`
-statement is a type guard that it understands. Now, let's say you want to take
-that `if` check and put it in a function:
+A TypeScript va bene `user.displayName.toUpperCase()` perché l'`if` è una _type guard_ che capisce. Ora, supponiamo che si voglia prendere quell'`if` e metterlo in una funzione:
 
 ```ts
 type User = {
@@ -562,10 +528,7 @@ function logUserDisplayName(user: User) {
 }
 ```
 
-Now, TypeScript is no longer happy because the call to `assertDisplayName` isn't
-a sufficient type guard. I'd argue this is a limitation on TypeScript's part.
-Hey, no tech is perfect. Anyway, we can help TypeScript out a bit by telling it
-that our function makes an assertion:
+Ora, TypeScript non è più content perché la chiamata a `assertDisplayName` non è una _type guard_ sufficiente. Sosterrei che questa è una limitazione lato TypeScript. Hey, nessuna tecnologia perfetta. In qualunque caso, possiamo aiutare TypeScript un pochino dicendogli che la nostra funzione fa un'asserzione:
 
 ```ts [8]
 type User = {
@@ -583,10 +546,8 @@ function logUserDisplayName(user: User) {
 }
 ```
 
-And that's another way to turn our function into a type narrowing function!
+E questo è un altro modo per trasformare la nostra funzione in una funzione di _type narrowing_!
 
-## Conclusion
+## Conclusioni
 
-That's definitely not everything, but that's a lot of the common syntax I find
-myself writing when dealing with functions in TypeScript. I hope it was helpful
-to you! Bookmark this and share it with your friends 😘
+Questo non è sicuramente tutto, ma è buona parte della sitassi che mi trovo a scrivere tutti i giorni riguardo le funzioni in TypeScript. Spero che ti sia stato d'aiuto! Aggiungi questi ai segnalibri e condividilo con i tuoi amici 😘
