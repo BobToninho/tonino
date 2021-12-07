@@ -5,32 +5,34 @@ __metadata:
   version: 5
   cacheKey: 8
 
-"@astrojs/compiler@npm:^0.3.9":
-  version: 0.3.9
-  resolution: "@astrojs/compiler@npm:0.3.9"
+"@astrojs/compiler@npm:^0.5.7":
+  version: 0.5.7
+  resolution: "@astrojs/compiler@npm:0.5.7"
   dependencies:
     typescript: ^4.3.5
-  checksum: d48c4577b06100b1170790c5e11eb0fa093f2bd601168165e855d517c2fbd10a7f88109507557934360c46e72bbca4104789dd7ea047f173cdb2055867673956
+  checksum: 8e0d20eaf2b9cd13d6f55bf0f429f1cdaea478214d8d4ea4293a04facb3824bd8bab721f012d807d2b8857e75ebd94d36a4d1efc339969b14a69ca3e4dec0581
   languageName: node
   linkType: hard
 
-"@astrojs/language-server@npm:^0.7.16":
-  version: 0.7.19
-  resolution: "@astrojs/language-server@npm:0.7.19"
+"@astrojs/language-server@npm:^0.8.2":
+  version: 0.8.3
+  resolution: "@astrojs/language-server@npm:0.8.3"
   dependencies:
     lodash: ^4.17.21
     source-map: ^0.7.3
     ts-morph: ^12.0.0
-    typescript: ^4.3.1-rc
+    typescript: ^4.5.2
     vscode-css-languageservice: ^5.1.1
     vscode-emmet-helper: 2.1.2
     vscode-html-languageservice: ^3.0.3
     vscode-languageserver: 6.1.1
     vscode-languageserver-protocol: ^3.16.0
     vscode-languageserver-textdocument: ^1.0.1
+    vscode-languageserver-types: ^3.16.0
+    vscode-uri: ^3.0.2
   bin:
     astro-ls: bin/server.js
-  checksum: f5dbbe5b225b3f801189413dabf3aa17aa4c8b1631d360cfba8d0633fe56b21d342dc9b1d8039e8ed27436a9722932f8a4209918b9fc6225e60dd58009aed09f
+  checksum: 20877bae69d599c9f622dd86a367036d5e83901b7d34751e5bc58d37846befdcb3f268440983ee7d4a77cec5edd414693374aa3bd9620f359afe60aba136fb0f
   languageName: node
   linkType: hard
 
@@ -79,46 +81,46 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/renderer-preact@npm:^0.3.0":
-  version: 0.3.0
-  resolution: "@astrojs/renderer-preact@npm:0.3.0"
+"@astrojs/renderer-preact@npm:^0.3.1":
+  version: 0.3.1
+  resolution: "@astrojs/renderer-preact@npm:0.3.1"
   dependencies:
     "@babel/plugin-transform-react-jsx": ^7.16.0
     preact: ^10.5.15
     preact-render-to-string: ^5.1.19
-  checksum: d0a15a240e3a2705d6109cb38a871763f1d35b4d72bfab91c80b2e8cbf1acbcdb2dc19841f4fe151644ccbaa2b9fe98170cc51fbcf7f5a215a9d149d310032cb
+  checksum: 4cb927307ede82ed06862a20f3c60463e89f1054854e4dc2fdd53034d6738be32236947ecdd67a2c0f290b73479b140184591f42eefff3fbd9f82751ce00bfc3
   languageName: node
   linkType: hard
 
-"@astrojs/renderer-react@npm:0.3.0":
-  version: 0.3.0
-  resolution: "@astrojs/renderer-react@npm:0.3.0"
+"@astrojs/renderer-react@npm:0.3.1":
+  version: 0.3.1
+  resolution: "@astrojs/renderer-react@npm:0.3.1"
   dependencies:
     "@babel/plugin-transform-react-jsx": ^7.16.0
     react: ^17.0.2
     react-dom: ^17.0.2
-  checksum: dcfd478dc195826d5b78378894b5af48e10628de8bcba79c59ff4a6573f493c2066609a040c8ee78da412bc3683e28ec4d1039611fe34bd123f712699e0f5569
+  checksum: ef79eee2f5d1296cd82bdc6cd806867e76686afd9bd5ea25b777cfe948d38f979a1dc3ca7182028fdc6e4fc461fa470fe33673fa8109343ae5cbad4036d1d8d6
   languageName: node
   linkType: hard
 
-"@astrojs/renderer-svelte@npm:0.2.1":
-  version: 0.2.1
-  resolution: "@astrojs/renderer-svelte@npm:0.2.1"
+"@astrojs/renderer-svelte@npm:0.2.2":
+  version: 0.2.2
+  resolution: "@astrojs/renderer-svelte@npm:0.2.2"
   dependencies:
     "@sveltejs/vite-plugin-svelte": ^1.0.0-next.30
     svelte: ^3.44.2
     svelte-preprocess: ^4.9.8
-  checksum: 816f87c521de3d06a7c7abadd3d17c3b3bfa21f1ac7485b7c7cb721875233e9d5a4c3fce7fd14817fb41705d10169a1080e97f0d1d0126effd25f2de6aad11c6
+  checksum: 217b6a8ff6a4713dcd4b6625654ae1655b8232b2787da6a81b80b8eb1446fe5b35d3094887891767eee010329e88867fe3f34f7423c22a1e52b33197e9305abc
   languageName: node
   linkType: hard
 
-"@astrojs/renderer-vue@npm:0.2.0":
-  version: 0.2.0
-  resolution: "@astrojs/renderer-vue@npm:0.2.0"
+"@astrojs/renderer-vue@npm:0.2.1":
+  version: 0.2.1
+  resolution: "@astrojs/renderer-vue@npm:0.2.1"
   dependencies:
     "@vitejs/plugin-vue": ^1.9.4
     vue: ^3.2.22
-  checksum: 8a900433d59a210f5c84bc3bdade78071a3e598be8bae91c5bad7a92a33eec9cd718e18fb563efc7d78d08ddbe788c42b5b7da2725037b9c1579c907bbe23d0c
+  checksum: 6046a48bdabbd4a48b0b57bec8ad6371d99ef882bcc777a282f4d7338d9eb71de131f97ff0de2e99babcb04b0b065e332a6c10fe668976a453456c535f2b7489
   languageName: node
   linkType: hard
 
@@ -692,7 +694,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/lodash-es@npm:^4":
+"@types/lodash-es@npm:^4.17.5":
   version: 4.17.5
   resolution: "@types/lodash-es@npm:4.17.5"
   dependencies:
@@ -782,7 +784,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/prettier@npm:^2":
+"@types/prettier@npm:^2.4.2":
   version: 2.4.2
   resolution: "@types/prettier@npm:2.4.2"
   checksum: 76e230b2d11028af11fe12e09b2d5b10b03738e9abf819ae6ebb0f78cac13d39f860755ce05ac3855b608222518d956628f5d00322dc206cc6d1f2d8d1519f1e
@@ -803,7 +805,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/sass@npm:^1, @types/sass@npm:^1.16.0":
+"@types/sass@npm:^1.16.0, @types/sass@npm:^1.43.1":
   version: 1.43.1
   resolution: "@types/sass@npm:1.43.1"
   dependencies:
@@ -1194,18 +1196,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:0.21.6":
-  version: 0.21.6
-  resolution: "astro@npm:0.21.6"
+"astro@npm:0.21.11":
+  version: 0.21.11
+  resolution: "astro@npm:0.21.11"
   dependencies:
-    "@astrojs/compiler": ^0.3.9
-    "@astrojs/language-server": ^0.7.16
+    "@astrojs/compiler": ^0.5.7
+    "@astrojs/language-server": ^0.8.2
     "@astrojs/markdown-remark": ^0.5.0
     "@astrojs/prism": 0.3.0
-    "@astrojs/renderer-preact": ^0.3.0
-    "@astrojs/renderer-react": 0.3.0
-    "@astrojs/renderer-svelte": 0.2.1
-    "@astrojs/renderer-vue": 0.2.0
+    "@astrojs/renderer-preact": ^0.3.1
+    "@astrojs/renderer-react": 0.3.1
+    "@astrojs/renderer-svelte": 0.2.2
+    "@astrojs/renderer-vue": 0.2.1
     "@babel/core": ^7.15.8
     "@babel/traverse": ^7.15.4
     "@proload/core": ^0.2.1
@@ -1219,6 +1221,7 @@ __metadata:
     es-module-lexer: ^0.7.1
     esbuild: 0.13.7
     estree-util-value-to-estree: ^1.2.0
+    estree-walker: ^3.0.0
     fast-glob: ^3.2.7
     fast-xml-parser: ^3.19.0
     html-entities: ^2.3.2
@@ -1252,7 +1255,7 @@ __metadata:
     zod: ^3.8.1
   bin:
     astro: astro.js
-  checksum: 1f85af2aaf17319d4915e2fe59b1c2e2ead3a0dd0ace6f9925506611b12ad21aa3fadd076f9b64315fb413cf869bb87158ab374550ffc80533ac5e2413be3e4b
+  checksum: d047d103d8437be3086bd04c7669a752c66642fad174f12d4b9210186d29c141e42362f73fd7298331014aaa753ad868bb06e3f1b42a3b563cd908bdcc6e6456
   languageName: node
   linkType: hard
 
@@ -3028,6 +3031,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"estree-walker@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "estree-walker@npm:3.0.0"
+  checksum: 3b6b5fd5e37df9e2f472fe6b39eecee9f6ae395676c1535a9bca70ed6bf4a7233747c2f56b8cfa47bdb47411589b87e4ef108875d18415d7e3d2b2225b752e75
+  languageName: node
+  linkType: hard
+
 "etag@npm:~1.8.1":
   version: 1.8.1
   resolution: "etag@npm:1.8.1"
@@ -4429,7 +4439,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:>=10":
+"lint-staged@npm:12.1.2":
   version: 12.1.2
   resolution: "lint-staged@npm:12.1.2"
   dependencies:
@@ -6121,7 +6131,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:2.5.0, prettier@npm:^2.4.1":
+"prettier@npm:2.5.1":
+  version: 2.5.1
+  resolution: "prettier@npm:2.5.1"
+  bin:
+    prettier: bin-prettier.js
+  checksum: 21b9408476ea1c544b0e45d51ceb94a84789ff92095abb710942d780c862d0daebdb29972d47f6b4d0f7ebbfb0ffbf56cc2cfa3e3e9d1cca54864af185b15b66
+  languageName: node
+  linkType: hard
+
+"prettier@npm:^2.4.1":
   version: 2.5.0
   resolution: "prettier@npm:2.5.0"
   bin:
@@ -7492,17 +7511,17 @@ __metadata:
   resolution: "tonino@workspace:."
   dependencies:
     "@tailwindcss/typography": 0.4.1
-    "@types/lodash-es": ^4
-    "@types/prettier": ^2
-    "@types/sass": ^1
+    "@types/lodash-es": ^4.17.5
+    "@types/prettier": ^2.4.2
+    "@types/sass": ^1.43.1
     "@types/tailwindcss": 2.2.4
-    astro: 0.21.6
+    astro: 0.21.11
     autoprefixer: 10.4.0
     husky: 7.0.4
-    lint-staged: ">=10"
+    lint-staged: 12.1.2
     lodash-es: 4.17.21
     postcss: 8.4.4
-    prettier: 2.5.0
+    prettier: 2.5.1
     prettier-plugin-astro: 0.0.11
     prism-themes: 1.9.0
     sass: 1.44.0
@@ -7616,7 +7635,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^4.3.1-rc, typescript@npm:^4.3.5":
+"typescript@npm:^4.3.5, typescript@npm:^4.5.2":
   version: 4.5.2
   resolution: "typescript@npm:4.5.2"
   bin:
@@ -7626,7 +7645,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.3.1-rc#~builtin<compat/typescript>, typescript@patch:typescript@^4.3.5#~builtin<compat/typescript>":
+"typescript@patch:typescript@^4.3.5#~builtin<compat/typescript>, typescript@patch:typescript@^4.5.2#~builtin<compat/typescript>":
   version: 4.5.2
   resolution: "typescript@patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"
   bin:
