@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.3](https://github.com/BobToninho/tonino2/compare/v0.6.2...v0.6.3) (2021-12-07)
+
+
+### Features
+
+* added original post and copy ([965f91a](https://github.com/BobToninho/tonino2/commit/965f91aa1e65d70aec8c33eb70f1a2e99ed818c4))
+* completed first version of the translation ([74771f9](https://github.com/BobToninho/tonino2/commit/74771f90cf7787207b3a36bc2f014ce747ea5ba9))
+* moved md files in the right folder and started translation ([db338b3](https://github.com/BobToninho/tonino2/commit/db338b3f62dab1ea7b05fba5d2e5f2c75f06dc38))
+
+
+### Bug Fixes
+
+* some characters were not being displayed correctly ([56d1816](https://github.com/BobToninho/tonino2/commit/56d18165b1a05d8c095cb0066d2b3f812134977d))
+
 ### [0.6.2](https://github.com/BobToninho/tonino2/compare/v0.6.1...v0.6.2) (2021-12-04)
 
 
