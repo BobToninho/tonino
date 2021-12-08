@@ -1,34 +1,36 @@
 ---
-import { readdirSync } from 'fs'
-import { startCase } from 'lodash-es'
 import BaseHead from '../../components/BaseHead.astro'
 import BaseLayout from '../../layouts/BaseLayout.astro'
 
-const blogDirContent = readdirSync('./src/pages/blog')
-const mdFiles = blogDirContent.filter(fileName => fileName.endsWith('.md'))
-const slugs = mdFiles.map(fileName => fileName.replace(/.md$/, ''))
-const blogPostNames = slugs.map(startCase)
+const permalink = Astro.request.canonicalURL.href
+
+const blogPosts = Astro.fetchContent('./*.md').map(res => ({
+	title: res.title,
+	href: res.url
+}))
 ---
 
-<head>
-	<BaseHead />
-</head>
-<body>
-	<BaseLayout>
-		<section class="container mb-8">
-			<p>This is still under construction :)</p>
-		</section>
+<html lang="en">
+	<head>
+		<BaseHead title="Roberto Tonino's Blog" description="" {permalink} />
+	</head>
+	<body>
+		<BaseLayout>
+			<section class="container mb-8">
+				<p>This is still under construction :)</p>
+			</section>
 
-		<section class="container">
-			<h2>Blog posts</h2>
+			<section class="container">
+				<h2>Blog posts</h2>
 
-			<ul>
-				{blogPostNames.map((post, index) => (
-					<li>
-						<a href={`/blog/${slugs[index]}`}>{post}</a>
-					</li>
-				))}
-			</ul>
-		</section>
-	</BaseLayout>
-</body>
+				<ul>
+					{blogPosts.map(({ title, href }) => (
+						<li>
+							<a href={href}>{title}</a>
+						</li>
+					))}
+				</ul>
+			</section>
+		</BaseLayout>
+	</body>
+</html>
