@@ -8,11 +8,17 @@ const blogPosts = Astro.fetchContent('./*.md').map(res => ({
 	title: res.title,
 	href: res.url
 }))
+
+const headProps = {
+	title: "Roberto Tonino's Blog",
+	description: '',
+	permalink
+}
 ---
 
 <html lang="en">
 	<head>
-		<BaseHead title="Roberto Tonino's Blog" description="" {permalink} />
+		<BaseHead {...headProps} />
 	</head>
 	<body>
 		<BaseLayout>
