@@ -2,20 +2,23 @@
 import BaseLayout from './BaseLayout.astro'
 import BaseHead from '../components/BaseHead.astro'
 
-const { content } = Astro.props
+const { title, description, date } = Astro.props.content
+const permalink = Astro.request.canonicalURL.href
 ---
 
-<head>
-	<BaseHead />
-</head>
-<body>
-	<BaseLayout>
-		<section class="px-8 pt-8 prose-sm lg:prose sm:mx-auto">
-			<h1 class="title">{content.title}</h1>
+<html lang="en">
+	<head>
+		<BaseHead {title} {description} {permalink} />
+	</head>
+	<body>
+		<BaseLayout>
+			<section class="px-8 pt-8 prose-sm lg:prose sm:mx-auto">
+				<h1 class="title">{title}</h1>
 
-			<article class="post">
-				<slot />
-			</article>
-		</section>
-	</BaseLayout>
-</body>
+				<article class="post">
+					<slot />
+				</article>
+			</section>
+		</BaseLayout>
+	</body>
+</html>
