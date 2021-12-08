@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.7.0](https://github.com/BobToninho/tonino2/compare/v0.6.3...v0.7.0) (2021-12-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* changed site url
+* added more meta tags
+
+### Features
+
+* added more meta tags ([0a49df6](https://github.com/BobToninho/tonino2/commit/0a49df6bdc210d4fa57da06ec5bceb8eb50c74e7))
+* changed site url ([cd2fe0b](https://github.com/BobToninho/tonino2/commit/cd2fe0b58b7be24bf008beb64dedff0fdc3d105a))
+* dynamic meta tags to blog posts ([85ef9db](https://github.com/BobToninho/tonino2/commit/85ef9dbb23f67910e4132f4134772e8a6722c7c5))
+
 ### [0.6.3](https://github.com/BobToninho/tonino2/compare/v0.6.2...v0.6.3) (2021-12-07)
 
 
