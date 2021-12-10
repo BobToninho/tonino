@@ -710,6 +710,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/luxon@npm:^2":
+  version: 2.0.7
+  resolution: "@types/luxon@npm:2.0.7"
+  checksum: 81ee3bf5085dac398468e788c2bdc9d36a28c673453f335b6bfe0b31bacb907a7368b09e1794c93702e73c5ebf2733c562c2bfb12768e893a58ce7dc70beacd9
+  languageName: node
+  linkType: hard
+
 "@types/mdast@npm:^3.0.0, @types/mdast@npm:^3.0.3":
   version: 3.0.10
   resolution: "@types/mdast@npm:3.0.10"
@@ -4636,6 +4643,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"luxon@npm:2.1.1":
+  version: 2.1.1
+  resolution: "luxon@npm:2.1.1"
+  checksum: 6d562796c4df195988f2afdca733e5a36457d6449c196cbf16710c706fde8d6b96c7d47fa54cd37c0cb29e4d2e7d8628a9677f36e23490139a8c90232f489e02
+  languageName: node
+  linkType: hard
+
 "magic-string@npm:^0.25.3, magic-string@npm:^0.25.7":
   version: 0.25.7
   resolution: "magic-string@npm:0.25.7"
@@ -7512,6 +7526,7 @@ __metadata:
   dependencies:
     "@tailwindcss/typography": 0.4.1
     "@types/lodash-es": ^4.17.5
+    "@types/luxon": ^2
     "@types/prettier": ^2.4.2
     "@types/sass": ^1.43.1
     "@types/tailwindcss": 2.2.4
@@ -7520,6 +7535,7 @@ __metadata:
     husky: 7.0.4
     lint-staged: 12.1.2
     lodash-es: 4.17.21
+    luxon: 2.1.1
     postcss: 8.4.4
     prettier: 2.5.1
     prettier-plugin-astro: 0.0.11
