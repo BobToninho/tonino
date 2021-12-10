@@ -9,30 +9,30 @@ module.exports = theme => {
 			css: {
 				color: base,
 				strong: {
-					color: theme('colors.primary.600')
+					color: theme('colors.primary.600'),
 				},
 				a: {
-					color: theme('colors.primary.600')
+					color: theme('colors.primary.600'),
 				},
 				'a:hover': {
-					color: theme('colors.primary.dark')
+					color: theme('colors.primary.dark'),
 				},
 				h1: {
-					color: base
+					color: base,
 				},
 				h2: {
-					color: base
+					color: base,
 				},
 				h3: {
-					color: base
+					color: base,
 				},
 				h4: {
-					color: base
+					color: base,
 				},
 				code: {
-					color: theme('colors.primary.600')
-				}
-			}
-		}
+					color: theme('colors.primary.600'),
+				},
+			},
+		},
 	}
 }

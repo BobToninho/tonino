@@ -17,7 +17,7 @@ all of them):
 
 ```js
 fetch('endpoint', {
-	credentials: 'include'
+	credentials: 'include',
 })
 ```
 
@@ -26,8 +26,8 @@ fetch('endpoint', {
 ```js
 app.use(
 	cors({
-		credentials: true
-	})
+		credentials: true,
+	}),
 )
 ```
 

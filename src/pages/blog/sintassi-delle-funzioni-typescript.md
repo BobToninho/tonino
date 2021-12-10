@@ -225,7 +225,7 @@ Object method:
 const math = {
 	sum(a: number, b: number): number {
 		return a + b
-	}
+	},
 }
 ```
 
@@ -235,7 +235,7 @@ Proprietà come una _function expression_:
 const math = {
 	sum: function sum(a: number, b: number): number {
 		return a + b
-	}
+	},
 }
 ```
 
@@ -243,7 +243,7 @@ Proprietà come una _arrow function expression_ (con return implicito):
 
 ```ts
 const math = {
-	sum: (a: number, b: number): number => a + b
+	sum: (a: number, b: number): number => a + b,
 }
 ```
 
@@ -253,7 +253,7 @@ Sfortunatamente, per estrarre quel tipo non puoi tipizzare la funzione stessa, m
 type MathFn = (a: number, b: number) => number
 
 const math: { sum: MathFn } = {
-	sum: (a, b) => a + b
+	sum: (a, b) => a + b,
 }
 ```
 

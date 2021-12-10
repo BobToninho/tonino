@@ -6,13 +6,13 @@ const permalink = Astro.request.canonicalURL.href
 
 const blogPosts = Astro.fetchContent('./*.md').map(res => ({
 	title: res.title,
-	href: res.url
+	href: res.url,
 }))
 
 const headProps = {
 	title: "Roberto Tonino's Blog",
 	description: '',
-	permalink
+	permalink,
 }
 ---
 

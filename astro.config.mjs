@@ -10,13 +10,13 @@
 export default /** @type {import('astro').AstroUserConfig} */ ({
 	buildOptions: {
 		site: 'https://tonino.xyz', // Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
-		sitemap: true // Generate sitemap (set to "false" to disable)
+		sitemap: true, // Generate sitemap (set to "false" to disable)
 	},
 	devOptions: {},
 	renderers: [],
 	vite: {
 		define: {
-			__VERSION__: JSON.stringify(process.env.npm_package_version)
-		}
-	}
+			__VERSION__: JSON.stringify(process.env.npm_package_version),
+		},
+	},
 })
