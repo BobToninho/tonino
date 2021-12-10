@@ -20,6 +20,3 @@ const options: Intl.DateTimeFormatOptions = {
 const date = new Date(props.date)
 const dateFormatted = date.toLocaleString(window.navigator.language, options)
 </script>
-
-<style scoped>
-</style>
