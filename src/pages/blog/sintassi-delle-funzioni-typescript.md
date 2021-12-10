@@ -1,6 +1,6 @@
 ---
 title: Sintassi delle funzioni Typescript
-date: 2021-02-25
+date: 2021-12-08
 description: La sintassi per varie funzioni e tipi di funzioni in TypeScript con l'aggiunta di semplici esempi.
 categories:
   - typescript
@@ -18,18 +18,18 @@ _Nota 1: questo articolo è stato tradotto dall'aricolo originale "[TypeScript F
 
 _Nota 2: gli snippet di codice non vengono tradotti, in quanto considero lo scrivere codice in italiano una bad practice :)_
 
-In JavaScript esistono molti modi di scrivere le funzioni. Aggiungici TypeScript e all'improvviso c'è molto a cui pensare. Dunque, con l'aiuto di [qualche](https://gist.github.com/kentcdodds/61176c067ec5250b5bd3c7fe57a0120d)
-[amico](https://twitter.com/kentcdodds/status/1365046763892084736), ho messo insieme questa lista di varie forme di funzioni che solitamente ti serviranno, insieme a semplici esempi.
+In JavaScript esistono molti modi di scrivere le funzioni. Aggiungici TypeScript e improvvisamente avrai ancora di puù a cui pensare. Con l'aiuto di [qualche](https://gist.github.com/kentcdodds/61176c067ec5250b5bd3c7fe57a0120d)
+[amico](https://twitter.com/kentcdodds/status/1365046763892084736), ho messo insieme questa lista di comuni tipologie di funzioni che potranno servirti, insieme a dei semplici esempi.
 
 Tieni a mente che ci sono MOLTISSIME combinazioni di sintassi differenti. Includerò soltanto le combinazioni meno ovvie o in qualche maniera uniche.
 
-Prima di tutto, la confusione più grande che ho per quanto riguarda la sintassi delle cose è dove mettere il _return type_ dalla funzione. Quando devo usare `:` e quando devo usare `=>`. Qua sotto ci sono un paio di esempi veloci che potrebbero velocizzarti se stai usando questo post come reference:
+Prima di tutto, la confusione più grande che ho per quanto riguarda la sintassi è dove mettere il _return type_ della funzione. Quando devo usare `:` e quando devo usare `=>`? Di seguito trovi un paio di esempi veloci che potrebbero velocizzarti il lavoro se stai usando questo post come reference:
 
 ```ts
-// Simple type for a function, use =>
+// Semplice tipo per una funzione, usa =>
 type FnType = (arg: ArgType) => ReturnType
 
-// Every other time, use :
+// Qualsiasi altra volta, usa :
 type FnAsObjType = {
 	(arg: ArgType): ReturnType
 }
@@ -38,25 +38,25 @@ interface InterfaceWithFn {
 }
 
 const fnImplementation = (arg: ArgType): ReturnType => {
-	/* implementation */
+	/* implementazione */
 }
 ```
 
-Penso che questa fosse una delle maggiori fonti di confusioni per me. Avendo scritto ciò, ora so che l'unica volta che uso `=> ReturnType` è quando sto definendo un _function type_ come tipo indipendente. In qualsiasi altro caso, usa `: ReturnType`.
+Penso che questa fosse una delle maggiori fonti di confusione per me. Avendolo scritto, ora so che l'unica volta che uso `=> ReturnType` è quando sto definendo un _function type_ come tipo indipendente. In qualsiasi altro caso, è bene usare `: ReturnType`.
 
-Continua a leggere per qualche esempio su come questo entra in gioco in tipici esempi di codice.
+Continua a leggere e troverai qualche esempio su come questo entra in gioco in esempi tipici di codice.
 
 ## Function declarations (dichiarazioni di funzioni)
 
 ```ts
-// inferred return type
+// return type inferito
 function sum(a: number, b: number) {
 	return a + b
 }
 ```
 
 ```ts
-// defined return type
+// return type definito
 function sum(a: number, b: number): number {
 	return a + b
 }
@@ -64,7 +64,7 @@ function sum(a: number, b: number): number {
 
 Nei seguenti esempio, useremo _return types_ specifici, ma tecnicamente non è necessario specificarli.
 
-## Function Expression (espressioni di funzioni)
+## Function Expression (espressione di funzione)
 
 ```ts
 // named function expression
@@ -93,17 +93,17 @@ const sum = (a: number, b: number): number => a + b
 ```
 
 ```ts
-// implicit return of an object requires parentheses to disambiguate the curly braces
+// l'implicit return di un oggetto richiede le parentesi tonde per disambiguare le parentesti graffe
 const sum = (a: number, b: number): { result: number } => ({ result: a + b })
 ```
 
-Puoi anche aggiungere le _type annotations_ vicine alla variabile, così facendo la funzione prenderà quei tipi:
+Puoi anche aggiungere le _type annotations_ vicino alla variabile, così facendo la funzione prenderà quei tipi:
 
 ```ts
 const sum: (a: number, b: number) => number = (a, b) => a + b
 ```
 
-E puoi estrarre quel tipo:
+Puoi anche estrarre quel tipo:
 
 ```ts
 type MathFn = (a: number, b: number) => number
@@ -130,7 +130,7 @@ const sum: MathFn = (a, b) => a + b
 sum.operator = '+'
 ```
 
-Ciò può essere fatto anche con un'interfaccia
+Ciò può essere fatto anche con un'interfaccia:
 
 ```ts
 interface MathFn {
@@ -141,7 +141,7 @@ const sum: MathFn = (a, b) => a + b
 sum.operator = '+'
 ```
 
-Ci sono poi `declare function` e `declare namespace` che vogliono dire: "Hey, esiste una variabile con questo nome e questo tipo". Possiamo usare ciò per creare il tipo e poi utilizzare `typeof` per assegnare quel tipo alla nostra funzione. Troverai usato spesso `declare` in file `.d.ts` per dichiarare i tipi delle librerie.
+Ci sono poi `declare function` e `declare namespace` che vogliono dire: "Hey, esiste una variabile con questo nome e questo tipo". Possiamo usarli per creare il tipo e poi utilizzare `typeof` per assegnare quel tipo alla nostra funzione. Troverai usato spesso `declare` nei file `.d.ts` per dichiarare i tipi delle librerie.
 
 ```ts
 declare function MathFn(a: number, b: number): number
@@ -152,7 +152,7 @@ const sum: typeof MathFn = (a, b) => a + b
 sum.operator = '+'
 ```
 
-Se dovessi scegliere tra `type`, `interface`, e `declare function`, personalmente preferisco `type`, a meno che io non abbia bisogno dell'estensibilità offertami da `interface`. Userei `declare` soltanto se volessi _veramente_ comunicare al compilatore che qualcosa esiste e del quale lui non ne è a conoscenza (come ad esempio una libreria).
+Se dovessi scegliere tra `type`, `interface`, e `declare function`, personalmente sceglierei `type`, a meno che non abbia bisogno dell'estensibilità offertami da `interface`. Userei `declare` soltanto se volessi _per davvero_ comunicare al compilatore che qualcosa esiste e del quale lui non ne è a conoscenza (come ad esempio una libreria).
 
 ## Parametri opzionali / di default
 
@@ -162,7 +162,7 @@ Parametro opzionale:
 const sum = (a: number, b?: number): number => a + (b ?? 0)
 ```
 
-Nota che l'ordine qui è importante. Se rendi un parametro opzionale, tutti i parametri seguenti **devono** essere opzionali. Questo accade perché è possibile chiamare `sum(1)` ma non `sum(, 2)`. Tuttavia, è possibile chiamare `sum(undefined, 2)` e se è ciò che vuoi rendere possibile, allora puoi farlo:
+Nota che l'ordine qui è importante. Se rendi un parametro opzionale, tutti i parametri seguenti **devono** essere opzionali. Questo accade perché è possibile chiamare `sum(1)` ma non `sum(, 2)`. Tuttavia, è possibile chiamare `sum(undefined, 2)` e se è quello che vuoi rendere possibile, allora puoi farlo:
 
 ```ts
 const sum = (a: number | undefined, b: number): number => (a ?? 0) + b
