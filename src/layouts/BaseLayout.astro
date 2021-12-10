@@ -3,39 +3,21 @@ import Logo from '../components/LogoRaster.astro'
 ---
 
 <style lang="scss">
-	.header,
-	.footer {
-		margin-left: auto;
-		margin-right: auto;
-		max-width: 60%;
-	}
-
-	.header {
-		height: 7rem;
-	}
-
-	.footer {
-		align-items: center;
-		display: flex;
-		height: 3.5rem;
-	}
-
-	.logo {
-		display: block;
-		max-width: 150px;
+	.base-container {
+		@apply ml-8 sm:max-w-xl lg:max-w-3xl sm:mx-auto;
 	}
 </style>
 
-<header class="header pt-8">
-	<a href="/" class="logo">
+<header class="pt-8 ml-8 base-container h-28">
+	<a href="/" class="block max-w-[150px]">
 		<Logo />
 	</a>
 </header>
 
-<main class="main">
+<main>
 	<slot />
 </main>
 
-<footer class="footer">
+<footer class="flex items-center ml-8 font-mono opacity-50 text-foreground base-container h-14 sm:text-lg">
 	by Roberto Tonino - v{__VERSION__}
 </footer>
