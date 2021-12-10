@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.3](https://github.com/BobToninho/tonino2/compare/v0.7.2...v0.7.3) (2021-12-10)
+
+
+### Features
+
+* BaseDate client-side component ([eb02ce7](https://github.com/BobToninho/tonino2/commit/eb02ce7212f224b33dd00489959b03a72b7f4549))
+
 ### [0.7.2](https://github.com/BobToninho/tonino2/compare/v0.7.1...v0.7.2) (2021-12-10)
 
 

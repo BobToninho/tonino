@@ -8,6 +8,12 @@
 			"type": "shell",
 			"command": "yarn format",
 			"problemMatcher": []
-		}
+		},
+		{
+			"label": "release",
+			"type": "shell",
+			"command": "yarn release",
+			"problemMatcher": []
+		},
 	]
 }
