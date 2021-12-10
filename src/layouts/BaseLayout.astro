@@ -2,7 +2,13 @@
 import Logo from '../components/LogoRaster.astro'
 ---
 
-<header class="h-28 pt-8 ml-8 sm:max-w-xl lg:max-w-3xl sm:mx-auto">
+<style lang="scss">
+	.base-container {
+		@apply ml-8 sm:max-w-xl lg:max-w-3xl sm:mx-auto;
+	}
+</style>
+
+<header class="pt-8 ml-8 base-container h-28">
 	<a href="/" class="block max-w-[150px]">
 		<Logo />
 	</a>
