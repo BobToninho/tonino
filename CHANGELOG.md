@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.2](https://github.com/BobToninho/tonino2/compare/v0.7.1...v0.7.2) (2021-12-10)
+
+
+### Features
+
+* semantic and syntactic correction ([6618f60](https://github.com/BobToninho/tonino2/commit/6618f600e54fc36eb510c82deaa27868fbbafb89))
+* showing dates on posts ([40b5a23](https://github.com/BobToninho/tonino2/commit/40b5a23fd5917a8e231dd37241834e9ce114a88a))
+
 ### [0.7.1](https://github.com/BobToninho/tonino2/compare/v0.7.0...v0.7.1) (2021-12-08)
 
 ## [0.7.0](https://github.com/BobToninho/tonino2/compare/v0.6.3...v0.7.0) (2021-12-08)
