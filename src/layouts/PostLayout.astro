@@ -4,16 +4,32 @@ import BaseHead from '../components/BaseHead.astro'
 
 const { title, description, date } = Astro.props.content
 const permalink = Astro.request.canonicalURL.href
+console.log()
+const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
+const localeDate = new Date(date).toLocaleDateString('en-gb', options)
+
+const headProps = {
+	title,
+	description,
+	permalink
+}
 ---
 
 <html lang="en">
 	<head>
-		<BaseHead {title} {description} {permalink} />
+		<BaseHead {...headProps} />
 	</head>
 	<body>
 		<BaseLayout>
-			<section class="px-8 pt-8 prose-sm lg:prose sm:mx-auto">
+			<section class="px-8 pt-8 prose lg:prose-xl sm:mx-auto">
 				<h1 class="title">{title}</h1>
+
+				{date && (
+					<p>
+						<span class="font-bold underline">Posted on:</span>
+						<time datetime={date}>{localeDate}</time>
+					</p>
+				)}
 
 				<article class="post">
 					<slot />
