@@ -1,12 +1,10 @@
 ---
 import BaseLayout from './BaseLayout.astro'
 import BaseHead from '../components/BaseHead.astro'
+import BaseDate from '../components/BaseDate.vue'
 
 const { title, description, date } = Astro.props.content
 const permalink = Astro.request.canonicalURL.href
-console.log()
-const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
-const localeDate = new Date(date).toLocaleDateString('en-gb', options)
 
 const headProps = {
 	title,
@@ -27,7 +25,7 @@ const headProps = {
 				{date && (
 					<p>
 						<span class="font-bold underline">Posted on:</span>
-						<time datetime={date}>{localeDate}</time>
+						<BaseDate {date} client:only />
 					</p>
 				)}
 

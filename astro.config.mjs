@@ -13,7 +13,7 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
 		sitemap: true, // Generate sitemap (set to "false" to disable)
 	},
 	devOptions: {},
-	renderers: [],
+	renderers: ['@astrojs/renderer-vue'],
 	vite: {
 		define: {
 			__VERSION__: JSON.stringify(process.env.npm_package_version),
