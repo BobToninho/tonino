@@ -1,11 +1,10 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
-const typography = require('./tailwind.typography.cjs')
+const typographyConfig = require('./tailwind.typography.cjs')
 
-/** @type {import("@types/tailwindcss/tailwind-config").TailwindConfig } */
+/** @type {import("tailwindcss/tailwind-config").TailwindConfig } */
 module.exports = {
-	mode: 'jit',
-	purge: ['./public/**/*.html', './src/**/*.{astro,js,jsx,svelte,ts,tsx,vue}'],
+	content: ['./public/**/*.html', './src/**/*.{astro,js,jsx,svelte,ts,tsx,vue}'],
 	theme: {
 		container: {
 			center: true,
@@ -15,7 +14,7 @@ module.exports = {
 			white: '#fff',
 			black: '#000',
 
-			gray: colors.blueGray,
+			gray: colors.slate,
 			blue: colors.blue,
 			grayscale: {
 				100: 'hsl(0, 0%, 10%)',
@@ -34,7 +33,7 @@ module.exports = {
 			foreground: 'var(--foreground)',
 		},
 		extend: {
-			typography,
+			typography: typographyConfig,
 		},
 	},
 	plugins: [require('@tailwindcss/typography')],
