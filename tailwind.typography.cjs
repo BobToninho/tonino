@@ -19,6 +19,7 @@ module.exports = theme => {
 				},
 				h1: {
 					color: base,
+					fontWeight: 700,
 				},
 				h2: {
 					color: base,
