@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.8.0](https://github.com/BobToninho/tonino2/compare/v0.7.4...v0.8.0) (2021-12-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* using redirects file for homepage
+
+### Features
+
+* added metadata to posts ([7689bfe](https://github.com/BobToninho/tonino2/commit/7689bfe9503e7f98245e8b68ab0f7a1eab244bee))
+* better date formatting ([1b63d8f](https://github.com/BobToninho/tonino2/commit/1b63d8f849af1d5991877292b29071e83f4e559e))
+* moved fonts in public folder ([87588ba](https://github.com/BobToninho/tonino2/commit/87588ba378eaeee7b76a21c95792a5eca6afdab4))
+* using redirects file for homepage ([83e0e30](https://github.com/BobToninho/tonino2/commit/83e0e309a6b654214ff9e394a67909c0df396a5b))
+
+
+### Bug Fixes
+
+* Flash Of Invisible Text (FOIT) happening ([a3d74cb](https://github.com/BobToninho/tonino2/commit/a3d74cb99802a98a0070c09d630bc3af7625aaa0))
+
 ### [0.7.4](https://github.com/BobToninho/tonino2/compare/v0.7.3...v0.7.4) (2021-12-10)
 
 ### [0.7.3](https://github.com/BobToninho/tonino2/compare/v0.7.2...v0.7.3) (2021-12-10)
