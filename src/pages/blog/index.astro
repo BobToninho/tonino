@@ -4,10 +4,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro'
 
 const permalink = Astro.request.canonicalURL.href
 
-const blogPosts = Astro.fetchContent('./*.md').map(res => ({
-	title: res.title,
-	href: res.url,
+const blogPosts = Astro.fetchContent('./*.md').map(({ title, url, isDraft }) => ({
+	title,
+	href: url,
+	isDraft,
 }))
+const publishablePosts = blogPosts.filter(post => !post.isDraft)
+
+console.log(blogPosts)
 
 const headProps = {
 	title: "Roberto Tonino's Blog",
@@ -30,7 +34,7 @@ const headProps = {
 				<h2>Blog posts</h2>
 
 				<ul>
-					{blogPosts.map(({ title, href }) => (
+					{publishablePosts.map(({ title, href }) => (
 						<li>
 							<a href={href}>{title}</a>
 						</li>
