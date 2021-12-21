@@ -5,7 +5,7 @@ __metadata:
   version: 5
   cacheKey: 8
 
-"@astrojs/compiler@npm:^0.5.7":
+"@astrojs/compiler@npm:^0.5.4":
   version: 0.5.7
   resolution: "@astrojs/compiler@npm:0.5.7"
   dependencies:
@@ -103,14 +103,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/renderer-svelte@npm:0.2.2":
-  version: 0.2.2
-  resolution: "@astrojs/renderer-svelte@npm:0.2.2"
+"@astrojs/renderer-svelte@npm:0.2.3":
+  version: 0.2.3
+  resolution: "@astrojs/renderer-svelte@npm:0.2.3"
   dependencies:
-    "@sveltejs/vite-plugin-svelte": ^1.0.0-next.30
+    "@sveltejs/vite-plugin-svelte": 1.0.0-next.30
     svelte: ^3.44.2
     svelte-preprocess: ^4.9.8
-  checksum: 217b6a8ff6a4713dcd4b6625654ae1655b8232b2787da6a81b80b8eb1446fe5b35d3094887891767eee010329e88867fe3f34f7423c22a1e52b33197e9305abc
+  checksum: 5973c3e97fc086f8ff55358daba6a8d6f2b22a076b84621efe18d9fe8f948c86cb90cd82ffc083d291f8b387f2a79871c8ec5d61a18e6ebf45266f7201cddf24
   languageName: node
   linkType: hard
 
@@ -121,6 +121,13 @@ __metadata:
     "@vitejs/plugin-vue": ^1.9.4
     vue: ^3.2.22
   checksum: 6046a48bdabbd4a48b0b57bec8ad6371d99ef882bcc777a282f4d7338d9eb71de131f97ff0de2e99babcb04b0b065e332a6c10fe668976a453456c535f2b7489
+  languageName: node
+  linkType: hard
+
+"@astropub/webapi@npm:^0.4.0":
+  version: 0.4.0
+  resolution: "@astropub/webapi@npm:0.4.0"
+  checksum: d42b526549e7cfde3ced4b885e31bd7fc14904af25061a728b3c07208640f597e4a6f552909e60ef459d655c86d31ad5aedf345017f259b5d8311d9b5220c415
   languageName: node
   linkType: hard
 
@@ -539,7 +546,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sveltejs/vite-plugin-svelte@npm:^1.0.0-next.30":
+"@sveltejs/vite-plugin-svelte@npm:1.0.0-next.30":
   version: 1.0.0-next.30
   resolution: "@sveltejs/vite-plugin-svelte@npm:1.0.0-next.30"
   dependencies:
@@ -710,10 +717,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/luxon@npm:^2":
-  version: 2.0.7
-  resolution: "@types/luxon@npm:2.0.7"
-  checksum: 81ee3bf5085dac398468e788c2bdc9d36a28c673453f335b6bfe0b31bacb907a7368b09e1794c93702e73c5ebf2733c562c2bfb12768e893a58ce7dc70beacd9
+"@types/luxon@npm:^2.0.8":
+  version: 2.0.8
+  resolution: "@types/luxon@npm:2.0.8"
+  checksum: 630d069a5a719c7512cb8805bcec6bac7f9aa5d434edf2159ba6dfb22eb8de982232a6d3621acd66f6ca2d1d6b0e8b40f9c8dafbbad654eb8cc01229f528ae45
   languageName: node
   linkType: hard
 
@@ -1049,13 +1056,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ansi-colors@npm:^4.1.1":
-  version: 4.1.1
-  resolution: "ansi-colors@npm:4.1.1"
-  checksum: 138d04a51076cb085da0a7e2d000c5c0bb09f6e772ed5c65c53cb118d37f6c5f1637506d7155fb5f330f0abcf6f12fa2e489ac3f8cdab9da393bf1bb4f9a32b0
-  languageName: node
-  linkType: hard
-
 "ansi-escapes@npm:^4.3.0":
   version: 4.3.2
   resolution: "ansi-escapes@npm:4.3.2"
@@ -1203,18 +1203,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:0.21.11":
-  version: 0.21.11
-  resolution: "astro@npm:0.21.11"
+"astro@npm:0.21.13":
+  version: 0.21.13
+  resolution: "astro@npm:0.21.13"
   dependencies:
-    "@astrojs/compiler": ^0.5.7
+    "@astrojs/compiler": ^0.5.4
     "@astrojs/language-server": ^0.8.2
     "@astrojs/markdown-remark": ^0.5.0
     "@astrojs/prism": 0.3.0
     "@astrojs/renderer-preact": ^0.3.1
     "@astrojs/renderer-react": 0.3.1
-    "@astrojs/renderer-svelte": 0.2.2
+    "@astrojs/renderer-svelte": 0.2.3
     "@astrojs/renderer-vue": 0.2.1
+    "@astropub/webapi": ^0.4.0
     "@babel/core": ^7.15.8
     "@babel/traverse": ^7.15.4
     "@proload/core": ^0.2.1
@@ -1225,17 +1226,17 @@ __metadata:
     ci-info: ^3.2.0
     connect: ^3.7.0
     eol: ^0.9.1
-    es-module-lexer: ^0.7.1
+    es-module-lexer: ^0.9.3
     esbuild: 0.13.7
     estree-util-value-to-estree: ^1.2.0
     estree-walker: ^3.0.0
     fast-glob: ^3.2.7
-    fast-xml-parser: ^3.19.0
+    fast-xml-parser: ^4.0.0-beta.3
     html-entities: ^2.3.2
     htmlparser2: ^7.1.2
     kleur: ^4.1.4
     magic-string: ^0.25.7
-    mime: ^2.5.2
+    mime: ^3.0.0
     morphdom: ^2.6.1
     node-fetch: ^3.0.0
     parse5: ^6.0.1
@@ -1258,11 +1259,11 @@ __metadata:
     supports-esm: ^1.0.0
     tsconfig-resolver: ^3.0.1
     vite: ^2.6.10
-    yargs-parser: ^20.2.9
+    yargs-parser: ^21.0.0
     zod: ^3.8.1
   bin:
     astro: astro.js
-  checksum: d047d103d8437be3086bd04c7669a752c66642fad174f12d4b9210186d29c141e42362f73fd7298331014aaa753ad868bb06e3f1b42a3b563cd908bdcc6e6456
+  checksum: 8724067b02ebc92dcac6bcfe6e4318923f35a3f0037a9f06fba8a4f9d9ca88b5d6dfa4662c0125894b57e1c1af9c15264ade5445f2dec30b9931a19f1fe957c4
   languageName: node
   linkType: hard
 
@@ -1984,7 +1985,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:4, debug@npm:^4.0.0, debug@npm:^4.1.0, debug@npm:^4.3.1, debug@npm:^4.3.2":
+"debug@npm:4, debug@npm:^4.0.0, debug@npm:^4.1.0, debug@npm:^4.3.1, debug@npm:^4.3.2, debug@npm:^4.3.3":
   version: 4.3.3
   resolution: "debug@npm:4.3.3"
   dependencies:
@@ -2270,15 +2271,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"enquirer@npm:^2.3.6":
-  version: 2.3.6
-  resolution: "enquirer@npm:2.3.6"
-  dependencies:
-    ansi-colors: ^4.1.1
-  checksum: 1c0911e14a6f8d26721c91e01db06092a5f7675159f0261d69c403396a385afd13dd76825e7678f66daffa930cfaa8d45f506fb35f818a2788463d022af1b884
-  languageName: node
-  linkType: hard
-
 "entities@npm:^2.0.0":
   version: 2.2.0
   resolution: "entities@npm:2.2.0"
@@ -2351,10 +2343,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"es-module-lexer@npm:^0.7.1":
-  version: 0.7.1
-  resolution: "es-module-lexer@npm:0.7.1"
-  checksum: c66fb633cc521529862818caf603897d58d30442c885a1a1ed16823ddbbb8a437e3952454a4b2650242df1c1b4d0efa42fedbe49594e3ef2ceb3c891cf1211dd
+"es-module-lexer@npm:^0.9.3":
+  version: 0.9.3
+  resolution: "es-module-lexer@npm:0.9.3"
+  checksum: 84bbab23c396281db2c906c766af58b1ae2a1a2599844a504df10b9e8dc77ec800b3211fdaa133ff700f5703d791198807bba25d9667392d27a5e9feda344da8
   languageName: node
   linkType: hard
 
@@ -3057,14 +3049,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-xml-parser@npm:^3.19.0":
-  version: 3.21.1
-  resolution: "fast-xml-parser@npm:3.21.1"
+"fast-xml-parser@npm:^4.0.0-beta.3":
+  version: 4.0.0-beta.8
+  resolution: "fast-xml-parser@npm:4.0.0-beta.8"
   dependencies:
-    strnum: ^1.0.4
+    strnum: ^1.0.5
   bin:
-    xml2js: cli.js
-  checksum: 73b9c907a424cc2f9b11a8a2f1b7448d936f1db6fa574b85cbe4be9739c2f77d99a827bb27d738a0db0047b20c71a5d663f64937fbdb9c38977fc6cd145221d2
+    fxparser: src/cli/cli.js
+  checksum: bee9de958a6b5092342565c0bb5f770ab8e0aa63bc1dc903fdd83c2a549ed715136f98749126af75e5ef1705a0a929945f023abcec2f7c38def13f2bf4879c48
   languageName: node
   linkType: hard
 
@@ -4332,31 +4324,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:12.1.2":
-  version: 12.1.2
-  resolution: "lint-staged@npm:12.1.2"
+"lint-staged@npm:12.1.3":
+  version: 12.1.3
+  resolution: "lint-staged@npm:12.1.3"
   dependencies:
     cli-truncate: ^3.1.0
     colorette: ^2.0.16
     commander: ^8.3.0
-    debug: ^4.3.2
-    enquirer: ^2.3.6
+    debug: ^4.3.3
     execa: ^5.1.1
     lilconfig: 2.0.4
-    listr2: ^3.13.3
+    listr2: ^3.13.5
     micromatch: ^4.0.4
     normalize-path: ^3.0.0
-    object-inspect: ^1.11.0
+    object-inspect: ^1.11.1
     string-argv: ^0.3.1
-    supports-color: ^9.0.2
+    supports-color: ^9.2.1
     yaml: ^1.10.2
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: ec84ce4f74d0d8fe314bd0b62fb5e0be64af692d1876f68c457116faef61b4b3b79d72df7819c248bfbb20c46e88fbe994128e7351e84bec7048263e00199925
+  checksum: f42fea248f690478ddd3d15ed9dd2302c0744da6af3032d1afe6e9f3c5ff99a7f4af85bf73425d027ff3c53b8c2a4a8f2227ab3e2e1367af786d301debea4bce
   languageName: node
   linkType: hard
 
-"listr2@npm:^3.13.3":
+"listr2@npm:^3.13.5":
   version: 3.13.5
   resolution: "listr2@npm:3.13.5"
   dependencies:
@@ -4522,10 +4513,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"luxon@npm:2.1.1":
-  version: 2.1.1
-  resolution: "luxon@npm:2.1.1"
-  checksum: 6d562796c4df195988f2afdca733e5a36457d6449c196cbf16710c706fde8d6b96c7d47fa54cd37c0cb29e4d2e7d8628a9677f36e23490139a8c90232f489e02
+"luxon@npm:2.2.0":
+  version: 2.2.0
+  resolution: "luxon@npm:2.2.0"
+  checksum: 69c715529b6aaa1f96fad8edfe2681004a1f314191ac243804a90c023fc533b5e3f0b9d34d5c86555d2a41297ddbee96a67a7cbb185f20243e66b7c6d4b809ac
   languageName: node
   linkType: hard
 
@@ -5227,12 +5218,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mime@npm:^2.5.2":
-  version: 2.6.0
-  resolution: "mime@npm:2.6.0"
+"mime@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "mime@npm:3.0.0"
   bin:
     mime: cli.js
-  checksum: 1497ba7b9f6960694268a557eae24b743fd2923da46ec392b042469f4b901721ba0adcf8b0d3c2677839d0e243b209d76e5edcbd09cfdeffa2dfb6bb4df4b862
+  checksum: f43f9b7bfa64534e6b05bd6062961681aeb406a5b53673b53b683f27fcc4e739989941836a355eef831f4478923651ecc739f4a5f6e20a76487b432bfd4db928
   languageName: node
   linkType: hard
 
@@ -5588,6 +5579,13 @@ __metadata:
   version: 1.11.0
   resolution: "object-inspect@npm:1.11.0"
   checksum: 8c64f89ce3a7b96b6925879ad5f6af71d498abc217e136660efecd97452991216f375a7eb47cb1cb50643df939bf0c7cc391567b7abc6a924d04679705e58e27
+  languageName: node
+  linkType: hard
+
+"object-inspect@npm:^1.11.1":
+  version: 1.12.0
+  resolution: "object-inspect@npm:1.12.0"
+  checksum: 2b36d4001a9c921c6b342e2965734519c9c58c355822243c3207fbf0aac271f8d44d30d2d570d450b2cc6f0f00b72bcdba515c37827d2560e5f22b1899a31cf4
   languageName: node
   linkType: hard
 
@@ -5954,6 +5952,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"postcss-selector-parser@npm:^6.0.7":
+  version: 6.0.7
+  resolution: "postcss-selector-parser@npm:6.0.7"
+  dependencies:
+    cssesc: ^3.0.0
+    util-deprecate: ^1.0.2
+  checksum: 661808ad629e3f289e0d237fbe9bb13766dadd2d548ec09ae86f68118f5d98be0f25bbaf5cd88486c5416e2eefaa9f73c59c2fc98dc370872fa51b250c7d1d9c
+  languageName: node
+  linkType: hard
+
 "postcss-value-parser@npm:^4.1.0, postcss-value-parser@npm:^4.2.0":
   version: 4.2.0
   resolution: "postcss-value-parser@npm:4.2.0"
@@ -5961,7 +5969,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.4.4, postcss@npm:^8.1.10, postcss@npm:^8.1.6, postcss@npm:^8.3.8":
+"postcss@npm:8.4.5":
+  version: 8.4.5
+  resolution: "postcss@npm:8.4.5"
+  dependencies:
+    nanoid: ^3.1.30
+    picocolors: ^1.0.0
+    source-map-js: ^1.0.1
+  checksum: b78abdd89c10f7b48f4bdcd376104a19d6e9c7495ab521729bdb3df315af6c211360e9f06887ad3bc0ab0f61a04b91d68ea11462997c79cced58b9ccd66fac07
+  languageName: node
+  linkType: hard
+
+"postcss@npm:^8.1.10, postcss@npm:^8.1.6, postcss@npm:^8.3.8":
   version: 8.4.4
   resolution: "postcss@npm:8.4.4"
   dependencies:
@@ -6540,7 +6559,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:1.44.0, sass@npm:^1.43.4":
+"sass@npm:1.45.1":
+  version: 1.45.1
+  resolution: "sass@npm:1.45.1"
+  dependencies:
+    chokidar: ">=3.0.0 <4.0.0"
+    immutable: ^4.0.0
+    source-map-js: ">=0.6.2 <2.0.0"
+  bin:
+    sass: sass.js
+  checksum: 5c310b9d6260a304520678442f5814bd54c8068b659f54ae51ccb9156168811abf4e48eae4f857a5feb2958c4c07eacd5812e28018749ab25fdb40200c5bdd65
+  languageName: node
+  linkType: hard
+
+"sass@npm:^1.43.4":
   version: 1.44.0
   resolution: "sass@npm:1.44.0"
   dependencies:
@@ -6776,7 +6808,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map-js@npm:^1.0.1":
+"source-map-js@npm:>=0.6.2 <2.0.0, source-map-js@npm:^1.0.1":
   version: 1.0.1
   resolution: "source-map-js@npm:1.0.1"
   checksum: 22606113d62bbd468712b0cb0c46e9a8629de7eb081049c62a04d977a211abafd7d61455617f8b78daba0b6c0c7e7c88f8c6b5aaeacffac0a6676ecf5caac5ce
@@ -7064,10 +7096,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"strnum@npm:^1.0.4":
-  version: 1.0.4
-  resolution: "strnum@npm:1.0.4"
-  checksum: 91432c37fef1c4df4eb32e5ff9ae7962a4627f81001fee3f86c3f279226a54157b2a14d074d85265c6c36e5e93bdb45f4339e46bdba0f1325c5c27fae78007b1
+"strnum@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "strnum@npm:1.0.5"
+  checksum: 651b2031db5da1bf4a77fdd2f116a8ac8055157c5420f5569f64879133825915ad461513e7202a16d7fec63c54fd822410d0962f8ca12385c4334891b9ae6dd2
   languageName: node
   linkType: hard
 
@@ -7116,7 +7148,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"supports-color@npm:^9.0.2":
+"supports-color@npm:^9.2.1":
   version: 9.2.1
   resolution: "supports-color@npm:9.2.1"
   checksum: 8a2bfeb64c1512d21a1a998c1f64acdaa85cf1f6a101627286548f19785524b329d7b28d567a28fc2d708fc7aba32f4c82a9b224f76b30a337a39d3e53418ff7
@@ -7197,9 +7229,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:3.0.1":
-  version: 3.0.1
-  resolution: "tailwindcss@npm:3.0.1"
+"tailwindcss@npm:3.0.7":
+  version: 3.0.7
+  resolution: "tailwindcss@npm:3.0.7"
   dependencies:
     arg: ^5.0.1
     chalk: ^4.1.2
@@ -7217,7 +7249,7 @@ __metadata:
     postcss-js: ^3.0.3
     postcss-load-config: ^3.1.0
     postcss-nested: 5.0.6
-    postcss-selector-parser: ^6.0.6
+    postcss-selector-parser: ^6.0.7
     postcss-value-parser: ^4.2.0
     quick-lru: ^5.1.1
     resolve: ^1.20.0
@@ -7228,7 +7260,7 @@ __metadata:
   bin:
     tailwind: lib/cli.js
     tailwindcss: lib/cli.js
-  checksum: 43c71047589f69178d05ca082b18080e59a29443b0d036a703d99fb1c50b596f32ddb9cd519e3ddd32b95abe175f17f1f70f6e3c29d42326eece7b2c31a387d1
+  checksum: 0b33d7c6a0860fae22bce9efbbd990ac635e1fc1a616eaca9ca5e7d3ed78c6efed5ca10ebcc186289cf731ece0769329eef715ca2cb641134550780e6ae39b39
   languageName: node
   linkType: hard
 
@@ -7317,23 +7349,23 @@ __metadata:
   dependencies:
     "@tailwindcss/typography": 0.5.0
     "@types/lodash-es": ^4.17.5
-    "@types/luxon": ^2
+    "@types/luxon": ^2.0.8
     "@types/prettier": ^2.4.2
     "@types/sass": ^1.43.1
     "@types/tailwindcss": 2.2.4
-    astro: 0.21.11
+    astro: 0.21.13
     autoprefixer: 10.4.0
     husky: 7.0.4
-    lint-staged: 12.1.2
+    lint-staged: 12.1.3
     lodash-es: 4.17.21
-    luxon: 2.1.1
-    postcss: 8.4.4
+    luxon: 2.2.0
+    postcss: 8.4.5
     prettier: 2.5.1
     prettier-plugin-astro: 0.0.11
     prism-themes: 1.9.0
-    sass: 1.44.0
+    sass: 1.45.1
     standard-version: 9.3.2
-    tailwindcss: 3.0.1
+    tailwindcss: 3.0.7
   languageName: unknown
   linkType: soft
 
@@ -8039,10 +8071,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yargs-parser@npm:^20.2.2, yargs-parser@npm:^20.2.3, yargs-parser@npm:^20.2.9":
+"yargs-parser@npm:^20.2.2, yargs-parser@npm:^20.2.3":
   version: 20.2.9
   resolution: "yargs-parser@npm:20.2.9"
   checksum: 8bb69015f2b0ff9e17b2c8e6bfe224ab463dd00ca211eece72a4cd8a906224d2703fb8a326d36fdd0e68701e201b2a60ed7cf81ce0fd9b3799f9fe7745977ae3
+  languageName: node
+  linkType: hard
+
+"yargs-parser@npm:^21.0.0":
+  version: 21.0.0
+  resolution: "yargs-parser@npm:21.0.0"
+  checksum: 1e205fca1cb7a36a1585e2b94a64e641c12741b53627d338e12747f4dca3c3610cdd9bb235040621120548dd74c3ef03a8168d52a1eabfedccbe4a62462b6731
   languageName: node
   linkType: hard
 
