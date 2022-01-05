@@ -1,17 +1,18 @@
 ---
 import BaseHead from '../../components/BaseHead.astro'
 import BaseLayout from '../../layouts/BaseLayout.astro'
+import { List } from 'immutable'
 
 const permalink = Astro.request.canonicalURL.href
 
-const blogPosts = Astro.fetchContent('./*.md').map(({ title, url, isDraft }) => ({
-	title,
-	href: url,
-	isDraft,
-}))
-const publishablePosts = blogPosts.filter(post => !post.isDraft)
-
-console.log(blogPosts)
+const publishablePosts = List(Astro.fetchContent('./*.md'))
+	.map(({ title, url, isDraft }) => ({
+		title,
+		href: url,
+		isDraft,
+	}))
+	.filter(post => !post.isDraft)
+	.toJS()
 
 const headProps = {
 	title: "Roberto Tonino's Blog",
