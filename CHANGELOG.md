@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.10.0](https://github.com/BobToninho/tonino2/compare/v0.9.3...v0.10.0) (2022-01-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* added blog posts in homepage
+
+### Features
+
+* added blog posts in homepage ([f203550](https://github.com/BobToninho/tonino2/commit/f203550f07b111e412289cc24f1ec1951bdd17e7))
+* logic for handling draft posts ([9ecf37f](https://github.com/BobToninho/tonino2/commit/9ecf37f0eb63604fe08db356b6223b275141ef81))
+* modified date localizer snippet and removed useless wrapper el ([fd71b9f](https://github.com/BobToninho/tonino2/commit/fd71b9f86451636afb7400da651ab19b3462f92b))
+* new blog post ([3438f86](https://github.com/BobToninho/tonino2/commit/3438f868b7951718d15bc2b97e255914291e0ebb))
+* sorting blog posts in descending order ([9ef4453](https://github.com/BobToninho/tonino2/commit/9ef445343fb59730031871e9e338c6633fb0883a))
+
 ### [0.9.3](https://github.com/BobToninho/tonino2/compare/v0.9.2...v0.9.3) (2021-12-20)
 
 ### [0.9.2](https://github.com/BobToninho/tonino2/compare/v0.9.1...v0.9.2) (2021-12-20)
