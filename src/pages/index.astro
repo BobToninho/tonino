@@ -1,10 +1,33 @@
 ---
+import { List } from 'immutable'
+import { DateTime } from 'luxon'
 import BaseHead from '../components/BaseHead.astro'
 import BaseLayout from '../layouts/BaseLayout.astro'
 
+interface BlogPost {
+	isDraft: boolean
+	date: string
+}
+
+const publishablePosts = List(Astro.fetchContent<BlogPost>('./blog/*.md'))
+	.map(({ title, url, isDraft, date }) => ({
+		title,
+		href: url,
+		isDraft,
+		date: DateTime.fromISO(date).toISODate(),
+	}))
+	.filter(post => !post.isDraft)
+	.sort((postA, postB) => {
+		const dateA = new Date(postA.date)
+		const dateB = new Date(postB.date)
+
+		return dateB.getDate() - dateA.getDate()
+	})
+	.toJS()
+
 const headProps = {
-	title: "Roberto Tonino's internet corner",
-	description: "The homepage of Roberto Tonino's website, a courios learner and explorer of new technologies.",
+	title: "Roberto Tonino's corner",
+	description: "The homepage of Roberto Tonino's website.",
 	permalink: Astro.request.canonicalURL.href,
 }
 ---
@@ -15,11 +38,39 @@ const headProps = {
 	</head>
 	<body>
 		<BaseLayout>
-			<section class="container">
-				<h1 class="mb-4">Roberto Tonino</h1>
+			<section class="container px-2 sm:px-6">
+				<h1 class="mb-12">{headProps.title}</h1>
 
-				<a href="/blog/">Go to my blog</a>
+				<h2 class="mb-10">Blog posts 🗃️</h2>
+				<div class="space-y-8">
+					{publishablePosts.map(({ title, href, date }) => (
+						<a
+							href={href}
+							class="no-underline text-foreground block border-primary-600 border-2 border-solid rounded-lg p-4 hover:bg-white hover:bg-opacity-10 "
+						>
+							<h3>{title}</h3>
+							<time datetime={date} class="post-date capitalize text-xs text-opacity-75">
+								{date}
+							</time>
+						</a>
+					))}
+				</div>
 			</section>
 		</BaseLayout>
+
+		<script>
+			const $dateEls = document.querySelectorAll('time')
+
+			$dateEls.forEach($dateEl => {
+				const date = $dateEl.getAttribute('datetime')
+				const options = {
+					weekday: 'long',
+					year: 'numeric',
+					month: 'long',
+					day: 'numeric',
+				}
+				$dateEl.innerText = new Date(date).toLocaleString(window.navigator.language, options)
+			})
+		</script>
 	</body>
 </html>

@@ -1,13 +1,30 @@
 ---
 import BaseHead from '../../components/BaseHead.astro'
 import BaseLayout from '../../layouts/BaseLayout.astro'
+import { List } from 'immutable'
+
+interface BlogPost {
+	isDraft: boolean
+	date: string
+}
 
 const permalink = Astro.request.canonicalURL.href
 
-const blogPosts = Astro.fetchContent('./*.md').map(res => ({
-	title: res.title,
-	href: res.url,
-}))
+const publishablePosts = List(Astro.fetchContent<BlogPost>('./*.md'))
+	.map(({ title, url, isDraft, date }) => ({
+		title,
+		href: url,
+		isDraft,
+		date,
+	}))
+	.filter(post => !post.isDraft)
+	.sort((postA, postB) => {
+		const dateA = new Date(postA.date)
+		const dateB = new Date(postB.date)
+
+		return dateB.getDate() - dateA.getDate()
+	})
+	.toJS()
 
 const headProps = {
 	title: "Roberto Tonino's Blog",
@@ -30,7 +47,7 @@ const headProps = {
 				<h2>Blog posts</h2>
 
 				<ul>
-					{blogPosts.map(({ title, href }) => (
+					{publishablePosts.map(({ title, href }) => (
 						<li>
 							<a href={href}>{title}</a>
 						</li>
