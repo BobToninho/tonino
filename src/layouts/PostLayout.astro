@@ -42,15 +42,18 @@ const headProps = {
 				</article>
 
 				<script>
-					const $dateEl = document.querySelector('#date')
-					const date = $dateEl.getAttribute('datetime')
-					const options = {
-						weekday: 'long',
-						year: 'numeric',
-						month: 'long',
-						day: 'numeric',
-					}
-					$dateEl.innerText = new Date(date).toLocaleString(window.navigator.language, options)
+					const $dateEls = document.querySelectorAll('time')
+
+					$dateEls.forEach($dateEl => {
+						const date = $dateEl.getAttribute('datetime')
+						const options = {
+							weekday: 'long',
+							year: 'numeric',
+							month: 'long',
+							day: 'numeric',
+						}
+						$dateEl.innerText = new Date(date).toLocaleString(window.navigator.language, options)
+					})
 				</script>
 			</section>
 		</BaseLayout>

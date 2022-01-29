@@ -44,21 +44,22 @@ const headProps = {
 				<h2 class="mb-10">Blog posts 🗃️</h2>
 				<div class="space-y-8">
 					{publishablePosts.map(({ title, href, date }) => (
-						<article class="border-primary-600 border-2 border-solid rounded-lg p-4 hover:bg-white hover:bg-opacity-10 hover:cursor-pointer ">
-							<a href={href} class="no-underline text-foreground">
-								<h3>{title}</h3>
-								<time datetime={date} class="post-date capitalize text-xs text-opacity-75">
-									{date}
-								</time>
-							</a>
-						</article>
+						<a
+							href={href}
+							class="no-underline text-foreground block border-primary-600 border-2 border-solid rounded-lg p-4 hover:bg-white hover:bg-opacity-10 "
+						>
+							<h3>{title}</h3>
+							<time datetime={date} class="post-date capitalize text-xs text-opacity-75">
+								{date}
+							</time>
+						</a>
 					))}
 				</div>
 			</section>
 		</BaseLayout>
 
 		<script>
-			const $dateEls = document.querySelectorAll('.post-date')
+			const $dateEls = document.querySelectorAll('time')
 
 			$dateEls.forEach($dateEl => {
 				const date = $dateEl.getAttribute('datetime')
