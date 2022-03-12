@@ -717,12 +717,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/lodash-es@npm:^4.17.5":
-  version: 4.17.5
-  resolution: "@types/lodash-es@npm:4.17.5"
+"@types/lodash-es@npm:^4.17.6":
+  version: 4.17.6
+  resolution: "@types/lodash-es@npm:4.17.6"
   dependencies:
     "@types/lodash": "*"
-  checksum: 8910f646310aa008bb45071619fe85abf917bbc2c7cc0af883a971de261723247695a58dd966bfa9defd946cef79811d8b075eb6f0af12343080ab0ae6614e12
+  checksum: 9bd239dd525086e278821949ce12fbdd4f100a060fed9323fc7ad5661113e1641f28a7ebab617230ed3474680d8f4de705c1928b48252bb684be6ec9eed715db
   languageName: node
   linkType: hard
 
@@ -733,10 +733,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/luxon@npm:^2.0.9":
-  version: 2.0.9
-  resolution: "@types/luxon@npm:2.0.9"
-  checksum: 6c99741e1735aca5b784981ecec3a6ad9497b8e46cc3dd0ba625901bb5b34af4c7b1bf33e32b3e8468312ce2850b31f553f712283a8301a0ee1aacb633276738
+"@types/luxon@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "@types/luxon@npm:2.3.0"
+  checksum: 163cadf3f2b6e0e6e73c5803916229a0ce1c08197caf77b7315c71df7c1ed24d213db4bcb7e04d58b9e081099eab5eedc7f3666131bf284f65b40187f3302892
   languageName: node
   linkType: hard
 
@@ -814,10 +814,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/prettier@npm:^2.4.3":
-  version: 2.4.3
-  resolution: "@types/prettier@npm:2.4.3"
-  checksum: b240434daabac54700c862b0bb52a83fec396e0e9c847447119ba41fd8404d79aadfa174e6306fb094b29efadac586344b7606c3a71c286b71755ab2579d54df
+"@types/prettier@npm:^2.4.4":
+  version: 2.4.4
+  resolution: "@types/prettier@npm:2.4.4"
+  checksum: 2c2cc57efd49c7d8907415a72f96c84a6dd8696dd3bf8aa4ca3a667427bebf71cbfbc912673624bdfc935d272d1c008c639cf155f6449315990a4dc110f0d216
   languageName: node
   linkType: hard
 
@@ -844,10 +844,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/tailwindcss@npm:3.0.4":
-  version: 3.0.4
-  resolution: "@types/tailwindcss@npm:3.0.4"
-  checksum: 66c9a4da47aedaecab775ee1e7915e9413cf79047c2939e9b0c790e5000ecfd59dbf0ebf7c36f0ef24ab61d344b74e91b919d5edecb66dbbeded5e9272fe5702
+"@types/tailwindcss@npm:3.0.9":
+  version: 3.0.9
+  resolution: "@types/tailwindcss@npm:3.0.9"
+  checksum: c991b2156d484276316d28d4e621d55ac2b43d2291939a6809d5c1ee71ed632331f08f0ac4ded8ea87f4038e38e28945ea63746d739ceb662e42face4e65e3a8
   languageName: node
   linkType: hard
 
@@ -7157,11 +7157,11 @@ __metadata:
   resolution: "tonino@workspace:."
   dependencies:
     "@tailwindcss/typography": 0.5.2
-    "@types/lodash-es": ^4.17.5
-    "@types/luxon": ^2.0.9
-    "@types/prettier": ^2.4.3
+    "@types/lodash-es": ^4.17.6
+    "@types/luxon": ^2.3.0
+    "@types/prettier": ^2.4.4
     "@types/sass": ^1.43.1
-    "@types/tailwindcss": 3.0.4
+    "@types/tailwindcss": 3.0.9
     astro: 0.24.0
     autoprefixer: 10.4.2
     husky: 7.0.4
