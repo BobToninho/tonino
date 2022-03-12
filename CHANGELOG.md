@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/BobToninho/tonino2/compare/v1.0.0...v1.0.1) (2022-03-12)
+
+
+### Bug Fixes
+
+* blog posts not being centered ([cbc42d2](https://github.com/BobToninho/tonino2/commit/cbc42d2eaff9925708cef69327597fa180e3a096))
+* strings resulting in escaped HTML ([020f75c](https://github.com/BobToninho/tonino2/commit/020f75c7a9aecb57cfbae7e15fc5e0e7870607ee))
+* temporarily removed version global variable because it broke builds ([6ded2da](https://github.com/BobToninho/tonino2/commit/6ded2da9bd9c8493500fa8f81127a6cf21950167))
+
 ## [1.0.0](https://github.com/BobToninho/tonino2/compare/v0.10.0...v1.0.0) (2022-01-29)
 
 ## [0.10.0](https://github.com/BobToninho/tonino2/compare/v0.9.3...v0.10.0) (2022-01-29)
