@@ -8,6 +8,16 @@ const { title, description, permalink } = Astro.props
 const socialUrl = Astro.site.href + 'assets/social.png'
 ---
 
+<style global lang="scss">
+	@import '../styles/fonts.scss';
+</style><style global lang="scss">
+	@import '../styles/reset.scss';
+</style><style global lang="scss">
+	@import '../styles/design.scss';
+</style><style global lang="scss">
+	@import '../styles/globals.scss';
+</style>
+
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <!-- TODO: Elaborate -->
@@ -42,11 +52,10 @@ const socialUrl = Astro.site.href + 'assets/social.png'
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={socialUrl} /> -->
 
-<link rel="stylesheet" type="text/css" href={Astro.resolve('../styles/fonts.scss')} />
+<!-- <link rel="stylesheet" type="text/css" href={Astro.resolve('../styles/fonts.scss')} />
 <link rel="stylesheet" type="text/css" href={Astro.resolve('../styles/reset.scss')} />
 <link rel="stylesheet" type="text/css" href={Astro.resolve('../styles/design.scss')} />
-<link rel="stylesheet" type="text/css" href={Astro.resolve('../styles/globals.scss')} />
-
+<link rel="stylesheet" type="text/css" href={Astro.resolve('../styles/globals.scss')} /> -->
 <!-- <script>
   const root = document.documentElement;
   const theme = localStorage.getItem('theme');
