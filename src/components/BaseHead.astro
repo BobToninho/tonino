@@ -36,7 +36,7 @@ const socialUrl = Astro.site.href + 'assets/social.png'
 <!-- TODO: Elaborate -->
 <!-- <meta name="theme-color" content="#454e56"> -->
 
-<title>{title}</title>
+<title set:html={title}></title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
 
