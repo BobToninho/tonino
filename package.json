@@ -12,13 +12,14 @@
 		"postinstall": "husky install"
 	},
 	"devDependencies": {
+		"@astrojs/sitemap": "0.1.0",
 		"@tailwindcss/typography": "0.5.2",
 		"@types/lodash-es": "^4.17.6",
 		"@types/luxon": "^2.3.1",
 		"@types/prettier": "^2.6.0",
 		"@types/sass": "^1.43.1",
 		"@types/tailwindcss": "3.0.10",
-		"astro": "0.24.0",
+		"astro": "1.0.0-beta.5",
 		"autoprefixer": "10.4.4",
 		"husky": "7.0.4",
 		"immutable": "4.0.0",
