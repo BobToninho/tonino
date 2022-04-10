@@ -1,14 +1,9 @@
 ---
+import { BlogPost } from '../types'
 import { List } from 'immutable'
 import { DateTime } from 'luxon'
 import BaseHead from '../components/BaseHead.astro'
 import BaseLayout from '../layouts/BaseLayout.astro'
-
-interface BlogPost {
-	isDraft: boolean
-	date: string
-	title: string
-}
 
 const mds = await Astro.glob<BlogPost>('./blog/*.md')
 const publishablePosts = List(mds)

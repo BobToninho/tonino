@@ -1,13 +1,8 @@
 ---
+import { BlogPost } from '../../types'
 import BaseHead from '../../components/BaseHead.astro'
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import { List } from 'immutable'
-
-interface BlogPost {
-	isDraft: boolean
-	date: string
-	title: string
-}
 
 const permalink = Astro.canonicalURL.href
 
@@ -17,7 +12,6 @@ const publishablePosts = List(mds)
 		title: post.frontmatter.title,
 		href: post.url,
 		isDraft: post.frontmatter.isDraft,
-		// date: DateTime.fromISO(post.frontmatter.date).toISODate(),
 		date: post.frontmatter.date,
 	}))
 	.filter(post => !post.isDraft)
