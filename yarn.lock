@@ -1092,6 +1092,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"astro-seo@npm:0.5.0":
+  version: 0.5.0
+  resolution: "astro-seo@npm:0.5.0"
+  checksum: ab9f6b1534bbf36db73df7e9eb64df630b190ddad46cdc63b231c8a98fc7058acb0a3d889aced174ac946acf86d47a047ceba5cec0cd64d16109d74bb96c5df6
+  languageName: node
+  linkType: hard
+
 "astro@npm:1.0.0-beta.5":
   version: 1.0.0-beta.5
   resolution: "astro@npm:1.0.0-beta.5"
@@ -7502,6 +7509,7 @@ __metadata:
     "@types/sass": ^1.43.1
     "@types/tailwindcss": 3.0.10
     astro: 1.0.0-beta.5
+    astro-seo: 0.5.0
     autoprefixer: 10.4.4
     husky: 7.0.4
     immutable: 4.0.0
