@@ -112,6 +112,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@astrojs/tailwind@npm:0.1.0":
+  version: 0.1.0
+  resolution: "@astrojs/tailwind@npm:0.1.0"
+  dependencies:
+    "@proload/core": ^0.2.2
+    autoprefixer: ^10.4.4
+    postcss: ^8.4.12
+    tailwindcss: ^3.0.23
+  checksum: 6ceb08f70cc697a93802151fa8e15c4d56033d62a3a621ca48c79f471f8e6a7e43585160952608f5491e6298998f3f39a274cbc4e6f2272ef35a47500c9d8c69
+  languageName: node
+  linkType: hard
+
 "@astrojs/webapi@npm:^0.11.0":
   version: 0.11.0
   resolution: "@astrojs/webapi@npm:0.11.0"
@@ -1150,7 +1162,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"autoprefixer@npm:10.4.4":
+"autoprefixer@npm:10.4.4, autoprefixer@npm:^10.4.4":
   version: 10.4.4
   resolution: "autoprefixer@npm:10.4.4"
   dependencies:
@@ -7379,7 +7391,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:3.0.23":
+"tailwindcss@npm:3.0.23, tailwindcss@npm:^3.0.23":
   version: 3.0.23
   resolution: "tailwindcss@npm:3.0.23"
   dependencies:
@@ -7482,6 +7494,7 @@ __metadata:
   resolution: "tonino@workspace:."
   dependencies:
     "@astrojs/sitemap": 0.1.0
+    "@astrojs/tailwind": 0.1.0
     "@tailwindcss/typography": 0.5.2
     "@types/lodash-es": ^4.17.6
     "@types/luxon": ^2.3.1
