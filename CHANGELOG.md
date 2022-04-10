@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/BobToninho/tonino2/compare/v1.0.1...v1.1.0) (2022-04-10)
+
+
+### Features
+
+* added astro seo ([b81a8e6](https://github.com/BobToninho/tonino2/commit/b81a8e6a67e62934c94dcbd0b81dcefcd9f9fe99))
+* added tailwind integration and restored old syntax highlighting ([eda3d20](https://github.com/BobToninho/tonino2/commit/eda3d20b377e765b24c3d2f7b379c3e33d543b16))
+* importing css in frontmatter ([60fa7cf](https://github.com/BobToninho/tonino2/commit/60fa7cf3a71d9a11a7d7938499d91a47122d6d26))
+* migrating to astro 1.0.0 beta ([f465b3d](https://github.com/BobToninho/tonino2/commit/f465b3d399207cf0897d50c7d13b23eff86626ef))
+* restored site version in footer ([118ebcb](https://github.com/BobToninho/tonino2/commit/118ebcb0259e715c3e681345e779291b495d533b))
+
+
+### Bug Fixes
+
+* fonts not found due to wrong url ([e087c6b](https://github.com/BobToninho/tonino2/commit/e087c6bcd240ee21b12c31e2131048fc11ccabea))
+* wrong links in preload fonts ([99f5dbb](https://github.com/BobToninho/tonino2/commit/99f5dbbe0dce7beb4f22be824ff5f77e59db82e6))
+
 ### [1.0.1](https://github.com/BobToninho/tonino2/compare/v1.0.0...v1.0.1) (2022-03-12)
 
 
