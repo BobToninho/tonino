@@ -1,20 +1,17 @@
 ---
+import { BlogPost } from '../types'
 import { List } from 'immutable'
 import { DateTime } from 'luxon'
 import BaseHead from '../components/BaseHead.astro'
 import BaseLayout from '../layouts/BaseLayout.astro'
 
-interface BlogPost {
-	isDraft: boolean
-	date: string
-}
-
-const publishablePosts = List(Astro.fetchContent<BlogPost>('./blog/*.md'))
-	.map(({ title, url, isDraft, date }) => ({
-		title,
-		href: url,
-		isDraft,
-		date: DateTime.fromISO(date).toISODate(),
+const mds = await Astro.glob<BlogPost>('./blog/*.md')
+const publishablePosts = List(mds)
+	.map(post => ({
+		title: post.frontmatter.title,
+		href: post.url,
+		isDraft: post.frontmatter.isDraft,
+		date: DateTime.fromISO(post.frontmatter.date).toISODate(),
 	}))
 	.filter(post => !post.isDraft)
 	.sort((postA, postB) => {
@@ -28,7 +25,7 @@ const publishablePosts = List(Astro.fetchContent<BlogPost>('./blog/*.md'))
 const headProps = {
 	title: "Roberto Tonino's corner",
 	description: "The homepage of Roberto Tonino's website.",
-	permalink: Astro.request.canonicalURL.href,
+	permalink: Astro.canonicalURL.href,
 }
 ---
 

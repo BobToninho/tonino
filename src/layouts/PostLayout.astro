@@ -5,7 +5,7 @@ import BaseLayout from './BaseLayout.astro'
 import BaseHead from '../components/BaseHead.astro'
 
 const { title, description, date } = Astro.props.content
-const permalink = Astro.request.canonicalURL.href
+const permalink = Astro.canonicalURL.href
 
 const isoDate = DateTime.fromISO(date).toISODate()
 
@@ -20,8 +20,8 @@ const headProps = {
 	<head>
 		<BaseHead {...headProps} />
 
-		<link rel="preload" href="/fonts/heebo-v12-latin-700.woff2" as="font" type="font/woff2" crossorigin />
-		<link rel="preload" href="/fonts/heebo-v12-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="preload" href="/assets/fonts/heebo-v12-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="preload" href="/assets/fonts/heebo-v12-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
 	</head>
 	<body>
 		<BaseLayout>
