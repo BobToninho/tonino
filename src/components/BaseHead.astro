@@ -1,22 +1,17 @@
 ---
+import '../styles/fonts.scss'
+import '../styles/reset.scss'
+import '../styles/design.scss'
+import '../styles/globals.scss'
+
 export interface Props {
 	title: string
 	description: string
 	permalink: string
 }
 const { title, description, permalink } = Astro.props
-const socialUrl = Astro.site.href + 'assets/social.png'
+// const socialUrl = Astro.site.href + 'assets/social.png'
 ---
-
-<style is:global lang="scss">
-	@import '../styles/fonts.scss';
-</style><style is:global lang="scss">
-	@import '../styles/reset.scss';
-</style><style is:global lang="scss">
-	@import '../styles/design.scss';
-</style><style is:global lang="scss">
-	@import '../styles/globals.scss';
-</style>
 
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
