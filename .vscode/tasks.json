@@ -6,7 +6,7 @@
 		{
 			"label": "format",
 			"type": "shell",
-			"command": "yarn format",
+			"command": "yarn prettier -w ${file}",
 			"problemMatcher": []
 		},
 		{
@@ -14,6 +14,28 @@
 			"type": "shell",
 			"command": "yarn release",
 			"problemMatcher": []
+		},
+		{
+			"type": "npm",
+			"script": "dev",
+			"runOptions": {
+				"instanceLimit": 1,
+				"runOn": "folderOpen"
+			},
+			"problemMatcher": [],
+			"label": "npm: dev",
+			"detail": "astro dev"
+		},
+		{
+			"type": "npm",
+			"script": "build",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [],
+			"label": "npm: build",
+			"detail": "yarn format && astro build"
 		}
 	]
 }
