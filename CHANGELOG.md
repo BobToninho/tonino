@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/BobToninho/tonino/compare/v1.1.0...v1.2.0) (2022-04-23)
+
+
+### Features
+
+* CountryFlag component ([d03d9d1](https://github.com/BobToninho/tonino/commit/d03d9d11793e66231b8dc5ae7368a3838674ac9e))
+* Ukraine banner ([eeff5bc](https://github.com/BobToninho/tonino/commit/eeff5bc7290eeb67e34697a562845a07391c3bd2))
+
 ## [1.1.0](https://github.com/BobToninho/tonino2/compare/v1.0.1...v1.1.0) (2022-04-10)
 
 
