@@ -1,0 +1,13 @@
+---
+const { code, alt, class: className } = Astro.props
+---
+
+<img
+	class={className}
+	src={`https://flagcdn.com/16x12/${code}.png`}
+	srcset={`https://flagcdn.com/32x24/${code}.png 2x,
+    https://flagcdn.com/48x36/${code}.png 3x`}
+	width="16"
+	height="12"
+	{alt}
+/>
