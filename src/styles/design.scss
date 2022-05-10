@@ -2,7 +2,8 @@
 	/* Colors */
 	// --color-base: hsla(230, 50%, 50%, 1);
 	// --color-primary: hsla(170, 50%, 50%, 1);
-	--color-primary: hsl(343, 79%, 63%);
+	// --color-primary: hsl(343, 79%, 63%);
+	--color-primary: hsl(336deg 86% 75%);
 	// --color-accent: hsla(350, 50%, 50%, 1);
 
 	// --color-accent-secondary: hsla(50, 50%, 50%, 1);
@@ -10,7 +11,9 @@
 
 	/* Default theme */
 	--color-foreground: hsla(0, 0%, 90%, 1);
-	--color-background: hsla(230, 50%, 13%, 1);
+	// --color-background: hsla(230, 50%, 13%, 1);
+	--color-background: hsla(230, 45%, 18%, 1);
+	//--color-background: #322659;//try for violet
 }
 
 [data-theme='violet'] {
