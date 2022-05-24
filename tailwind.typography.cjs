@@ -1,7 +1,4 @@
-const colorTextBase = 'colors.gray.200'
-
 module.exports = theme => {
-	// const base = theme(colorTextBase)
 	const base = 'var(--foreground)'
 
 	return {

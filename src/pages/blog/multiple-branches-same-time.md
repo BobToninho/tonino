@@ -15,7 +15,7 @@ and git will create a new folder in the path `<filesystem-location>` and checkou
 
 For instance:
 
-```
+```bash
 git worktree add ../app-4.2.0 production-4.2.0
 ```
 
