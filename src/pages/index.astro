@@ -18,7 +18,7 @@ const publishablePosts = List(mds)
 		const dateA = new Date(postA.date)
 		const dateB = new Date(postB.date)
 
-		return dateB.getDate() - dateA.getDate()
+		return dateB.valueOf() - dateA.valueOf()
 	})
 	.toJS()
 
