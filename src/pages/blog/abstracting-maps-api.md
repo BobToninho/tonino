@@ -1,7 +1,7 @@
 ---
 title: Abstracting a maps client like Mapbox or Google Maps
 date: 2021-12-21
-isDraft: true
+draft: true
 description: Using abstractions to help maintain huge APIs like the maps' ones.
 categories:
   - maps

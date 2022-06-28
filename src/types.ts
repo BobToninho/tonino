@@ -1,5 +1,5 @@
 export interface BlogPost {
-	isDraft: boolean
+	draft: boolean
 	date: string
 	title: string
 }

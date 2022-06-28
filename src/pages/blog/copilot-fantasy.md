@@ -1,7 +1,7 @@
 ---
 title: GitHub Copilot is a creative guy
 date: 2022-04-22
-isDraft: true
+draft: true
 description: Making Copilot do weird stuff
 layout: ../../layouts/PostLayout.astro
 ---

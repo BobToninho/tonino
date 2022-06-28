@@ -10,10 +10,10 @@ const publishablePosts = List(mds)
 	.map(post => ({
 		title: post.frontmatter.title,
 		href: post.url,
-		isDraft: post.frontmatter.isDraft,
+		draft: post.frontmatter.draft,
 		date: DateTime.fromISO(post.frontmatter.date).toISODate(),
 	}))
-	.filter(post => !post.isDraft)
+	.filter(post => !post.draft)
 	.sort((postA, postB) => {
 		const dateA = new Date(postA.date)
 		const dateB = new Date(postB.date)
