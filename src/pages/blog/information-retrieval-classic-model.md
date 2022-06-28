@@ -1,0 +1,28 @@
+---
+title: 'Information Retrieval: Classic model'
+date: 2022-06-28
+description: Describing and arguing the classic Information Retrieval model
+layout: ../../layouts/PostLayout.astro
+setup: |
+  import InformationRetrievalPreface from '../../components/InformationRetrievalPreface.astro'
+---
+
+<InformationRetrievalPreface />
+
+![Classic information retrieval model](/assets/images/classic-ir-model.png)
+
+## What this means
+
+There is an initial set of **documents** which are then **indexed**, forming a set of **indexed documents**.
+
+There is an user having an **information need**. This information need is **expressed** by a **query** inserted into the <abbr title="Information Retrieval">IR</abbr> system.
+
+Once the query is inserted, the system matches it with the indexed documents and produces a **set of retrieved documents**.
+If the set of documents doesn't satisfy the information need, the user reformulates the query and repeats the process.
+
+## Main problem
+
+The information need is **not static**! It changes with every loop of the model because the user benefits of the results to improve it or completely change it, in the situation the initial one was not actually the real information need. This makes the classic model quite trivial and mainly wrong.
+
+Martia Bates created a term that fits this situation, _berry picking_: berries do not come all together – they
+are scattered in bushes and need to be picked up one at a time
