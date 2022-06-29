@@ -1,6 +1,9 @@
 # build output
 dist
 
+# vim
+Session.vim
+
 # dependencies
 node_modules/
 .snowpack/

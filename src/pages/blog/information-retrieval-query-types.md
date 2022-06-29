@@ -1,0 +1,56 @@
+---
+title: 'Information Retrieval: Query types'
+date: 2022-06-29
+description: Listing and briefly describing the 3 query types of an Information Retrieval System
+layout: ../../layouts/PostLayout.astro
+setup: |
+  import InformationRetrievalPreface from '../../components/InformationRetrievalPreface.astro'
+---
+
+<InformationRetrievalPreface />
+
+There are 3 types of queries that an <abbr title="Information Retrieval System">IRS</abbr> can receive:
+
+1. Keyword based
+2. Pattern matching
+3. Structural
+
+## Keyword based
+
+Can be divided in:
+
+- **Single words** — return documents that contain at least one of the words
+- **Contextual** — find words next to each other
+- **Boolean** — uses boolean operators
+  - Usually it is relaxed by means of fuzzy boolean logic
+- **Natural language** — harder for the system, easier for the user.
+  - Example: Conversational search of Siri, Alexa
+
+## Pattern matching
+
+Can be divided in:
+
+- **Words**
+- **Prefix** — big part of the meaning is in the radix of the words, not at the end
+- **Suffix** — can lead to opposite results (example: "relevant", "irrelevant")
+- **Substring**
+- **Range** — very useful for dates and numbers. For text is not
+- **RegExp** — useful only for technical users (computer scientists...)
+- **Extended pattern** — simplified RegExps
+
+In pattern matching it is good practice to allow errors, both in queries and in documents. [Levenshtein distance](https://en.wikipedia.org/wiki/Levenshtein_distance) can be used.
+
+## Structural
+
+Based on the structure of the text. Since the web was invented they became more important. Can be divided in:
+
+- **Fixed** — email (sender, recipient, subject)
+- **Hierarchical** — book (chapter, section, subsection)
+- **Hypertextual** — non linear, linked documents contained in a graph
+
+## More query types
+
+- Query By Example
+- Spoken query
+- Long queries
+- Different UIs than search box only
