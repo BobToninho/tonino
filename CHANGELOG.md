@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/BobToninho/tonino/compare/v1.3.0...v1.4.0) (2022-06-29)
+
+
+### Features
+
+* abbr cursor if it has a title ([af360fd](https://github.com/BobToninho/tonino/commit/af360fd92d43cfb93f9c0ca45c84bbb408e0cc71))
+* first information retrieval post ([3744b19](https://github.com/BobToninho/tonino/commit/3744b19f57788f09f695897f925d86657203eb14))
+* using builtin Astro draft system ([6646d18](https://github.com/BobToninho/tonino/commit/6646d186bcef4bdf027ca309affc98a7b15b70f7))
+
+
+### Bug Fixes
+
+* blog post sorting ([174e4fb](https://github.com/BobToninho/tonino/commit/174e4fb1415d8b7380452350ffdc1e96a16be1c3))
+
+## [1.3.0](https://github.com/BobToninho/tonino/compare/v1.2.0...v1.3.0) (2022-05-24)
+
+
+### Features
+
+* text logo ([ed3c29b](https://github.com/BobToninho/tonino/commit/ed3c29b0d3ec47044dc121ab262619177ca99a97))
+
 ## [1.2.0](https://github.com/BobToninho/tonino/compare/v1.1.0...v1.2.0) (2022-04-23)
 
 
