@@ -1,6 +1,6 @@
 {
 	"name": "tonino",
-	"version": "1.2.0",
+	"version": "1.4.0",
 	"private": true,
 	"scripts": {
 		"dev": "astro dev",
@@ -36,6 +36,9 @@
 	},
 	"dependencies": {
 		"prism-themes": "1.9.0"
+	},
+	"resolutions": {
+		"minimist": "1.2.6"
 	},
 	"lint-staged": {
 		"*.{js,cjs,mjs,css,scss,md,astro}": "prettier --write"
