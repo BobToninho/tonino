@@ -11,8 +11,6 @@ setup: |
 <InformationRetrievalPreface />
 <InformationRetrievalPrefaceGlossary />
 
-modello booleano -> vector space -> necessità di calcolare pesi -> tf-idf
-
 ## Boolean model
 
 Uses boolean operators to perform queries. The terms therefore can either be present in the document or not, dividing `N` in 2 parts.
