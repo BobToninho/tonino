@@ -5,9 +5,11 @@ description: Introduction and explanation of the Term Frequency - Inverse Docume
 layout: ../../layouts/PostLayout.astro
 setup: |
   import InformationRetrievalPreface from '../../components/InformationRetrievalPreface.astro'
+  import InformationRetrievalPrefaceGlossary from '../../components/InformationRetrievalPrefaceGlossary.astro'
 ---
 
 <InformationRetrievalPreface />
+<InformationRetrievalPrefaceGlossary />
 
 modello booleano -> vector space -> necessità di calcolare pesi -> tf-idf
 
