@@ -14,6 +14,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@astrojs/compiler@npm:^0.15.2":
+  version: 0.15.2
+  resolution: "@astrojs/compiler@npm:0.15.2"
+  dependencies:
+    tsm: ^2.2.1
+    uvu: ^0.5.3
+  checksum: 696038fb74012cc24986a7cc6a58c9a2c7bd2bbb35b860971a75153e5a506953a82aabe5b167265cb61cd89ff4d6bb1043759e6d6c33a3de162b0347b62e0814
+  languageName: node
+  linkType: hard
+
 "@astrojs/compiler@npm:^0.17.0":
   version: 0.17.0
   resolution: "@astrojs/compiler@npm:0.17.0"
@@ -92,17 +102,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/parser@npm:^0.22.0":
-  version: 0.22.0
-  resolution: "@astrojs/parser@npm:0.22.0"
-  dependencies:
-    acorn: ^8.6.0
-    locate-character: ^2.0.5
-    magic-string: ^0.25.3
-  checksum: 5636a06c9b0932a0e79a688aca28dab9006fc65b2c64e9679cd533c704741fed45b351a374b750c25117d0597d50be58620c1b475bee48699b333634a73b1acf
-  languageName: node
-  linkType: hard
-
 "@astrojs/prism@npm:0.4.1, @astrojs/prism@npm:^0.4.1":
   version: 0.4.1
   resolution: "@astrojs/prism@npm:0.4.1"
@@ -110,13 +109,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/sitemap@npm:0.2.2":
-  version: 0.2.2
-  resolution: "@astrojs/sitemap@npm:0.2.2"
+"@astrojs/sitemap@npm:0.2.6":
+  version: 0.2.6
+  resolution: "@astrojs/sitemap@npm:0.2.6"
   dependencies:
     sitemap: ^7.1.1
     zod: ^3.17.3
-  checksum: 6cb30b11278b58832f359968beef3083ae40230b7234320da94debf6d1f4103ff2d387c977f3b955e87ac5a50f0c79ee772350abdcb36e1e7972b0de92a630d4
+  checksum: 6ebc799af13d87ec51957d92c2d05320914d933abc82eaad9422411eaf618c57eb6315c2e2d0ed9c050383c555d47681231fd291273e4253021c1b6ae1b2c04d
   languageName: node
   linkType: hard
 
@@ -130,15 +129,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/tailwind@npm:0.2.1":
-  version: 0.2.1
-  resolution: "@astrojs/tailwind@npm:0.2.1"
+"@astrojs/tailwind@npm:0.2.4":
+  version: 0.2.4
+  resolution: "@astrojs/tailwind@npm:0.2.4"
   dependencies:
-    "@proload/core": ^0.3.1
-    autoprefixer: ^10.4.4
-    postcss: ^8.4.12
+    "@proload/core": ^0.3.2
+    autoprefixer: ^10.4.7
+    postcss: ^8.4.14
     tailwindcss: ^3.0.24
-  checksum: 0051e3435745f8999772c0bee9ae858307b91edb190a74d730855a4cdcf12875821227f60748e71e69c6e9778ab2ed1fa17eb21f1d8d7de4bda71970ae45d044
+  checksum: 44a7cff7f3c8764ab11758e3597b85617ee7c12f0677922f702b1ae29ef75064e4f8fc93c832be9f39d68d8c51a746908daf6fd003af0193b0c4360f8e8e5955
   languageName: node
   linkType: hard
 
@@ -685,6 +684,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@pkgr/utils@npm:^2.2.0":
+  version: 2.3.0
+  resolution: "@pkgr/utils@npm:2.3.0"
+  dependencies:
+    cross-spawn: ^7.0.3
+    is-glob: ^4.0.3
+    open: ^8.4.0
+    picocolors: ^1.0.0
+    tiny-glob: ^0.2.9
+    tslib: ^2.4.0
+  checksum: d2fe95c51d548497425182b284dea8155d9e80bb36fa744c670174d7deae53743b13aa9f63a8bfaa8b31dcf7c53dc279a99372f2c2c35ff9fcebf91c5c5c8190
+  languageName: node
+  linkType: hard
+
 "@polka/url@npm:^1.0.0-next.20":
   version: 1.0.0-next.21
   resolution: "@polka/url@npm:1.0.0-next.21"
@@ -692,7 +705,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@proload/core@npm:^0.3.1, @proload/core@npm:^0.3.2":
+"@proload/core@npm:^0.3.2":
   version: 0.3.2
   resolution: "@proload/core@npm:0.3.2"
   dependencies:
@@ -989,15 +1002,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"acorn@npm:^8.6.0":
-  version: 8.7.0
-  resolution: "acorn@npm:8.7.0"
-  bin:
-    acorn: bin/acorn
-  checksum: e0f79409d68923fbf1aa6d4166f3eedc47955320d25c89a20cc822e6ba7c48c5963d5bc657bc242d68f7a4ac9faf96eef033e8f73656da6c640d4219935fdfd0
-  languageName: node
-  linkType: hard
-
 "acorn@npm:^8.7.1":
   version: 8.7.1
   resolution: "acorn@npm:8.7.1"
@@ -1279,7 +1283,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"autoprefixer@npm:10.4.7":
+"autoprefixer@npm:10.4.7, autoprefixer@npm:^10.4.7":
   version: 10.4.7
   resolution: "autoprefixer@npm:10.4.7"
   dependencies:
@@ -1294,24 +1298,6 @@ __metadata:
   bin:
     autoprefixer: bin/autoprefixer
   checksum: 0e55d0d19806c672ec0c79cc23c27cf77e90edf2600670735266ba33ec5294458f404baaa2f7cd4cfe359cf7a97b3c86f01886bdbdc129a4f2f76ca5977a91af
-  languageName: node
-  linkType: hard
-
-"autoprefixer@npm:^10.4.4":
-  version: 10.4.4
-  resolution: "autoprefixer@npm:10.4.4"
-  dependencies:
-    browserslist: ^4.20.2
-    caniuse-lite: ^1.0.30001317
-    fraction.js: ^4.2.0
-    normalize-range: ^0.1.2
-    picocolors: ^1.0.0
-    postcss-value-parser: ^4.2.0
-  peerDependencies:
-    postcss: ^8.1.0
-  bin:
-    autoprefixer: bin/autoprefixer
-  checksum: bd42e23d71af0228b6b0b27d0d0b33c95e67562e55eb4ca0e221cf795a06482c90d565d6544a5f4090d8e303b09b200845fa2bcaaa707d1e8777974250dffe1f
   languageName: node
   linkType: hard
 
@@ -2177,6 +2163,13 @@ __metadata:
   dependencies:
     clone: ^1.0.2
   checksum: 96e2112da6553d376afd5265ea7cbdb2a3b45535965d71ab8bb1da10c8126d168fdd5268799625324b368356d21ba2a7b3d4ec50961f11a47b7feb9de3d4413e
+  languageName: node
+  linkType: hard
+
+"define-lazy-prop@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "define-lazy-prop@npm:2.0.0"
+  checksum: 0115fdb065e0490918ba271d7339c42453d209d4cb619dfe635870d906731eff3e1ade8028bb461ea27ce8264ec5e22c6980612d332895977e89c1bbc80fcee2
   languageName: node
   linkType: hard
 
@@ -3552,6 +3545,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"globalyzer@npm:0.1.0":
+  version: 0.1.0
+  resolution: "globalyzer@npm:0.1.0"
+  checksum: 419a0f95ba542534fac0842964d31b3dc2936a479b2b1a8a62bad7e8b61054faa9b0a06ad9f2e12593396b9b2621cac93358d9b3071d33723fb1778608d358a1
+  languageName: node
+  linkType: hard
+
 "globby@npm:^10.0.1":
   version: 10.0.2
   resolution: "globby@npm:10.0.2"
@@ -3565,6 +3565,13 @@ __metadata:
     merge2: ^1.2.3
     slash: ^3.0.0
   checksum: 167cd067f2cdc030db2ec43232a1e835fa06217577d545709dbf29fd21631b30ff8258705172069c855dc4d5766c3b2690834e35b936fbff01ad0329fb95a26f
+  languageName: node
+  linkType: hard
+
+"globrex@npm:^0.1.2":
+  version: 0.1.2
+  resolution: "globrex@npm:0.1.2"
+  checksum: adca162494a176ce9ecf4dd232f7b802956bb1966b37f60c15e49d2e7d961b66c60826366dc2649093cad5a0d69970cfa8875bd1695b5a1a2f33dcd2aa88da3c
   languageName: node
   linkType: hard
 
@@ -4125,7 +4132,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-docker@npm:^2.0.0":
+"is-docker@npm:^2.0.0, is-docker@npm:^2.1.1":
   version: 2.2.1
   resolution: "is-docker@npm:2.2.1"
   bin:
@@ -4591,13 +4598,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"locate-character@npm:^2.0.5":
-  version: 2.0.5
-  resolution: "locate-character@npm:2.0.5"
-  checksum: dbc4c62bb98ba95626d5533c6d45d480b2536bb500d1453efdd19d0797e75ba92abf8d0432966990a1567a3b591b0fa6067f0ce93808cbf8b55beedd7bd28a78
-  languageName: node
-  linkType: hard
-
 "locate-path@npm:^2.0.0":
   version: 2.0.0
   resolution: "locate-path@npm:2.0.0"
@@ -4729,15 +4729,6 @@ __metadata:
   version: 2.4.0
   resolution: "luxon@npm:2.4.0"
   checksum: 6071028d65cc3d3bdab5e6a3995dd97411c92bb3b3163a02deb7b7014318ad3a6fd750ae77131c42141b717c14aef8880d3130f265281d500ef2365f7265b3f3
-  languageName: node
-  linkType: hard
-
-"magic-string@npm:^0.25.3":
-  version: 0.25.7
-  resolution: "magic-string@npm:0.25.7"
-  dependencies:
-    sourcemap-codec: ^1.4.4
-  checksum: 727a1fb70f9610304fe384f1df0251eb7d1d9dd779c07ef1225690361b71b216f26f5d934bfb11c919b5b0e7ba50f6240c823a6f2e44cfd33d4a07d7747ca829
   languageName: node
   linkType: hard
 
@@ -5887,6 +5878,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"open@npm:^8.4.0":
+  version: 8.4.0
+  resolution: "open@npm:8.4.0"
+  dependencies:
+    define-lazy-prop: ^2.0.0
+    is-docker: ^2.1.1
+    is-wsl: ^2.2.0
+  checksum: e9545bec64cdbf30a0c35c1bdc310344adf8428a117f7d8df3c0af0a0a24c513b304916a6d9b11db0190ff7225c2d578885080b761ed46a3d5f6f1eebb98b63c
+  languageName: node
+  linkType: hard
+
 "ora@npm:^6.1.0":
   version: 6.1.0
   resolution: "ora@npm:6.1.0"
@@ -6335,14 +6337,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-astro@npm:0.0.12":
-  version: 0.0.12
-  resolution: "prettier-plugin-astro@npm:0.0.12"
+"prettier-plugin-astro@npm:0.1.1":
+  version: 0.1.1
+  resolution: "prettier-plugin-astro@npm:0.1.1"
   dependencies:
-    "@astrojs/parser": ^0.22.0
-    prettier: ^2.4.1
+    "@astrojs/compiler": ^0.15.2
+    prettier: ^2.6.2
     sass-formatter: ^0.7.2
-  checksum: cad4552e6b1b18a83f69a82d9f53963cbdbd37e41e4619cb00c6ec8abd514d22aa45ce7dc6c15f93c5a407bbf51bce52b37ce50f1dfebc6b65b0457c2e127fe1
+    synckit: ^0.7.0
+  checksum: e94bb13e548502b9f306f8e3daacf1930f2e6c930b58e854121237905dff8b6a414975c4a54b996716fcb44d5d89002bc3a2da117198e2f5c1c4be7422740623
   languageName: node
   linkType: hard
 
@@ -6364,12 +6367,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.4.1":
-  version: 2.5.0
-  resolution: "prettier@npm:2.5.0"
+"prettier@npm:^2.6.2":
+  version: 2.7.1
+  resolution: "prettier@npm:2.7.1"
   bin:
     prettier: bin-prettier.js
-  checksum: aad1b35b73e7c14596d389d90977a83dad0db689ba5802a0ef319c357b7867f55b885db197972aa6a56c30f53088c9f8e0d7f7930ae074c275a4e9cbe091d21d
+  checksum: 55a4409182260866ab31284d929b3cb961e5fdb91fe0d2e099dac92eaecec890f36e524b4c19e6ceae839c99c6d7195817579cdffc8e2c80da0cb794463a748b
   languageName: node
   linkType: hard
 
@@ -7203,7 +7206,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sourcemap-codec@npm:^1.4.4, sourcemap-codec@npm:^1.4.8":
+"sourcemap-codec@npm:^1.4.8":
   version: 1.4.8
   resolution: "sourcemap-codec@npm:1.4.8"
   checksum: b57981c05611afef31605732b598ccf65124a9fcb03b833532659ac4d29ac0f7bfacbc0d6c5a28a03e84c7510e7e556d758d0bb57786e214660016fb94279316
@@ -7568,6 +7571,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"synckit@npm:^0.7.0":
+  version: 0.7.2
+  resolution: "synckit@npm:0.7.2"
+  dependencies:
+    "@pkgr/utils": ^2.2.0
+    tslib: ^2.4.0
+  checksum: 09734631b1e66e24a06a104e4d058f7301d11ff8b6c5a9aab55a878879b9c50d1d9a05ff25624da05481fcac9be19cfa0e712d10d7978831d40955ad10ea28c9
+  languageName: node
+  linkType: hard
+
 "tailwindcss@npm:3.1.4":
   version: 3.1.4
   resolution: "tailwindcss@npm:3.1.4"
@@ -7684,6 +7697,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tiny-glob@npm:^0.2.9":
+  version: 0.2.9
+  resolution: "tiny-glob@npm:0.2.9"
+  dependencies:
+    globalyzer: 0.1.0
+    globrex: ^0.1.2
+  checksum: aea5801eb6663ddf77ebb74900b8f8bd9dfcfc9b6a1cc8018cb7421590c00bf446109ff45e4b64a98e6c95ddb1255a337a5d488fb6311930e2a95334151ec9c6
+  languageName: node
+  linkType: hard
+
 "to-fast-properties@npm:^2.0.0":
   version: 2.0.0
   resolution: "to-fast-properties@npm:2.0.0"
@@ -7704,8 +7727,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "tonino@workspace:."
   dependencies:
-    "@astrojs/sitemap": 0.2.2
-    "@astrojs/tailwind": 0.2.1
+    "@astrojs/sitemap": 0.2.6
+    "@astrojs/tailwind": 0.2.4
     "@tailwindcss/typography": 0.5.2
     "@types/lodash-es": 4.17.6
     "@types/luxon": 2.3.2
@@ -7720,7 +7743,7 @@ __metadata:
     luxon: 2.4.0
     postcss: 8.4.14
     prettier: 2.6.2
-    prettier-plugin-astro: 0.0.12
+    prettier-plugin-astro: 0.1.1
     prettier-plugin-tailwindcss: 0.1.11
     prism-themes: 1.9.0
     sass: 1.53.0
@@ -7778,7 +7801,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsm@npm:^2.1.4":
+"tslib@npm:^2.4.0":
+  version: 2.4.0
+  resolution: "tslib@npm:2.4.0"
+  checksum: 8c4aa6a3c5a754bf76aefc38026134180c053b7bd2f81338cb5e5ebf96fefa0f417bff221592bf801077f5bf990562f6264fecbc42cd3309b33872cb6fc3b113
+  languageName: node
+  linkType: hard
+
+"tsm@npm:^2.1.4, tsm@npm:^2.2.1":
   version: 2.2.1
   resolution: "tsm@npm:2.2.1"
   dependencies:
@@ -8092,6 +8122,20 @@ __metadata:
   bin:
     uvu: bin.js
   checksum: 369135a16dc454121681a83fbfe0a5d7733d3758403e921f4911eab8355235a1a5aeb59046f842046fbd4695d5267c463ca2b0ceb6787d6772d67e2f377bcf1f
+  languageName: node
+  linkType: hard
+
+"uvu@npm:^0.5.3":
+  version: 0.5.6
+  resolution: "uvu@npm:0.5.6"
+  dependencies:
+    dequal: ^2.0.0
+    diff: ^5.0.0
+    kleur: ^4.0.3
+    sade: ^1.7.3
+  bin:
+    uvu: bin.js
+  checksum: 09460a37975627de9fcad396e5078fb844d01aaf64a6399ebfcfd9e55f1c2037539b47611e8631f89be07656962af0cf48c334993db82b9ae9c3d25ce3862168
   languageName: node
   linkType: hard
 

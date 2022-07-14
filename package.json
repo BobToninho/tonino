@@ -12,8 +12,8 @@
 		"postinstall": "husky install"
 	},
 	"devDependencies": {
-		"@astrojs/sitemap": "0.2.2",
-		"@astrojs/tailwind": "0.2.1",
+		"@astrojs/sitemap": "0.2.6",
+		"@astrojs/tailwind": "0.2.4",
 		"@tailwindcss/typography": "0.5.2",
 		"@types/lodash-es": "4.17.6",
 		"@types/luxon": "2.3.2",
@@ -28,7 +28,7 @@
 		"luxon": "2.4.0",
 		"postcss": "8.4.14",
 		"prettier": "2.6.2",
-		"prettier-plugin-astro": "0.0.12",
+		"prettier-plugin-astro": "0.1.1",
 		"prettier-plugin-tailwindcss": "0.1.11",
 		"sass": "1.53.0",
 		"standard-version": "9.5.0",
