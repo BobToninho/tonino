@@ -28,14 +28,16 @@ const headProps = {
 			<section class="px-8 pt-8 prose lg:prose-xl sm:mx-auto container">
 				<h1 class="decoration-primary-600 tracking-wide underline">{title}</h1>
 
-				{date && (
-					<p>
-						<span class="font-bold underline">Posted on:</span>
-						<time id="date" datetime={isoDate}>
-							{isoDate}
-						</time>
-					</p>
-				)}
+				{
+					date && (
+						<p>
+							<span class="font-bold underline">Posted on:</span>
+							<time id="date" datetime={isoDate}>
+								{isoDate}
+							</time>
+						</p>
+					)
+				}
 
 				<article>
 					<slot />

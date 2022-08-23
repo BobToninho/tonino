@@ -44,11 +44,13 @@ const headProps = {
 				<h2>Blog posts</h2>
 
 				<ul>
-					{publishablePosts.map(({ title, href }) => (
-						<li>
-							<a href={href}>{title}</a>
-						</li>
-					))}
+					{
+						publishablePosts.map(({ title, href }) => (
+							<li>
+								<a href={href}>{title}</a>
+							</li>
+						))
+					}
 				</ul>
 			</section>
 		</BaseLayout>
