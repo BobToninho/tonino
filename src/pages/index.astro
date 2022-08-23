@@ -25,7 +25,7 @@ const publishablePosts = List(mds)
 const headProps = {
 	title: "Roberto Tonino's corner",
 	description: "The homepage of Roberto Tonino's website.",
-	permalink: Astro.canonicalURL.href,
+	permalink: new URL(Astro.url.pathname, Astro.site),
 }
 ---
 

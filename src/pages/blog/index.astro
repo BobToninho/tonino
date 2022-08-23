@@ -4,7 +4,7 @@ import BaseHead from '../../components/BaseHead.astro'
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import { List } from 'immutable'
 
-const permalink = Astro.canonicalURL.href
+const permalink = new URL(Astro.url.pathname, Astro.site)
 
 const mds = await Astro.glob<BlogPost>('./*.md')
 const publishablePosts = List(mds)

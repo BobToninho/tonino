@@ -5,7 +5,7 @@ import BaseLayout from './BaseLayout.astro'
 import BaseHead from '../components/BaseHead.astro'
 
 const { title, description, date } = Astro.props.content
-const permalink = Astro.canonicalURL.href
+const permalink = new URL(Astro.url.pathname, Astro.site)
 
 const isoDate = DateTime.fromISO(date).toISODate()
 
