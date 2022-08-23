@@ -3,10 +3,10 @@ title: 'Information Retrieval: TF-IDF'
 date: 2022-07-06
 description: Introduction and explanation of the Term Frequency - Inverse Document Frequency algorithm
 layout: ../../layouts/PostLayout.astro
-setup: |
-  import InformationRetrievalPreface from '../../components/InformationRetrievalPreface.astro'
-  import InformationRetrievalPrefaceGlossary from '../../components/InformationRetrievalPrefaceGlossary.astro'
 ---
+
+import InformationRetrievalPreface from '../../components/InformationRetrievalPreface.astro'
+import InformationRetrievalPrefaceGlossary from '../../components/InformationRetrievalPrefaceGlossary.astro'
 
 <InformationRetrievalPreface />
 <InformationRetrievalPrefaceGlossary />
@@ -31,8 +31,6 @@ Uses boolean operators to perform queries. The terms therefore can either be pre
 
 Draws the documents and the keywords in a `t` dimensional space. Each keyword represents a point in this hyperspace from which we can draw a vector that starts from the origin, which represents the document. The query is also one of the vectors. This allows to rank documents by similarity.
 
-<!--|element|hyperspace|-->
-
 |          |        |
 | -------- | ------ |
 | keyword  | point  |
@@ -43,7 +41,9 @@ This model makes possible to compare keywords and their relationship with docume
 
 ![Vector space model similarity function](/assets/images/vector-space-model-similarity-function.v1.png)
 
-<code>sim(d<sub>j</sub>, q) ϵ [0, 1]</code>
+<code>
+	sim(d<sub>j</sub>, q) ϵ [0, 1]
+</code>
 
 Conversely from the Boolean model, now each keyword has a weight <code>w<sub>i,j</sub></code>, which is not trivial to compute. Introducing TF-IDF. TF-IDF means: **T**erm **F**requency - **I**nverse **D**ocument **F**requency.
 
@@ -61,7 +61,9 @@ Document Frequency (log argument flipped upside down): relationship between the 
 
 _log_ is uset to mitigate the importance of <abbr title="Inverse Document Frequency">IDF</abbr>, giving more importance to <abbr title="Term Frequency">TF</abbr>.
 
-<abbr title="Term Frequency">TF</abbr> is different for every document. <abbr title="Inverse Document Frequency">IDF</abbr> is always the same.
+<abbr title="Term Frequency">TF</abbr> is different for every document. <abbr title="Inverse Document Frequency">
+	IDF
+</abbr> is always the same.
 
 The multiplication of TF and IDF gives the weight <code>w<sub>i,j</sub></code>:
 

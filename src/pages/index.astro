@@ -5,7 +5,7 @@ import { DateTime } from 'luxon'
 import BaseHead from '../components/BaseHead.astro'
 import BaseLayout from '../layouts/BaseLayout.astro'
 
-const mds = await Astro.glob<BlogPost>('./blog/*.md')
+const mds = await Astro.glob<BlogPost>('./blog/*.(md|mdx)')
 const publishablePosts = List(mds)
 	.map(post => ({
 		title: post.frontmatter.title,
