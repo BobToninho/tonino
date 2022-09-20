@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/BobToninho/tonino/compare/v1.4.2...v1.5.0) (2022-09-20)
+
+
+### Features
+
+* added useful commands post ([ceae66b](https://github.com/BobToninho/tonino/commit/ceae66beed67fa38ab20e33cd8081f0fa93f29d4))
+* created dependabot file for yarn updates ([6dd2c25](https://github.com/BobToninho/tonino/commit/6dd2c25434b4811d5a39f715e06bd45d395a8b3f))
+* re-added Ukraine link ([a20eab6](https://github.com/BobToninho/tonino/commit/a20eab6d2f826990d5a8586fe44746bb29e62e2b))
+* update commands blog post ([9749d65](https://github.com/BobToninho/tonino/commit/9749d651e9fd911f5210f862e420d11ef3989be4))
+
 ### [1.4.2](https://github.com/BobToninho/tonino/compare/v1.4.1...v1.4.2) (2022-07-12)
 
 ### [1.4.1](https://github.com/BobToninho/tonino/compare/v1.4.0...v1.4.1) (2022-06-30)
