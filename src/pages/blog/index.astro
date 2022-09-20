@@ -4,9 +4,9 @@ import BaseHead from '../../components/BaseHead.astro'
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import { List } from 'immutable'
 
-const permalink = Astro.canonicalURL.href
+const permalink = new URL(Astro.url.pathname, Astro.site)
 
-const mds = await Astro.glob<BlogPost>('./*.md')
+const mds = await Astro.glob<BlogPost>('./*.(md|mdx)')
 const publishablePosts = List(mds)
 	.map(post => ({
 		title: post.frontmatter.title,
@@ -44,11 +44,13 @@ const headProps = {
 				<h2>Blog posts</h2>
 
 				<ul>
-					{publishablePosts.map(({ title, href }) => (
-						<li>
-							<a href={href}>{title}</a>
-						</li>
-					))}
+					{
+						publishablePosts.map(({ title, href }) => (
+							<li>
+								<a href={href}>{title}</a>
+							</li>
+						))
+					}
 				</ul>
 			</section>
 		</BaseLayout>
