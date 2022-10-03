@@ -30,17 +30,23 @@ Get-Help [Command]
 Update-Help [-UICulture en-US]
 ```
 
+## Rust and all its tools
+
+```bash
+rustup update
+rustup self update
+```
+
+## Deno
+
+```bash
+deno upgrade
+```
+
 ## Linux
 
 ### Updating pip and all python packages in the current venv
 
 ```bash
 python3 -m pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 python3 -m pip install --upgrade
-```
-
-### Updating Rust and all its tools
-
-```bash
-rustup update
-rustup self update
 ```
