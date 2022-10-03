@@ -16,7 +16,7 @@ export default defineConfig({
 			},
 		}),
 		mdx(),
-		prefetch({ selector: 'a[href^="/blog"]' }),
+		prefetch(),
 	],
 	markdown: {
 		syntaxHighlight: 'prism',
