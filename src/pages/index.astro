@@ -43,6 +43,7 @@ const headProps = {
 					{
 						publishablePosts.map(({ title, href, date }) => (
 							<a
+								rel="prefetch"
 								href={href}
 								class="_border-2 block border-solid border-primary-600 p-4 text-foreground no-underline hover:bg-white hover:bg-opacity-10 "
 							>

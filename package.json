@@ -12,29 +12,30 @@
 		"postinstall": "husky install"
 	},
 	"devDependencies": {
-		"@astrojs/mdx": "0.11.1",
+		"@astrojs/mdx": "0.11.3",
 		"@astrojs/sitemap": "1.0.0",
-		"@astrojs/tailwind": "2.0.1",
+		"@astrojs/tailwind": "2.0.2",
 		"@tailwindcss/typography": "0.5.7",
 		"@types/lodash-es": "4.17.6",
 		"@types/luxon": "3.0.1",
-		"astro": "1.2.7",
+		"astro": "1.4.2",
 		"astro-seo": "0.6.0",
-		"autoprefixer": "10.4.11",
+		"autoprefixer": "10.4.12",
 		"husky": "8.0.1",
 		"immutable": "4.1.0",
 		"lint-staged": "13.0.3",
 		"lodash-es": "4.17.21",
-		"luxon": "3.0.3",
-		"postcss": "8.4.16",
+		"luxon": "3.0.4",
+		"postcss": "8.4.17",
 		"prettier": "2.7.1",
-		"prettier-plugin-astro": "0.5.4",
+		"prettier-plugin-astro": "0.5.5",
 		"prettier-plugin-tailwindcss": "0.1.13",
-		"sass": "1.54.9",
+		"sass": "1.55.0",
 		"standard-version": "9.5.0",
 		"tailwindcss": "3.1.8"
 	},
 	"dependencies": {
+		"@astrojs/prefetch": "0.0.7",
 		"prism-themes": "1.9.0"
 	},
 	"resolutions": {
