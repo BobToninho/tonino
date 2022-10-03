@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/BobToninho/tonino/compare/v1.5.0...v1.6.0) (2022-10-03)
+
+
+### Features
+
+* using default prefetch selector ([eee7857](https://github.com/BobToninho/tonino/commit/eee78575c3847394babf4825ca4efe6e71e522b7))
+
 ## [1.5.0](https://github.com/BobToninho/tonino/compare/v1.4.2...v1.5.0) (2022-09-20)
 
 
