@@ -14,6 +14,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@astrojs/cloudflare@npm:3.0.0":
+  version: 3.0.0
+  resolution: "@astrojs/cloudflare@npm:3.0.0"
+  dependencies:
+    esbuild: ^0.14.42
+  checksum: 511e1cd438d47c955a7e818094d1e1202f6a3353ff5676a5d8ae20449c88bf9594a916f87d1223a19dacb71e883f8ebe35792a4dc26fb5f60884bc5fe2405780
+  languageName: node
+  linkType: hard
+
 "@astrojs/compiler@npm:^0.23.4":
   version: 0.23.5
   resolution: "@astrojs/compiler@npm:0.23.5"
@@ -3613,7 +3622,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild@npm:^0.14.43":
+"esbuild@npm:^0.14.42, esbuild@npm:^0.14.43":
   version: 0.14.54
   resolution: "esbuild@npm:0.14.54"
   dependencies:
@@ -8385,6 +8394,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "tonino@workspace:."
   dependencies:
+    "@astrojs/cloudflare": 3.0.0
     "@astrojs/mdx": 0.11.3
     "@astrojs/prefetch": 0.0.7
     "@astrojs/sitemap": 1.0.0
