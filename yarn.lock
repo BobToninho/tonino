@@ -21,10 +21,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/compiler@npm:^0.25.0":
-  version: 0.25.2
-  resolution: "@astrojs/compiler@npm:0.25.2"
-  checksum: b392128dc6e96cfd35199ecf184e9ac16a5bfd4cdf940e7f067d9283824ffd93c2e2edb23a479cd1c3a801b119c233e35176940239168c2774a101f96dbf175a
+"@astrojs/compiler@npm:^0.26.0":
+  version: 0.26.1
+  resolution: "@astrojs/compiler@npm:0.26.1"
+  checksum: c4751efd93103f727e9b371e0d0a6e3e382fdc6fb737bc7a32de202d7040a75640c3fca50d4d60e3ba46a2445e2c45fa72f64ba74677d87f80d6f3e640097391
   languageName: node
   linkType: hard
 
@@ -82,9 +82,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/mdx@npm:0.11.3":
-  version: 0.11.3
-  resolution: "@astrojs/mdx@npm:0.11.3"
+"@astrojs/mdx@npm:0.11.4":
+  version: 0.11.4
+  resolution: "@astrojs/mdx@npm:0.11.4"
   dependencies:
     "@astrojs/prism": ^1.0.1
     "@mdx-js/mdx": ^2.1.2
@@ -102,7 +102,7 @@ __metadata:
     shiki: ^0.11.1
     unist-util-visit: ^4.1.0
     vfile: ^5.3.2
-  checksum: 017573f8ec38e2157b455b430ed3cb59e5f0b5e198cfeaadbcc2b7ae6f3a8db08bc7482218bc9a1eed97a75ec778258c06f50284bceb8253ffcb8561dfe30a40
+  checksum: 7f4045dcab683e0a6ca7247b7a687175f5eba7ecaf710a120a0ff4058443ed4b56e802e621b2ebb9df552ef1abda7f1f0361c438bea4d21da441b2a15d5e529d
   languageName: node
   linkType: hard
 
@@ -123,12 +123,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/prefetch@npm:0.0.7":
-  version: 0.0.7
-  resolution: "@astrojs/prefetch@npm:0.0.7"
+"@astrojs/prefetch@npm:0.0.8":
+  version: 0.0.8
+  resolution: "@astrojs/prefetch@npm:0.0.8"
   dependencies:
     throttles: ^1.0.1
-  checksum: 4de21e5fea9123d478cfa499568181ffbf1b5c6f1079d3ca79fa2b2582ab06f446d5e69027d00b78dec5954709a75b4027f44e9110ea5b8c00caa3371739f542
+  checksum: 2e68855b570b498bd7431a0be24d8c45975ff7b2b79ad6d853d0539ee03351d24ff281fcc7902ea93da32bcfe6d887187495e412a04b0679cb65da7341f63c92
   languageName: node
   linkType: hard
 
@@ -1665,11 +1665,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:1.4.2":
-  version: 1.4.2
-  resolution: "astro@npm:1.4.2"
+"astro@npm:1.4.6":
+  version: 1.4.6
+  resolution: "astro@npm:1.4.6"
   dependencies:
-    "@astrojs/compiler": ^0.25.0
+    "@astrojs/compiler": ^0.26.0
     "@astrojs/language-server": ^0.26.2
     "@astrojs/markdown-remark": ^1.1.3
     "@astrojs/telemetry": ^1.0.1
@@ -1730,7 +1730,7 @@ __metadata:
     zod: ^3.17.3
   bin:
     astro: astro.js
-  checksum: 3aa4f6fca07a112172c6dbcdaebd2be80b4da21f9b299e64feeac25c714464144637a3602a317fa627e94620bebc638fee3375dc5b899ed49f243e44b3d992c2
+  checksum: e50ffc392d8efb3c837bfb389caf3eaa115159a50b8d338bb84456f81316e85e303cbbb8fa8b93f0630ae977736a657ecb478735af697ba21e938e1150d3dbbf
   languageName: node
   linkType: hard
 
@@ -8385,14 +8385,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "tonino@workspace:."
   dependencies:
-    "@astrojs/mdx": 0.11.3
-    "@astrojs/prefetch": 0.0.7
+    "@astrojs/mdx": 0.11.4
+    "@astrojs/prefetch": 0.0.8
     "@astrojs/sitemap": 1.0.0
     "@astrojs/tailwind": 2.0.2
     "@tailwindcss/typography": 0.5.7
     "@types/lodash-es": 4.17.6
     "@types/luxon": 3.0.1
-    astro: 1.4.2
+    astro: 1.4.6
     astro-seo: 0.6.0
     autoprefixer: 10.4.12
     husky: 8.0.1
