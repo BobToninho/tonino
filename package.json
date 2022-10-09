@@ -6,7 +6,7 @@
 		"dev": "astro dev",
 		"start": "astro dev",
 		"build": "yarn format && astro build",
-		"preview": "astro preview",
+		"preview": "wrangler pages dev dist",
 		"format": "yarn prettier -w .",
 		"release": "standard-version",
 		"postinstall": "husky install"
