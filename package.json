@@ -36,7 +36,6 @@
 		"wrangler": "2.1.10"
 	},
 	"dependencies": {
-		"@astrojs/cloudflare": "3.0.0",
 		"@astrojs/prefetch": "0.0.7",
 		"prism-themes": "1.9.0"
 	},
