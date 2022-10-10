@@ -35,7 +35,7 @@
 		"tailwindcss": "3.1.8"
 	},
 	"dependencies": {
-		"@astrojs/prefetch": "0.0.7",
+		"@astrojs/prefetch": "0.0.8",
 		"prism-themes": "1.9.0"
 	},
 	"resolutions": {
