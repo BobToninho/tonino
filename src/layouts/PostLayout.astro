@@ -4,10 +4,11 @@ import { DateTime } from 'luxon'
 import BaseLayout from './BaseLayout.astro'
 import BaseHead from '../components/BaseHead.astro'
 
-const { title, description, date } = Astro.props.content
+const { title, description, date, lang = 'en-us' } = Astro.props.content
 const permalink = new URL(Astro.url.pathname, Astro.site)
 
 const isoDate = DateTime.fromISO(date).toISODate()
+const formattedDate = DateTime.fromISO(date).setLocale(lang).toLocaleString(DateTime.DATE_MED)
 
 const headProps = {
 	title,
@@ -22,41 +23,47 @@ const headProps = {
 
 		<link rel="preload" href="/assets/fonts/heebo-v12-latin-700.woff2" as="font" type="font/woff2" crossorigin />
 		<link rel="preload" href="/assets/fonts/heebo-v12-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+		<style lang="scss">
+			.wrapper {
+				--gap: clamp(1rem, 6vw, 3rem);
+				--full: minmax(var(--gap), 1fr);
+				--content: min(50ch, 100% - var(--gap) * 2);
+				--popout: minmax(0, 2rem);
+				--feature: minmax(0, 5rem);
+
+				display: grid;
+				grid-template-columns:
+					1fr
+					min(65ch, 100%)
+					1fr;
+				grid-template-columns:
+					[full-start] var(--full)
+					[feature-start] var(--feature)
+					[popout-start] var(--popout)
+					[content-start] var(--content) [content-end]
+					var(--popout) [popout-end]
+					var(--feature) [feature-end]
+					var(--full) [full-end];
+			}
+		</style>
 	</head>
 	<body>
 		<BaseLayout>
-			<section class="px-8 pt-8 prose lg:prose-xl sm:mx-auto container">
+			<section class="px-8 pt-8 prose lg:prose-xl wrapper">
 				<h1 class="decoration-primary-600 tracking-wide underline">{title}</h1>
 
 				{
 					date && (
 						<p>
-							<span class="font-bold underline">Posted on:</span>
-							<time id="date" datetime={isoDate}>
-								{isoDate}
+							<span>Posted on:</span>
+							<time id="date" datetime={isoDate} class="font-bold">
+								{formattedDate}
 							</time>
 						</p>
 					)
 				}
 
-				<article>
-					<slot />
-				</article>
-
-				<script>
-					const $dateEls = document.querySelectorAll('time')
-
-					$dateEls.forEach($dateEl => {
-						const date = $dateEl.getAttribute('datetime')
-						const options = {
-							weekday: 'long',
-							year: 'numeric',
-							month: 'long',
-							day: 'numeric',
-						}
-						$dateEl.innerText = new Date(date).toLocaleString(window.navigator.language, options)
-					})
-				</script>
+				<slot />
 			</section>
 		</BaseLayout>
 	</body>

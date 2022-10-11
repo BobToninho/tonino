@@ -6,19 +6,19 @@
 		"dev": "astro dev",
 		"start": "astro dev",
 		"build": "yarn format && astro build",
-		"preview": "astro preview",
+		"preview": "wrangler pages dev dist",
 		"format": "yarn prettier -w .",
 		"release": "standard-version",
 		"postinstall": "husky install"
 	},
 	"devDependencies": {
-		"@astrojs/mdx": "0.11.3",
+		"@astrojs/mdx": "0.11.4",
 		"@astrojs/sitemap": "1.0.0",
 		"@astrojs/tailwind": "2.0.2",
 		"@tailwindcss/typography": "0.5.7",
 		"@types/lodash-es": "4.17.6",
 		"@types/luxon": "3.0.1",
-		"astro": "1.4.2",
+		"astro": "1.4.6",
 		"astro-seo": "0.6.0",
 		"autoprefixer": "10.4.12",
 		"husky": "8.0.1",
@@ -32,10 +32,11 @@
 		"prettier-plugin-tailwindcss": "0.1.13",
 		"sass": "1.55.0",
 		"standard-version": "9.5.0",
-		"tailwindcss": "3.1.8"
+		"tailwindcss": "3.1.8",
+		"wrangler": "2.1.10"
 	},
 	"dependencies": {
-		"@astrojs/prefetch": "0.0.7",
+		"@astrojs/prefetch": "0.0.8",
 		"prism-themes": "1.9.0"
 	},
 	"resolutions": {
