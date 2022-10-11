@@ -1,6 +1,7 @@
 ---
 title: 'Terminal commands for updating everything'
-date: 2022-08-30
+#date: 2022-08-30
+date: 2022-10-11
 description: List of terminal commands for both Linux and Windows for updating packages, language tools, etc...
 layout: ../../layouts/PostLayout.astro
 ---
