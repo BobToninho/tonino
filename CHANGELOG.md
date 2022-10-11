@@ -2,6 +2,38 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0](https://github.com/BobToninho/tonino/compare/v1.6.0...v1.8.0) (2022-10-11)
+
+
+### Features
+
+* added deno upgrade command ([87765c8](https://github.com/BobToninho/tonino/commit/87765c812f82846911ad55050d871dcd9bcf80ff))
+* build-generated date according to post locale, with english ad default ([290162e](https://github.com/BobToninho/tonino/commit/290162ea882245c49a313050ffb625fd6a6993c2))
+* logic for new badge in home page ([e389d74](https://github.com/BobToninho/tonino/commit/e389d74d2e848661fc57c892c99bca5680ec9263))
+* style for new posts ([b11c23b](https://github.com/BobToninho/tonino/commit/b11c23b4d70940eadc83f866b536a4abbb645d95))
+* using standout layout for posts ([a2c01f8](https://github.com/BobToninho/tonino/commit/a2c01f8b01393a5a70c2f28d81d3422c0d424c58))
+
+
+### Bug Fixes
+
+* unknown language for code snippet ([a9221df](https://github.com/BobToninho/tonino/commit/a9221dfcf8402fb4d87588f31fd5e6961f1dd50f))
+
+## [1.7.0](https://github.com/BobToninho/tonino/compare/v1.6.0...v1.7.0) (2022-10-11)
+
+
+### Features
+
+* added deno upgrade command ([87765c8](https://github.com/BobToninho/tonino/commit/87765c812f82846911ad55050d871dcd9bcf80ff))
+* build-generated date according to post locale, with english ad default ([290162e](https://github.com/BobToninho/tonino/commit/290162ea882245c49a313050ffb625fd6a6993c2))
+* logic for new badge in home page ([e389d74](https://github.com/BobToninho/tonino/commit/e389d74d2e848661fc57c892c99bca5680ec9263))
+* style for new posts ([b11c23b](https://github.com/BobToninho/tonino/commit/b11c23b4d70940eadc83f866b536a4abbb645d95))
+* using standout layout for posts ([a2c01f8](https://github.com/BobToninho/tonino/commit/a2c01f8b01393a5a70c2f28d81d3422c0d424c58))
+
+
+### Bug Fixes
+
+* unknown language for code snippet ([a9221df](https://github.com/BobToninho/tonino/commit/a9221dfcf8402fb4d87588f31fd5e6961f1dd50f))
+
 ## [1.6.0](https://github.com/BobToninho/tonino/compare/v1.5.0...v1.6.0) (2022-10-03)
 
 
