@@ -4,10 +4,11 @@ import { DateTime } from 'luxon'
 import BaseLayout from './BaseLayout.astro'
 import BaseHead from '../components/BaseHead.astro'
 
-const { title, description, date } = Astro.props.content
+const { title, description, date, lang = 'en-us' } = Astro.props.content
 const permalink = new URL(Astro.url.pathname, Astro.site)
 
 const isoDate = DateTime.fromISO(date).toISODate()
+const formattedDate = DateTime.fromISO(date).setLocale(lang).toLocaleString(DateTime.DATE_MED)
 
 const headProps = {
 	title,
@@ -31,9 +32,9 @@ const headProps = {
 				{
 					date && (
 						<p>
-							<span class="font-bold underline">Posted on:</span>
-							<time id="date" datetime={isoDate}>
-								{isoDate}
+							<span>Posted on:</span>
+							<time id="date" datetime={isoDate} class="font-bold">
+								{formattedDate}
 							</time>
 						</p>
 					)
