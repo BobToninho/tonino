@@ -1,10 +1,17 @@
-module.exports = theme => {
-	const base = 'var(--foreground)'
+const ContentTypes = {
+	CONTENT: 'content',
+	POPOUT: 'popout',
+	FEATURE: 'feature',
+	FULL: 'full',
+}
+const base = 'var(--foreground)'
 
+module.exports = theme => {
 	return {
 		DEFAULT: {
 			css: {
 				color: base,
+				maxWidth: 'initial',
 				strong: {
 					color: theme('colors.primary.600'),
 				},
@@ -15,20 +22,19 @@ module.exports = theme => {
 					color: theme('colors.primary.dark'),
 				},
 				h1: {
-					color: base,
 					fontWeight: 700,
-				},
-				h2: {
-					color: base,
-				},
-				h3: {
-					color: base,
-				},
-				h4: {
-					color: base,
 				},
 				code: {
 					color: theme('colors.primary.600'),
+				},
+				'h1, h2, h3, h4': {
+					color: base,
+				},
+				'h1, h2, h3, h4, p, ol, ul': {
+					gridColumn: ContentTypes.CONTENT,
+				},
+				pre: {
+					gridColumn: ContentTypes.POPOUT,
 				},
 			},
 		},
