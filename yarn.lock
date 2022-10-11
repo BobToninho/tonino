@@ -1665,9 +1665,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:1.4.6":
-  version: 1.4.6
-  resolution: "astro@npm:1.4.6"
+"astro@npm:1.4.7":
+  version: 1.4.7
+  resolution: "astro@npm:1.4.7"
   dependencies:
     "@astrojs/compiler": ^0.26.0
     "@astrojs/language-server": ^0.26.2
@@ -1730,7 +1730,7 @@ __metadata:
     zod: ^3.17.3
   bin:
     astro: astro.js
-  checksum: e50ffc392d8efb3c837bfb389caf3eaa115159a50b8d338bb84456f81316e85e303cbbb8fa8b93f0630ae977736a657ecb478735af697ba21e938e1150d3dbbf
+  checksum: a4791867f567f9b7207fbfecee81e51ba79f4d21cb815f670523f1c3f4d0c0ddb9bf15f4f542eb573e5e73dc627af935fee4f881d1a598b0f0e8c541eeb37498
   languageName: node
   linkType: hard
 
@@ -8392,7 +8392,7 @@ __metadata:
     "@tailwindcss/typography": 0.5.7
     "@types/lodash-es": 4.17.6
     "@types/luxon": 3.0.1
-    astro: 1.4.6
+    astro: 1.4.7
     astro-seo: 0.6.0
     autoprefixer: 10.4.12
     husky: 8.0.1
