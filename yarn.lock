@@ -14,17 +14,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@astrojs/compiler@npm:0.27.2, @astrojs/compiler@npm:^0.27.1":
+  version: 0.27.2
+  resolution: "@astrojs/compiler@npm:0.27.2"
+  checksum: 10e823c4c89e63414c4479f966ed2026f5f0c005d741668d4293d09de49a671946481405e1917f6e1c9f574a846993ac18ae4e6367a72b39d0712b0743d91b43
+  languageName: node
+  linkType: hard
+
 "@astrojs/compiler@npm:^0.23.4":
   version: 0.23.5
   resolution: "@astrojs/compiler@npm:0.23.5"
   checksum: 9779b8a7fab2b467ea8637fca8129110fe3b6dbee4fc2e9fe4ec162c3f91ffd77fd447abab01a926b7440749e03c269dda65c4ca1d8759d9662f9198e56eeb01
-  languageName: node
-  linkType: hard
-
-"@astrojs/compiler@npm:^0.27.1":
-  version: 0.27.2
-  resolution: "@astrojs/compiler@npm:0.27.2"
-  checksum: 10e823c4c89e63414c4479f966ed2026f5f0c005d741668d4293d09de49a671946481405e1917f6e1c9f574a846993ac18ae4e6367a72b39d0712b0743d91b43
   languageName: node
   linkType: hard
 
@@ -1052,6 +1052,20 @@ __metadata:
     tiny-glob: ^0.2.9
     tslib: ^2.4.0
   checksum: d2fe95c51d548497425182b284dea8155d9e80bb36fa744c670174d7deae53743b13aa9f63a8bfaa8b31dcf7c53dc279a99372f2c2c35ff9fcebf91c5c5c8190
+  languageName: node
+  linkType: hard
+
+"@pkgr/utils@npm:^2.3.1":
+  version: 2.3.1
+  resolution: "@pkgr/utils@npm:2.3.1"
+  dependencies:
+    cross-spawn: ^7.0.3
+    is-glob: ^4.0.3
+    open: ^8.4.0
+    picocolors: ^1.0.0
+    tiny-glob: ^0.2.9
+    tslib: ^2.4.0
+  checksum: 118a1971120253740121a1db0a6658c21195b7da962acf9c124b507a3df707cfc97b0b84a16edcbd4352853b182e8337da9fc6e8e3d06c60d75ae4fb42321c75
   languageName: node
   linkType: hard
 
@@ -7007,15 +7021,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-astro@npm:0.5.5":
-  version: 0.5.5
-  resolution: "prettier-plugin-astro@npm:0.5.5"
+"prettier-plugin-astro@npm:0.6.0":
+  version: 0.6.0
+  resolution: "prettier-plugin-astro@npm:0.6.0"
   dependencies:
-    "@astrojs/compiler": ^0.23.4
+    "@astrojs/compiler": 0.27.2
     prettier: ^2.7.1
     sass-formatter: ^0.7.5
-    synckit: ^0.7.0
-  checksum: b0e527645158c97c2726aaf532e920ff4a1b98fe9cd594612e2c9c399f64eaa395255ec4371b2d0a527e5dc80af93b214adbcfe2a306e622878c35e128b6a761
+    synckit: ^0.8.4
+  checksum: a2632b625e7fa048f6ddb522e0f2a20ad20b9215c83286b9450ee94271fd628747ea0ffd812dd626102a7d80599a549d2f18447ef481bf64140c93e9e649ca7c
   languageName: node
   linkType: hard
 
@@ -8275,6 +8289,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"synckit@npm:^0.8.4":
+  version: 0.8.4
+  resolution: "synckit@npm:0.8.4"
+  dependencies:
+    "@pkgr/utils": ^2.3.1
+    tslib: ^2.4.0
+  checksum: 83e054fe4494dab42114fc4ed36a11b85e18742d304ade3f40d3afb4ba4145d76183adba1f29e2c36e9a0a453b93a83e2387505f96a0efd901f562927a968c44
+  languageName: node
+  linkType: hard
+
 "tailwindcss@npm:3.1.8":
   version: 3.1.8
   resolution: "tailwindcss@npm:3.1.8"
@@ -8411,7 +8435,7 @@ __metadata:
     luxon: 3.0.4
     postcss: 8.4.18
     prettier: 2.7.1
-    prettier-plugin-astro: 0.5.5
+    prettier-plugin-astro: 0.6.0
     prettier-plugin-tailwindcss: 0.1.13
     prism-themes: 1.9.0
     sass: 1.55.0
