@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.3](https://github.com/BobToninho/tonino/compare/v1.8.2...v1.8.3) (2022-11-15)
+
+
+### Bug Fixes
+
+* blog post style ([7f53256](https://github.com/BobToninho/tonino/commit/7f5325663b396fe67079292b5f457be48108395f))
+
 ### [1.8.2](https://github.com/BobToninho/tonino/compare/v1.8.1...v1.8.2) (2022-11-15)
 
 ### [1.8.1](https://github.com/BobToninho/tonino/compare/v1.8.0...v1.8.1) (2022-10-16)
