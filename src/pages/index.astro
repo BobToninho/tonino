@@ -34,18 +34,24 @@ const headProps = {
 		<BaseHead {...headProps} />
 
 		<style lang="scss">
-			[data-new] {
-				border-color: gold;
-				background-color: hsl(51deg 100% 50% / 10%);
-				position: relative;
+			.published-post {
+				&:not([data-new]) {
+					@apply border-primary-600;
+				}
 
-				&::before {
-					content: 'NEW';
-					line-height: 1;
-					opacity: 0.5;
-					position: absolute;
-					right: 0.5em;
-					top: 0.5em;
+				&[data-new] {
+					border-color: gold;
+					background-color: hsl(51deg 100% 50% / 10%);
+					position: relative;
+
+					&::before {
+						content: 'NEW';
+						line-height: 1;
+						opacity: 0.5;
+						position: absolute;
+						right: 0.5em;
+						top: 0.5em;
+					}
 				}
 			}
 		</style>
@@ -62,7 +68,7 @@ const headProps = {
 							<a
 								rel="prefetch"
 								href={href}
-								class="published-post block border-solid border-primary-600 p-4 text-foreground no-underline hover:bg-white hover:bg-opacity-10"
+								class="published-post block border-solid p-4 text-foreground no-underline hover:bg-white hover:bg-opacity-10"
 							>
 								<h3>{title}</h3>
 								<time datetime={date} class="published-post__date text-xs capitalize text-opacity-75">
