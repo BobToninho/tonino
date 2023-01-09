@@ -27,7 +27,7 @@
 		"lodash-es": "4.17.21",
 		"luxon": "3.2.1",
 		"postcss": "8.4.21",
-		"prettier": "2.7.1",
+		"prettier": "2.8.2",
 		"prettier-plugin-astro": "0.7.2",
 		"prettier-plugin-tailwindcss": "0.2.1",
 		"sass": "1.55.0",
