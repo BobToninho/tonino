@@ -1104,9 +1104,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tailwindcss/typography@npm:0.5.8":
-  version: 0.5.8
-  resolution: "@tailwindcss/typography@npm:0.5.8"
+"@tailwindcss/typography@npm:0.5.9":
+  version: 0.5.9
+  resolution: "@tailwindcss/typography@npm:0.5.9"
   dependencies:
     lodash.castarray: ^4.4.0
     lodash.isplainobject: ^4.0.6
@@ -1114,7 +1114,7 @@ __metadata:
     postcss-selector-parser: 6.0.10
   peerDependencies:
     tailwindcss: "*"
-  checksum: afe172c75ddf086f840b10f95e562bb210dde5612fccfcfd3c4cee688c57ca5b79569b3c2cb75687b34b1b7f9ad194b14e9fbb09a741cd69198bb92b5ac3838f
+  checksum: b98e21bdd1798d7e4683499893c5c20ad43fcc8955d5d6eefbe1d30e98e9b6c28949ae8f276d39be9a66fafe843597717196bc5a0a2ac0f87ef86aa051ab9611
   languageName: node
   linkType: hard
 
@@ -1668,16 +1668,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro-seo@npm:0.6.1":
-  version: 0.6.1
-  resolution: "astro-seo@npm:0.6.1"
-  checksum: 3172e13664e9f9a769f62b7dbd747f81e20f0946a7c55415c5c3e10b6f98b952ebd21724b5b6759b9e9048c441f4dd0916978790ede9fc62b8dffa9416fd6e60
+"astro-seo@npm:0.7.0":
+  version: 0.7.0
+  resolution: "astro-seo@npm:0.7.0"
+  checksum: 1f63fdeb7ed862e55a4575364ca332e435f06ee419b8537c28c91209fb964767fe16ca88810cf3c228bed9a03a5f3b0672ed484ebc04644326307559380c3861
   languageName: node
   linkType: hard
 
-"astro@npm:1.9.1":
-  version: 1.9.1
-  resolution: "astro@npm:1.9.1"
+"astro@npm:1.9.2":
+  version: 1.9.2
+  resolution: "astro@npm:1.9.2"
   dependencies:
     "@astrojs/compiler": ^0.31.0
     "@astrojs/language-server": ^0.28.3
@@ -1744,7 +1744,7 @@ __metadata:
     zod: ^3.17.3
   bin:
     astro: astro.js
-  checksum: befc8ebff7ce3cfd772e73431190878546eb831b0748abe7dfa1924bb1c97dcc2902f179afdf899ec950830fb4b4030edbac048e70a60999c9585aa57369c978
+  checksum: 9440797c45704c55ca1373458abe116ebe71b92ab11f59c20dadae72cd0ebce40810c71215718ef9e8a461107f0af95d221936c293546bb5f768a0cc83761947
   languageName: node
   linkType: hard
 
@@ -6816,12 +6816,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:2.8.2":
-  version: 2.8.2
-  resolution: "prettier@npm:2.8.2"
+"prettier@npm:2.8.3":
+  version: 2.8.3
+  resolution: "prettier@npm:2.8.3"
   bin:
     prettier: bin-prettier.js
-  checksum: 740c56c2128d587d656ea1dde9bc9c3503dfc94db4f3ac387259215eeb2e216680bdad9d18a0c9feecc6b42cfa188d6fa777df4c36c1d00cedd4199074fbfbd2
+  checksum: 92f2ceb522d454370e02082aa74ad27388672f7cee8975028b59517c069fe643bdc73e322675c8faf2ff173d7a626d1a6389f26b474000308e793aa25fff46e5
   languageName: node
   linkType: hard
 
@@ -8184,11 +8184,11 @@ __metadata:
     "@astrojs/prefetch": 0.1.1
     "@astrojs/sitemap": 1.0.0
     "@astrojs/tailwind": 2.1.3
-    "@tailwindcss/typography": 0.5.8
+    "@tailwindcss/typography": 0.5.9
     "@types/lodash-es": 4.17.6
     "@types/luxon": 3.2.0
-    astro: 1.9.1
-    astro-seo: 0.6.1
+    astro: 1.9.2
+    astro-seo: 0.7.0
     autoprefixer: 10.4.13
     husky: 8.0.3
     immutable: 4.2.2
@@ -8196,14 +8196,14 @@ __metadata:
     lodash-es: 4.17.21
     luxon: 3.2.1
     postcss: 8.4.21
-    prettier: 2.8.2
+    prettier: 2.8.3
     prettier-plugin-astro: 0.7.2
     prettier-plugin-tailwindcss: 0.2.1
     prism-themes: 1.9.0
     sass: 1.57.1
     standard-version: 9.5.0
     tailwindcss: 3.2.4
-    wrangler: 2.7.0
+    wrangler: 2.8.1
   languageName: unknown
   linkType: soft
 
@@ -8893,9 +8893,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"wrangler@npm:2.7.0":
-  version: 2.7.0
-  resolution: "wrangler@npm:2.7.0"
+"wrangler@npm:2.8.1":
+  version: 2.8.1
+  resolution: "wrangler@npm:2.8.1"
   dependencies:
     "@cloudflare/kv-asset-handler": ^0.2.0
     "@esbuild-plugins/node-globals-polyfill": ^0.1.1
@@ -8919,7 +8919,7 @@ __metadata:
   bin:
     wrangler: bin/wrangler.js
     wrangler2: bin/wrangler.js
-  checksum: 57733a5c535b77fb34160e06e5c0f3f26808862eec8fd7d01e93531ced72969cc7c5b5ce367f509731eabfa6606ded034a8d5ecf4d08bec03e7a2b6dccf7f4a0
+  checksum: b9775fb3104b642242fcfa4b3531e091aeb72a514f1660b976edfc659457f9cd2117e9d3e7d7f0f23b1bb251a32851cd048095628b3bf61c6b58fabf0f25762f
   languageName: node
   linkType: hard
 
