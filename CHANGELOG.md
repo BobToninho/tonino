@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.9.0](https://github.com/BobToninho/tonino/compare/v1.8.3...v1.9.0) (2023-01-28)
+
+
+### Features
+
+* update dependabot file ([5a48648](https://github.com/BobToninho/tonino/commit/5a48648bc49fd862383ddb90d4e26cc071e3f94c))
+
 ### [1.8.3](https://github.com/BobToninho/tonino/compare/v1.8.2...v1.8.3) (2022-11-15)
 
 
