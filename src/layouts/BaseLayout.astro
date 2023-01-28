@@ -9,8 +9,8 @@ import Logo from '../components/LogoText.astro'
 	}
 </style>
 
-<aside class="fixed flex justify-center w-full bg-[#fcdf51]">
-	<a class="text-[#0071ce] hover:text-[#0071ce]/50 font-bold" href="https://u24.gov.ua/"
+<aside class="fixed flex w-full justify-center bg-[#fcdf51]">
+	<a class="font-bold text-[#0071ce] hover:text-[#0071ce]/50" href="https://u24.gov.ua/"
 		><CountryFlag code="ua" alt="Ukraine flag" class="inline" /> Support and donate to Ukraine here. Thank you! <CountryFlag
 			code="ua"
 			alt="Ukraine flag"
@@ -19,7 +19,7 @@ import Logo from '../components/LogoText.astro'
 	</a>
 </aside>
 
-<header class="pt-8 ml-8 base-container h-28">
+<header class="base-container ml-8 h-28 pt-8">
 	<a href="/" class="block max-w-[150px] no-underline">
 		<Logo />
 	</a>
@@ -29,6 +29,6 @@ import Logo from '../components/LogoText.astro'
 	<slot />
 </main>
 
-<footer class="flex items-center ml-8 font-mono opacity-50 text-foreground base-container h-14 sm:text-lg">
+<footer class="base-container ml-8 flex h-14 items-center font-mono text-foreground opacity-50 sm:text-lg">
 	by Roberto Tonino - v{__VERSION__}
 </footer>
