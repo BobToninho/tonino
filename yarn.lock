@@ -98,12 +98,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/prefetch@npm:0.1.1":
-  version: 0.1.1
-  resolution: "@astrojs/prefetch@npm:0.1.1"
+"@astrojs/prefetch@npm:0.1.2":
+  version: 0.1.2
+  resolution: "@astrojs/prefetch@npm:0.1.2"
   dependencies:
     throttles: ^1.0.1
-  checksum: 788b4e8cf33d0381aaba9ab18fdf2f2aa4dce8c6bef05640201b5d6635b22ab6ac5f396ea307ddba7a62c8f2ee967bf8bc7ec3ea50d6f7aa4f9ffda7070974fa
+  checksum: 7461e0fa83967ad1839c047760aca190d8bfe85cc9951094e6b470a162f1319abf905b49e5bed5862d748f4c490da46343ac1e6fb0a9bdc982fa31ded27df0f4
   languageName: node
   linkType: hard
 
@@ -7727,7 +7727,7 @@ __metadata:
   resolution: "tonino@workspace:."
   dependencies:
     "@astrojs/mdx": 0.15.1
-    "@astrojs/prefetch": 0.1.1
+    "@astrojs/prefetch": 0.1.2
     "@astrojs/sitemap": 1.0.0
     "@astrojs/tailwind": 3.0.0
     "@tailwindcss/typography": 0.5.9
