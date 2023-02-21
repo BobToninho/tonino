@@ -12,14 +12,14 @@
 		"postinstall": "husky install"
 	},
 	"devDependencies": {
-		"@astrojs/mdx": "0.15.1",
-		"@astrojs/sitemap": "1.0.0",
-		"@astrojs/tailwind": "3.0.0",
+		"@astrojs/mdx": "0.17.0",
+		"@astrojs/sitemap": "1.0.1",
+		"@astrojs/tailwind": "3.0.1",
 		"@tailwindcss/typography": "0.5.9",
 		"@types/lodash-es": "4.17.6",
 		"@types/luxon": "3.2.0",
-		"astro": "2.0.2",
-		"astro-seo": "0.7.0",
+		"astro": "2.0.14",
+		"astro-seo": "0.7.1",
 		"autoprefixer": "10.4.13",
 		"husky": "8.0.3",
 		"immutable": "4.2.2",
@@ -36,7 +36,7 @@
 		"wrangler": "2.8.1"
 	},
 	"dependencies": {
-		"@astrojs/prefetch": "0.1.1",
+		"@astrojs/prefetch": "0.1.2",
 		"prism-themes": "1.9.0"
 	},
 	"resolutions": {
