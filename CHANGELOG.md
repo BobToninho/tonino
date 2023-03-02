@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.10.0](https://github.com/BobToninho/tonino/compare/v1.9.0...v1.10.0) (2023-03-02)
+
+
+### Features
+
+* add more updating commands with descriptions and links ([b02094d](https://github.com/BobToninho/tonino/commit/b02094d63e5ea882199aa49ad9888c1df5cdd630))
+* add revision/update date to posts ([973ac01](https://github.com/BobToninho/tonino/commit/973ac01c4c566ffa1f63afcb0323049992477c90))
+* add rss link on header ([942b23c](https://github.com/BobToninho/tonino/commit/942b23c487120e6289035c6bceeb1849648293d3))
+* enrich post ([b1463ff](https://github.com/BobToninho/tonino/commit/b1463ff9afd261e2fc29b2ac9b216d7b2c4b357b))
+* generate rss for blog ([0d5d112](https://github.com/BobToninho/tonino/commit/0d5d1127932c7d097105ed8297b77efa6fd4b31e))
+* improve post title grammar ([8ff3421](https://github.com/BobToninho/tonino/commit/8ff34216e02b531a18218dbbff0c2a747e5b0c2f))
+* push nav on the right edge of the page ([0967a7c](https://github.com/BobToninho/tonino/commit/0967a7c6c753b9f8dcdad2e1fb28ca59bea57343))
+* render all content in rss ([a7dea65](https://github.com/BobToninho/tonino/commit/a7dea65a0045ce7210f7d4a65d53e19bbca34553))
+* vertically center the logo and underline rss text ([4d55508](https://github.com/BobToninho/tonino/commit/4d555085250e2e101a7abf3642081d2b677bdeb0))
+
 ## [1.9.0](https://github.com/BobToninho/tonino/compare/v1.8.3...v1.9.0) (2023-01-28)
 
 
