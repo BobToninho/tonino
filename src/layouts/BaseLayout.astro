@@ -7,6 +7,20 @@ import Logo from '../components/LogoText.astro'
 	.base-container {
 		@apply ml-8 sm:mx-auto sm:max-w-xl lg:max-w-3xl;
 	}
+
+	.head-link {
+		color: var(--color-foreground);
+		font-family: Helvetica, sans-serif;
+		/* font-size: 2rem; */
+		font-weight: 700;
+		text-shadow: 1px 1px 0px var(--color-primary);
+		text-decoration: underline;
+		transition: text-shadow 0.2s ease-in-out;
+
+		&:hover {
+			text-shadow: 2px 2px 0px var(--color-primary);
+		}
+	}
 </style>
 
 <aside class="fixed flex w-full justify-center bg-[#fcdf51]">
@@ -19,16 +33,22 @@ import Logo from '../components/LogoText.astro'
 	</a>
 </aside>
 
-<header class="base-container ml-8 h-28 pt-8">
-	<a href="/" class="block max-w-[150px] no-underline">
+<header class="mx-auto flex h-28 justify-center pt-8 sm:max-w-xl lg:max-w-3xl">
+	<div class="basis-1/3"></div>
+	<a href="/" class="block max-w-[150px] basis-1/3 no-underline">
 		<Logo />
 	</a>
+	<div class="basis-1/3">
+		<a href="/rss.xml" title="RSS Feed" class="head-link block max-w-[150px] basis-1/3 no-underline"> RSS</a>
+	</div>
 </header>
 
 <main>
 	<slot />
 </main>
 
-<footer class="base-container ml-8 flex h-14 items-center font-mono text-foreground opacity-50 sm:text-lg">
+<footer
+	class="ml-8 flex h-14 items-center font-mono text-foreground opacity-50 sm:mx-auto sm:max-w-xl sm:text-lg lg:max-w-3xl"
+>
 	by Roberto Tonino - v{__VERSION__}
 </footer>
