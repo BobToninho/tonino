@@ -21,7 +21,7 @@ wsl --update
 
 There is no easy way to update the PowerShell modules installed via
 `Install-Module`, but [this script][pwsh-update-packages] does the job
-perfectly.
+perfectly (also removing the packages' old versions).
 
 Update [PowerShell help modules][pwsh-help-modules]:
 
