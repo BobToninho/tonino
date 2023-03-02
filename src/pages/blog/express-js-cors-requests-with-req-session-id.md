@@ -1,6 +1,7 @@
 ---
 title: How to fix express-js CORS requests that use req.session.id
 date: 2021-12-10
+pubDate: 2021-12-10
 description: How to resolve an annoying problem with ExpressJS.
 layout: ../../layouts/PostLayout.astro
 ---

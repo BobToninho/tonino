@@ -1,6 +1,7 @@
 ---
 title: How to work in multiple branches of the same repo at the same time
 date: 2022-01-28
+pubDate: 2022-01-28
 description: Editing multiple branches at the same time using git wroktrees.
 layout: ../../layouts/PostLayout.astro
 ---

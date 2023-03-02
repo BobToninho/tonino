@@ -1,6 +1,7 @@
 ---
 title: 'Uniud: informazioni e suggerimenti borsa di studio 2023'
 date: 2022-07-06
+pubDate: 2022-07-06
 description: Informazioni sulla borsa di studio ARDIS 2023
 layout: ../../layouts/PostLayout.astro
 ---

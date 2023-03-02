@@ -1,6 +1,7 @@
 ---
 title: 'Neovim LSP: installing pyright does not work'
 date: 2022-10-12
+pubDate: 2022-10-12
 description: Providing a solution to a problem related to the installation of the pyright syntax analyzer
 layout: ../../layouts/PostLayout.astro
 ---

@@ -1,8 +1,8 @@
 ---
 title: 'Useful terminal commands'
 date: 2022-10-09
-draft: truec
-description:
+pubDate: 2022-10-09
+draft: true
 layout: ../../layouts/PostLayout.astro
 ---
 
