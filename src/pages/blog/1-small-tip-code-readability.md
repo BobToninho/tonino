@@ -1,6 +1,7 @@
 ---
 title: 1 small tip to improve your code readability
 date: 2021-12-10
+pubDate: 2021-12-10
 description: Describing a helpful method to write cleaner code.
 layout: ../../layouts/PostLayout.astro
 ---

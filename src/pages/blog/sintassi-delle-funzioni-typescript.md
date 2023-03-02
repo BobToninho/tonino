@@ -1,6 +1,7 @@
 ---
 title: Sintassi delle funzioni Typescript
 date: 2021-12-08
+pubDate: 2021-12-08
 description: La sintassi per varie funzioni e tipi di funzioni in TypeScript con l'aggiunta di semplici esempi.
 lang: it-it
 categories:

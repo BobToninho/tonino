@@ -1,6 +1,7 @@
 ---
 title: 'TIL: How to uninstall WSL'
 date: 2022-11-15
+pubDate: 2022-11-15
 description: 'WSL does not offer the possibility to uninstall distro from the CLI, but the way to do it is quite simple'
 layout: ../../layouts/PostLayout.astro
 ---
