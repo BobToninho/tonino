@@ -1,5 +1,5 @@
 ---
-title: 'Terminal commands for updating everything'
+title: Terminal commands to update everything
 #date: 2022-08-30
 date: 2022-10-11
 pubDate: 2022-10-11
