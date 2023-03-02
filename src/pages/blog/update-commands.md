@@ -1,6 +1,5 @@
 ---
 title: Terminal commands to update everything
-#date: 2022-08-30
 date: 2022-10-11
 pubDate: 2022-10-11
 revisionDate: 2023-03-02
@@ -8,10 +7,16 @@ description: List of terminal commands for both Linux and Windows for updating p
 layout: ../../layouts/PostLayout.astro
 ---
 
-For some update commands it is appended a command for inspecting the
-current state of the tool.
+This post is for those of you who want to have their tools always at the
+last, cutting edge version. I tried to put together all the tools that I
+use daily for my job and for my university studies. Hope this benefits
+not only me.
 
-## Windows
+Quick note: for some update commands I prepend a command to inspect the
+current state of the tool. This is useful especially for package
+managers.
+
+## Windows specific
 
 Update [wsl]:
 
@@ -63,7 +68,7 @@ rustup update
 ```
 
 Rust installed binaries are not updated by running the previous command.
-They need to be explicitly updated, for instance, to update
+They need to be explicitly updated. For instance, to update
 [cargo-watch]:
 
 ```bash
@@ -77,16 +82,16 @@ cargo install cargo-watch
 deno upgrade
 ```
 
-## Linux
+## Python
 
 ### Updating pip ~~and all python packages in the current venv~~
 
 The first command seems to not work anymore due to the `--outdated` and
-the `--format=freeze` commands used together. The second command updates
-only pip
+the `--format=freeze` flags used together. The second command updates
+only pip.
 
 ```bash
-#python3 -m pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 python3 -m pip install --upgrade
+# python3 -m pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 python3 -m pip install --upgrade
 python -m pip install --upgrade pip
 ```
 
