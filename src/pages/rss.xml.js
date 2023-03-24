@@ -14,6 +14,7 @@ export async function get(context) {
 			content: sanitizeHtml(post.compiledContent()),
 			...post.frontmatter,
 		})),
+		stylesheet: '/pretty-feed-v3.xsl',
 		customData: '<language>en-us</language>',
 	})
 }
