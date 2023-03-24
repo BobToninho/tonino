@@ -7,10 +7,12 @@ layout: ../../layouts/PostLayout.astro
 ---
 
 import InformationRetrievalPreface from '../../components/InformationRetrievalPreface.astro'
+import classicIrModelPng from '../../assets/classic-ir-model.png'
+import { Picture } from '@astrojs/image/components'
 
 <InformationRetrievalPreface />
 
-![Classic information retrieval model](/assets/images/classic-ir-model.png)
+<Picture src={classicIrModelPng} alt="Classic information retrieval model" widths={[1210]} aspectRatio="1210:747" />
 
 ## What this means
 
