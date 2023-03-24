@@ -9,7 +9,7 @@ host:
 build: format
   .\node_modules\.bin\astro build
 
-preview:
+preview: build
   .\node_modules\.bin\wrangler pages dev dist
 
 format:
