@@ -3,6 +3,7 @@ import '../styles/fonts.scss'
 import '../styles/reset.scss'
 import '../styles/design.scss'
 import '../styles/globals.scss'
+import '../styles/turbo.scss'
 import { SEO } from 'astro-seo'
 
 export interface Props {
@@ -20,16 +21,19 @@ const { title, description } = Astro.props
 <!-- TODO: Elaborate -->
 <meta name="MobileOptimized" content="320" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-<link href="favicon-light.png" rel="icon" media="(prefers-color-scheme: light)" />
-<link href="favicon-dark.png" rel="icon" media="(prefers-color-scheme: dark)" />
+<link href="/favicon-light.png" rel="icon" media="(prefers-color-scheme: light)" />
+<link href="/favicon-dark.png" rel="icon" media="(prefers-color-scheme: dark)" />
 
+<script type="module">
+	import * as Turbo from 'https://cdn.skypack.dev/@hotwired/turbo'
+</script>
 <SEO {title} {description} />
 <!--<link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">-->
-<link href="favicon-light.png" type="image/x-icon" rel="shortcut icon" media="(prefers-color-scheme: light)" />
-<link href="favicon-dark.png" type="image/x-icon" rel="shortcut icon" media="(prefers-color-scheme: dark)" />
+<link href="/favicon-light.png" type="image/x-icon" rel="shortcut icon" media="(prefers-color-scheme: light)" />
+<link href="/favicon-dark.png" type="image/x-icon" rel="shortcut icon" media="(prefers-color-scheme: dark)" />
 <!-- <link rel="apple-touch-icon" type="image/x-icon" href="/img/favicon.png" /> -->
-<link href="favicon-light.png" type="image/x-icon" rel="apple-touch-icon" media="(prefers-color-scheme: light)" />
-<link href="favicon-dark.png" type="image/x-icon" rel="apple-touch-icon" media="(prefers-color-scheme: dark)" />
+<link href="/favicon-light.png" type="image/x-icon" rel="apple-touch-icon" media="(prefers-color-scheme: light)" />
+<link href="/favicon-dark.png" type="image/x-icon" rel="apple-touch-icon" media="(prefers-color-scheme: dark)" />
 <!-- <link rel="apple-touch-icon" type="image/x-icon" href="/img/favicon.png" /> -->
 <!-- TODO: Elaborate -->
 <meta name="theme-color" content="#f688b4" />
