@@ -12,34 +12,35 @@
 		"postinstall": "husky install"
 	},
 	"devDependencies": {
-		"@astrojs/mdx": "0.17.0",
-		"@astrojs/prefetch": "0.1.2",
-		"@astrojs/rss": "2.1.1",
-		"@astrojs/sitemap": "1.0.1",
-		"@astrojs/tailwind": "3.0.1",
+		"@astrojs/mdx": "0.18.2",
+		"@astrojs/prefetch": "0.2.1",
+		"@astrojs/rss": "2.3.1",
+		"@astrojs/sitemap": "1.2.1",
+		"@astrojs/tailwind": "3.1.1",
 		"@tailwindcss/typography": "0.5.9",
-		"@types/lodash-es": "4.17.6",
+		"@types/lodash-es": "4.17.7",
 		"@types/luxon": "3.2.0",
-		"@types/sanitize-html": "^2",
-		"astro": "2.0.14",
-		"astro-seo": "0.7.1",
-		"autoprefixer": "10.4.13",
+		"@types/sanitize-html": "2.9.0",
+		"astro": "2.1.6",
+		"astro-seo": "0.7.2",
+		"autoprefixer": "10.4.14",
 		"husky": "8.0.3",
-		"immutable": "4.2.4",
-		"lint-staged": "13.1.2",
+		"immutable": "4.3.0",
+		"lint-staged": "13.2.0",
 		"lodash-es": "4.17.21",
-		"luxon": "3.2.1",
+		"luxon": "3.3.0",
 		"postcss": "8.4.21",
-		"prettier": "2.8.4",
+		"prettier": "2.8.7",
 		"prettier-plugin-astro": "0.8.0",
-		"prettier-plugin-tailwindcss": "0.2.3",
+		"prettier-plugin-tailwindcss": "0.2.5",
 		"sanitize-html": "2.10.0",
-		"sass": "1.58.3",
+		"sass": "1.60.0",
 		"standard-version": "9.5.0",
 		"tailwindcss": "3.2.7",
-		"wrangler": "2.10.0"
+		"wrangler": "2.13.0"
 	},
 	"dependencies": {
+		"@astrojs/image": "0.16.2",
 		"prism-themes": "1.9.0"
 	},
 	"resolutions": {
@@ -48,5 +49,5 @@
 	"lint-staged": {
 		"*.{js,cjs,mjs,css,scss,md,astro}": "prettier --write"
 	},
-	"packageManager": "yarn@3.4.1"
+	"packageManager": "yarn@3.5.0"
 }
