@@ -35,7 +35,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/compiler@npm:^1.2.0":
+"@astrojs/compiler@npm:^1.3.0":
   version: 1.3.0
   resolution: "@astrojs/compiler@npm:1.3.0"
   checksum: d2eb523499289c567d2197b4d6b3106cab3449627dfd0017652cbf3829c73684bd5db8a2c011a3a96f058be3fdfbed2a46d23b6f04aece62b77808f6ee752e06
@@ -1973,11 +1973,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:2.1.6":
-  version: 2.1.6
-  resolution: "astro@npm:2.1.6"
+"astro@npm:2.1.7":
+  version: 2.1.7
+  resolution: "astro@npm:2.1.7"
   dependencies:
-    "@astrojs/compiler": ^1.2.0
+    "@astrojs/compiler": ^1.3.0
     "@astrojs/language-server": ^0.28.3
     "@astrojs/markdown-remark": ^2.1.2
     "@astrojs/telemetry": ^2.1.0
@@ -2037,7 +2037,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: ce89b69075db3fd7243ce18a696662e35cd6bda480f0a97c59debedb759cbec0fbd423ddd63b65e9f173eda7ccd5b4b9549eb13bc33850cd78bf707c6072898e
+  checksum: adb0a822eb76aeb20fb38663176090aa08149a1ea1fa00658befb2ae73f46207b3518f3c0c9eb0248033c81c1938b342f3520662738c7e16ef7171eb3e5aa42b
   languageName: node
   linkType: hard
 
@@ -8036,7 +8036,7 @@ __metadata:
     "@types/lodash-es": 4.17.7
     "@types/luxon": 3.2.0
     "@types/sanitize-html": 2.9.0
-    astro: 2.1.6
+    astro: 2.1.7
     astro-seo: 0.7.2
     autoprefixer: 10.4.14
     husky: 8.0.3
