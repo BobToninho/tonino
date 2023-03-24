@@ -8,9 +8,8 @@ import { SEO } from 'astro-seo'
 export interface Props {
 	title: string
 	description: string
-	permalink: string
 }
-const { title, description, permalink } = Astro.props
+const { title, description } = Astro.props
 // const socialUrl = Astro.site.href + 'assets/social.png'
 ---
 
@@ -21,7 +20,9 @@ const { title, description, permalink } = Astro.props
 <!-- TODO: Elaborate -->
 <meta name="MobileOptimized" content="320" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<!-- <link rel="icon" type="image/x-icon" href="/favicon.ico" /> -->
+<link href="favicon-light.png" rel="icon" media="(prefers-color-scheme: light)" />
+<link href="favicon-dark.png" rel="icon" media="(prefers-color-scheme: dark)" />
 
 <SEO {title} {description} />
 <!-- <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon"> -->
