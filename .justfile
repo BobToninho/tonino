@@ -6,7 +6,7 @@ dev:
 host:
   .\node_modules\.bin\astro dev --host
 
-build:
+build: format
   .\node_modules\.bin\astro build
 
 preview:
