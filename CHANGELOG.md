@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/BobToninho/tonino/compare/v1.10.0...v2.0.0) (2023-03-24)
+
+
+### ⚠ BREAKING CHANGES
+
+* add SPA navigation
+
+### Features
+
+* add astro image integration ([aa8b04b](https://github.com/BobToninho/tonino/commit/aa8b04b1bc48aab463943da9ebcfb4602ed5bd58))
+* add color scheme sensitive favicon ([28e4586](https://github.com/BobToninho/tonino/commit/28e4586ab38a108d484cfdb0f0fe10b7106a3de0))
+* add SPA navigation ([2e02b2e](https://github.com/BobToninho/tonino/commit/2e02b2eb328bb6214c5c73fc59fcd1f8e813bfe3))
+* add theme color ([1bf94a9](https://github.com/BobToninho/tonino/commit/1bf94a90add3a9ef19d6fdaf662d1f9b01a023c2))
+* test optimized pictures in blog post ([68790c8](https://github.com/BobToninho/tonino/commit/68790c858586838d09ded0591ed6fa42d1423a68))
+* use favicons for apple icons ([57c83d8](https://github.com/BobToninho/tonino/commit/57c83d8fe4eabff9ec27a875a95ed1ac5e7612ca))
+
 ## [1.10.0](https://github.com/BobToninho/tonino/compare/v1.9.0...v1.10.0) (2023-03-02)
 
 
