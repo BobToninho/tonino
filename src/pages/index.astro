@@ -58,7 +58,7 @@ const headProps = {
 	</head>
 	<body>
 		<BaseLayout>
-			<section class="container px-2 sm:px-6">
+			<section class="container max-w-3xl px-2 sm:px-6">
 				<h1 class="mb-12" set:html={headProps.title} />
 
 				<h2 class="mb-10">Blog posts</h2>
@@ -96,7 +96,6 @@ const headProps = {
 					month: 'long',
 					day: 'numeric',
 				}
-				// @ts-expect-error No options needs to be of type DateTimeFormatOptions
 				const localeDate = new Date(date).toLocaleString(window.navigator.language, options)
 
 				$dateEl.innerText = localeDate
