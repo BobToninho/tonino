@@ -32,7 +32,7 @@
 		"postcss": "8.4.21",
 		"prettier": "2.8.7",
 		"prettier-plugin-astro": "0.8.0",
-		"prettier-plugin-tailwindcss": "0.2.5",
+		"prettier-plugin-tailwindcss": "0.2.8",
 		"sanitize-html": "2.10.0",
 		"sass": "1.60.0",
 		"standard-version": "9.5.0",
