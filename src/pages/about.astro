@@ -1,0 +1,19 @@
+---
+import BaseHead from '../components/BaseHead.astro'
+import BaseLayout from '../layouts/BaseLayout.astro'
+
+const headProps = {
+	title: "Roberto Tonino's corner",
+	description: "The homepage of Roberto Tonino's website.",
+	permalink: new URL(Astro.url.pathname, Astro.site),
+}
+---
+
+<html lang="en">
+	<head>
+		<BaseHead {...headProps} />
+	</head>
+	<body>
+		<BaseLayout>Hello it's me</BaseLayout>
+	</body>
+</html>
