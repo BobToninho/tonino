@@ -30,6 +30,10 @@ module.exports = {
 			primary: {
 				600: 'var(--color-primary)',
 			},
+			secondary: {
+				500: 'var(--color-secondary-1)',
+				600: 'var(--color-secondary)',
+			},
 			foreground: 'var(--color-foreground)',
 		},
 		fontFamily: {
