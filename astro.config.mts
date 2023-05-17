@@ -12,11 +12,6 @@ export default defineConfig({
 	site: 'https://tonino.xyz',
 	integrations: [sitemap(), tailwind(), mdx(), prefetch(), image()],
 	markdown: {
-		syntaxHighlight: 'prism',
-	},
-	vite: {
-		define: {
-			__VERSION__: JSON.stringify(pkg.version),
-		},
-	},
+		syntaxHighlight: 'shiki',
+	}
 })
