@@ -26,8 +26,18 @@
 	--color-background: hsla(260, 50%, 13%, 1);
 }
 
+[data-theme='brutal'] {
+	/* Colors */
+	--color-primary: #28d800;
+	--color-secondary: #ff0000;
+	--color-foreground: #000;
+	--color-background: #f8f0c6;
+	// --color-background: #fffef2;
+}
+
 /* Base fonts from: https://iainbean.com/posts/2021/system-fonts-dont-have-to-be-ugly/ */
 :root {
-	font-family: Heebo, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
-		Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+	// font-family: Helvetica, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+	// Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+	@apply font-mono;
 }

@@ -1,6 +1,8 @@
 ---
+import { Picture } from '@astrojs/image/components'
 import BaseHead from '../components/BaseHead.astro'
 import BaseLayout from '../layouts/BaseLayout.astro'
+import meJpg from '../assets/me.jpg'
 
 const headProps = {
 	title: "Roberto Tonino's corner",
@@ -9,11 +11,24 @@ const headProps = {
 }
 ---
 
-<html lang="en">
+<html lang="en" data-theme="brutal">
 	<head>
 		<BaseHead {...headProps} />
 	</head>
 	<body>
-		<BaseLayout>Hello it's me</BaseLayout>
+		<BaseLayout>
+			<section class="container px-4 sm:px-0">
+				<h2 class="text-lg font-normal">Transforming Cool Ideas into Stuff That Works (STW)</h2>
+				<!--
+				<Picture
+					src={meJpg}
+					widths={[200, 400, 800]}
+					aspectRatio={1}
+					class="border-4 border-solid border-primary-600"
+					alt="Picture of the owner of the website, Roberto Tonino. The person is photographed from the chest and up, while there is are rocks and plants on the background. The person wears golden glasses and a blue t-shirt. It's a sunny day. The picture is taken in Park Guell in Barcelona"
+				/>
+				-->
+			</section>
+		</BaseLayout>
 	</body>
 </html>

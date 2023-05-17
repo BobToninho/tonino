@@ -30,7 +30,10 @@ module.exports = {
 			primary: {
 				600: 'var(--color-primary)',
 			},
-			foreground: 'var(--foreground)',
+			foreground: 'var(--color-foreground)',
+		},
+		fontFamily: {
+			mono: ['MartianMonoVF', ...defaultTheme.fontFamily.mono],
 		},
 		extend: {
 			typography: typographyConfig,
