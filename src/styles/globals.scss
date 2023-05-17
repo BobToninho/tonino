@@ -9,3 +9,8 @@ html {
 abbr[title] {
 	cursor: help;
 }
+
+::selection {
+	background-color: color-mix(in srgb, var(--color-primary) 80%, white);
+	color: var(--color-foreground);
+}
