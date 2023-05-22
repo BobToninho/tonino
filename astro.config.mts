@@ -13,5 +13,5 @@ export default defineConfig({
 	integrations: [sitemap(), tailwind(), mdx(), prefetch(), image()],
 	markdown: {
 		syntaxHighlight: 'shiki',
-	}
+	},
 })
