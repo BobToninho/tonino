@@ -1,5 +1,8 @@
-@import 'prism-themes/themes/prism-shades-of-purple.css';
+// @import 'prism-themes/themes/prism-shades-of-purple.css';
 @import 'tailwind';
+// @import "open-props/masks/corner-cuts";
+// @import "open-props/src/props.masks.corner-cuts.css";
+// @import "open-props/masks.corner-cuts.min.css";
 
 html {
 	background-color: var(--color-background);
@@ -8,4 +11,9 @@ html {
 
 abbr[title] {
 	cursor: help;
+}
+
+::selection {
+	background-color: color-mix(in srgb, var(--color-primary) 80%, white);
+	color: var(--color-foreground);
 }

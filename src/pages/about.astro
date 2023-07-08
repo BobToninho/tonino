@@ -1,0 +1,87 @@
+---
+import { Picture } from '@astrojs/image/components'
+import BaseHead from '../components/BaseHead.astro'
+import BaseLayout from '../layouts/BaseLayout.astro'
+import withThem from '../assets/with-them.jpg'
+
+const headProps = {
+	title: "Roberto Tonino's corner",
+	description: 'About Roberto Tonino.',
+	permalink: new URL(Astro.url.pathname, Astro.site),
+}
+---
+
+<html lang="en" data-theme="brutal">
+	<head>
+		<BaseHead {...headProps} />
+		<style>
+			p {
+				@apply mb-4 px-2 text-[16px] sm:text-[20px] lg:px-0;
+				max-width: 60ch;
+				line-height: 1.3;
+			}
+		</style>
+	</head>
+	<body>
+		<BaseLayout>
+			<section class="flex flex-col items-center">
+				<p>
+					I am a guy that enjoys spending time writing software. I like to actually write code and I like to find
+					solutions to problems. Yes, I know, usual and basic stuff. Maybe I should be more creative. But I don't
+					consider myself as a creative-first person. I am creative, yes, but I need to be in the right condition to use
+					my creativity. Also, who said that creativity is important for everything? Sure, in my job it's an important
+					aspect, but there is more.
+				</p>
+
+				<p>
+					Attention and method are two important aspects in software engineering. Attention because when you create
+					software, you always have <em>many options</em>. It may sound general, but writing code can be simply reduced
+					to choosing an alternative between many others, or finding a new alternative to add to the pool of the
+					alternatives. Every decision in software needs to have a reason, there must be a strong opinion on why
+					something was done. From writing a single line of code to designing a whole platform architecture. With time
+					and experience, a subset of these strong opinions are automatic. This is because in software there are many
+					patterns. You know that everytime you have to center a <code>div</code> in CSS, you use flex, grid or the good
+					old <code>margin: 0 auto;</code>.
+				</p>
+
+				<p>
+					Other than software engineering, I enjoy spending time with people. It's truly enriching when you are just
+					together with your friends, people that you know you can trust and have fun with. Party, also that.
+				</p>
+
+				<p class="mb-8">
+					In the photo below you can see me with my girlfriend and some of my best friends. It's incredible how I met
+					them: if I didn't attend that German course while doing an Erasmus in Austria...
+				</p>
+			</section>
+
+			<Picture
+				src={withThem}
+				widths={[300, 600, 900, 1200]}
+				aspectRatio={1080 / 558}
+				class="container mb-5 border-8 border-solid border-primary-600"
+				alt="The owner of this website with his girlfriend and some of his best friends, posing for a picture together in a balcony."
+				title="SIUMMM"
+			/>
+
+			<section class="flex flex-col items-center">
+				<p>
+					We spent together a part of my life that I will never forget. And we are going to spend more of it, for sure.
+				</p>
+
+				<p>You can find my social networks here.</p>
+			</section>
+
+			<section class="flex flex-col items-center">
+				<a
+					href="https://www.linkedin.com/in/roberto-tonino/"
+					class="bg-secondary-600 px-4 py-2 text-xs text-white decoration-[3px] underline-offset-4 hover:bg-secondary-500 md:px-8 md:py-4 md:text-base"
+					>LinkedIn</a
+				>
+			</section>
+
+			<!--
+				-->
+		</BaseLayout>
+	</body>
+</html>

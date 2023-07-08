@@ -1,33 +1,24 @@
 :root {
-	/* Colors */
-	// --color-base: hsla(230, 50%, 50%, 1);
-	// --color-primary: hsla(170, 50%, 50%, 1);
-	// --color-primary: hsl(343, 79%, 63%);
 	--color-primary: hsl(336deg 86% 75%);
-	// --color-accent: hsla(350, 50%, 50%, 1);
-
-	// --color-accent-secondary: hsla(50, 50%, 50%, 1);
-	// --color-base-alternative: hsla(248, 66%, 24%, 1);
-
-	/* Default theme */
 	--color-foreground: hsla(0, 0%, 90%, 1);
-	// --color-background: hsla(230, 50%, 13%, 1);
 	--color-background: hsla(230, 45%, 18%, 1);
-	//--color-background: #322659;//try for violet
 }
 
 [data-theme='violet'] {
-	/* Colors */
 	--color-base: hsla(260, 50%, 50%, 1);
 	--color-primary: hsla(200, 50%, 50%, 1);
-	// --color-accent: hsla(20, 50%, 50%, 1);
-	// --color-accent-secondary: hsla(80, 50%, 50%, 1);
 
 	--color-background: hsla(260, 50%, 13%, 1);
 }
 
-/* Base fonts from: https://iainbean.com/posts/2021/system-fonts-dont-have-to-be-ugly/ */
+[data-theme='brutal'] {
+	--color-primary: #28d800;
+	--color-secondary: #ff0000;
+	--color-secondary-1: color-mix(in srgb, var(--color-secondary) 70%, white);
+	--color-foreground: #000;
+	--color-background: #f8f0c6;
+}
+
 :root {
-	font-family: Heebo, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
-		Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+	@apply font-mono;
 }
