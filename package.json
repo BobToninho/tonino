@@ -30,6 +30,7 @@
 		"lodash-es": "4.17.21",
 		"luxon": "3.3.0",
 		"postcss": "8.4.23",
+		"postcss-jit-props": "1.0.13",
 		"prettier": "2.8.8",
 		"prettier-plugin-astro": "0.8.0",
 		"prettier-plugin-tailwindcss": "0.2.8",
@@ -41,6 +42,7 @@
 	},
 	"dependencies": {
 		"@astrojs/image": "0.16.7",
+		"open-props": "1.5.8",
 		"prism-themes": "1.9.0"
 	},
 	"resolutions": {

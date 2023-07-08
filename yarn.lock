@@ -6184,6 +6184,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"open-props@npm:1.5.8":
+  version: 1.5.8
+  resolution: "open-props@npm:1.5.8"
+  checksum: 00108675d503e9b251800695e7e27dd74dc1d68ec4a28d78891837dfa1ac60cf10a2f310ac5b6f6a9dd2e0e5afc992b2259e9ff7c139c4c243979f18aea8e767
+  languageName: node
+  linkType: hard
+
 "open@npm:^8.4.0":
   version: 8.4.0
   resolution: "open@npm:8.4.0"
@@ -6513,6 +6520,17 @@ __metadata:
   peerDependencies:
     postcss: ^8.0.0
   checksum: 7bd04bd8f0235429009d0022cbf00faebc885de1d017f6d12ccb1b021265882efc9302006ba700af6cab24c46bfa2f3bc590be3f9aee89d064944f171b04e2a3
+  languageName: node
+  linkType: hard
+
+"postcss-jit-props@npm:1.0.13":
+  version: 1.0.13
+  resolution: "postcss-jit-props@npm:1.0.13"
+  dependencies:
+    tiny-glob: ^0.2.9
+  peerDependencies:
+    postcss: ^8.2.8
+  checksum: 6bdc5df07b97fc8209efcdf02e0d80f4b85a7e2875bb567a265ea7b9219f683368c6b4123f54c7d9929387062f2fa809ba836aebccf4e58f7b6a61b63c033134
   languageName: node
   linkType: hard
 
@@ -8072,7 +8090,9 @@ __metadata:
     lint-staged: 13.2.2
     lodash-es: 4.17.21
     luxon: 3.3.0
+    open-props: 1.5.8
     postcss: 8.4.23
+    postcss-jit-props: 1.0.13
     prettier: 2.8.8
     prettier-plugin-astro: 0.8.0
     prettier-plugin-tailwindcss: 0.2.8
