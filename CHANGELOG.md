@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/BobToninho/tonino/compare/v2.0.0...v2.1.0) (2023-07-08)
+
+
+### Features
+
+* add about link, linkedin link and selection style ([8389dd1](https://github.com/BobToninho/tonino/commit/8389dd19674c75ad6982169372964323f7187016))
+* add about page ([7eef5b8](https://github.com/BobToninho/tonino/commit/7eef5b85c9116c69dd1d01f35ea5c976e1839450))
+* add and use brutal theme with MartianMonoVF ([969a786](https://github.com/BobToninho/tonino/commit/969a7864a5ad6e1c4b980a0daab4ec55d7140be9))
+* add Mastodon and Twitter links ([1c3e606](https://github.com/BobToninho/tonino/commit/1c3e606ae5d21e13b4681ddcc5bf53f82f08893a))
+* add open props ([c1168f0](https://github.com/BobToninho/tonino/commit/c1168f0077fdb5042de00f389948f58cf6f82324))
+* complete about page and edit footer ([01f3418](https://github.com/BobToninho/tonino/commit/01f3418d139e09eb72f8cc35991371b0313720e6))
+* homepage max width ([5d6033d](https://github.com/BobToninho/tonino/commit/5d6033df4d206c423d71de28f897b84fa7120d68))
+* preload MartianMono, remove all Heebo references and preloads ([098ba0a](https://github.com/BobToninho/tonino/commit/098ba0a95ae7787e1d118e2a2c12245ad4abae96))
+* use shiki as syntax highlighter ([30acd8a](https://github.com/BobToninho/tonino/commit/30acd8a90ea733e53971726cf8ef03ccdaea8749))
+
 ## [2.0.0](https://github.com/BobToninho/tonino/compare/v1.10.0...v2.0.0) (2023-03-24)
 
 
