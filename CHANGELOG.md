@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0](https://github.com/BobToninho/tonino/compare/v2.1.0...v2.2.0) (2023-07-08)
+
+
+### Features
+
+* add gh link with rel me for webmentions ([ed0ff95](https://github.com/BobToninho/tonino/commit/ed0ff95dc3caa440f7a6779123760fc3320202c7))
+
 ## [2.1.0](https://github.com/BobToninho/tonino/compare/v2.0.0...v2.1.0) (2023-07-08)
 
 
