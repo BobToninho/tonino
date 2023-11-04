@@ -8,8 +8,7 @@
 		"build": "yarn format && astro build",
 		"preview": "wrangler pages dev dist",
 		"format": "yarn prettier -w .",
-		"release": "standard-version",
-		"postinstall": "husky install"
+		"release": "standard-version"
 	},
 	"devDependencies": {
 		"@astrojs/mdx": "0.19.7",
@@ -24,9 +23,7 @@
 		"astro": "2.8.0",
 		"astro-seo": "0.7.4",
 		"autoprefixer": "10.4.14",
-		"husky": "8.0.3",
 		"immutable": "4.3.0",
-		"lint-staged": "13.2.3",
 		"lodash-es": "4.17.21",
 		"luxon": "3.3.0",
 		"postcss": "8.4.31",
@@ -47,9 +44,6 @@
 	},
 	"resolutions": {
 		"minimist": "1.2.6"
-	},
-	"lint-staged": {
-		"*.{js,cjs,mjs,css,scss,md,astro}": "prettier --write"
 	},
 	"packageManager": "yarn@3.5.0"
 }
