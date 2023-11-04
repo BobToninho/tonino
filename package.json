@@ -29,7 +29,7 @@
 		"lint-staged": "13.2.3",
 		"lodash-es": "4.17.21",
 		"luxon": "3.3.0",
-		"postcss": "8.4.25",
+		"postcss": "8.4.31",
 		"postcss-jit-props": "1.0.13",
 		"prettier": "3.0.0",
 		"prettier-plugin-astro": "0.10.0",
