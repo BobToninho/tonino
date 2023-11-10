@@ -9,7 +9,7 @@ import Logo from '../components/LogoText.astro'
 	}
 </style>
 
-<aside class="fixed flex w-full justify-center bg-[#fcdf51]">
+<aside class="fixed flex w-full justify-center bg-[#fcdf51] items-center h-8">
 	<a class="font-bold text-[#0071ce] hover:text-[#0071ce]/50" href="https://u24.gov.ua/"
 		><CountryFlag code="ua" alt="Ukraine flag" class="inline" /> Support Ukraine here. Thank you! <CountryFlag
 			code="ua"
@@ -19,15 +19,16 @@ import Logo from '../components/LogoText.astro'
 	</a>
 </aside>
 
-<header class="container flex h-28 items-center justify-center px-2 pt-8">
-	<div class="basis-1/3"></div>
-	<a href="/" class="block basis-2/3 text-center no-underline decoration-foreground hover:underline hover:decoration-8">
+<header class="max-w-screen-md mx-auto flex items-center pt-8 h-28">
+	<div class="flex items-center pl-8 grow h-full border-2 border-black border-solid">
+	<a href="/" class=" text-center no-underline decoration-foreground hover:underline hover:decoration-8">
 		<Logo />
 	</a>
-	<nav class="basis-1/3">
+	</div>
+	<nav class="w-20 h-20 flex justify-center items-center border-2 border-l-0 border-black border-solid">
 		<a
 			href="/about"
-			class="bg-secondary-600 px-4 py-2 text-xs text-white decoration-[3px] underline-offset-4 hover:bg-secondary-500 md:px-8 md:py-4 md:text-base"
+			class="text-xs text-black no-underline hover:underline hover:decoration-[3px] underline-offset-4 md:text-base"
 			>About</a
 		>
 	</nav>
