@@ -7,7 +7,7 @@ import image from '@astrojs/image'
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://tonino.xyz',
+	site: 'https://www.tonino.xyz',
 	integrations: [sitemap(), tailwind(), mdx(), prefetch(), image()],
 	markdown: {
 		syntaxHighlight: 'shiki',
