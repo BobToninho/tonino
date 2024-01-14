@@ -56,10 +56,12 @@ const headProps = {
 			</section>
 
 			<Picture
+				width={withThem.width}
+				height={withThem.height}
 				src={withThem}
 				widths={[300, 600, 900, 1200]}
-				aspectRatio={1080 / 558}
-				class="container mb-5 border-8 border-solid border-primary-600"
+				formats={['avif', 'webp']}
+				class="mx-auto mb-5 border-8 border-solid border-primary-600 h-auto container"
 				alt="The owner of this website with his girlfriend and some of his best friends, posing for a picture together in a balcony."
 				title="SIUMMM"
 			/>
@@ -76,12 +78,12 @@ const headProps = {
 				<a
 					href="https://www.linkedin.com/in/roberto-tonino/"
 					class="bg-secondary-600 px-4 py-2 text-xs text-white decoration-[3px] underline-offset-4 hover:bg-secondary-500 md:px-8 md:py-4 md:text-base"
-					>LinkedIn</a
+				>LinkedIn</a
 				>
 			</section>
 
 			<!--
-				-->
+			-->
 		</BaseLayout>
 	</body>
 </html>

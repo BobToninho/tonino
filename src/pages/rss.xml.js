@@ -1,7 +1,7 @@
-import rss, { pagesGlobToRssItems } from '@astrojs/rss'
+import rss from '@astrojs/rss'
 import sanitizeHtml from 'sanitize-html'
 
-export async function get(context) {
+export async function GET(context) {
 	const blogImportResult = await import.meta.glob('./blog/*.{md, mdx}', { eager: true })
 	const blogPosts = Object.values(blogImportResult)
 
