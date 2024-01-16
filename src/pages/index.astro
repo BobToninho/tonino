@@ -40,7 +40,7 @@ const headProps = {
 		<style lang="scss">
 			.published-post {
 				&[data-new] {
-					border-color: gold;
+					// border-color: gold;
 					background-color: hsl(51deg 100% 50% / 10%);
 					position: relative;
 
@@ -58,9 +58,9 @@ const headProps = {
 	</head>
 	<body>
 		<BaseLayout>
-			<div class="h-16 border-solid border-x-2 border-y-0 border-black max-w-screen-md mx-auto"/>
+			<div class="mx-auto h-16 max-w-screen-md"></div>
 
-			<section class="mx-auto max-w-screen-md border-x-black border-solid border-t-2 border-b-2 border-x-2">
+			<section class="mx-auto max-w-screen-md">
 				<!--
 				<div class="h-20 ">
 					<h1 class="_px-2 _sm:px-8 _h-full _flex _items-center">Blog posts</h1>
@@ -68,20 +68,22 @@ const headProps = {
 
 				<div>
 				-->
-					{
-						publishablePosts.map(({ title, href, date }) => (
-							<a
-								rel="prefetch"
-								href={href}
-								class="published-post min-h-16 block border-solid border-t-2 border-b-0 border-x-0 py-4 px-8 text-foreground no-underline hover:bg-white hover:bg-opacity-10"
-							>
-								<span class="block uppercase text-2xl" style="font-family: Montserrat, sans-serif;">{title}</span>
-								<time datetime={date} class="published-post__date text-xs capitalize text-opacity-75">
-									{date}
-								</time>
-							</a>
-						))
-					}
+				{
+					publishablePosts.map(({ title, href, date }) => (
+						<a
+							rel="prefetch"
+							href={href}
+							class="published-post block min-h-16 border-x-0 border-b-0 border-t-2 border-solid px-8 py-4 text-foreground no-underline hover:bg-white hover:bg-opacity-10"
+						>
+							<span class="block text-2xl uppercase" style="font-family: Montserrat, sans-serif;">
+								{title}
+							</span>
+							<time datetime={date} class="published-post__date text-xs capitalize text-opacity-75">
+								{date}
+							</time>
+						</a>
+					))
+				}
 				<!--
 				</div>
 				-->

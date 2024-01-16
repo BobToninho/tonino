@@ -9,7 +9,7 @@ import Logo from '../components/LogoText.astro'
 	}
 </style>
 
-<aside class="fixed flex w-full justify-center bg-[#fcdf51] items-center h-8">
+<aside class="fixed flex h-8 w-full items-center justify-center bg-[#fcdf51]">
 	<a class="font-bold text-[#0071ce] hover:text-[#0071ce]/50" href="https://u24.gov.ua/"
 		><CountryFlag code="ua" alt="Ukraine flag" class="inline" /> Support Ukraine here. Thank you! <CountryFlag
 			code="ua"
@@ -19,16 +19,16 @@ import Logo from '../components/LogoText.astro'
 	</a>
 </aside>
 
-<header class="max-w-screen-md mx-auto flex items-center pt-8 h-28">
-	<div class="flex items-center pl-8 grow h-full border-2 border-black border-solid">
-	<a href="/" class=" text-center no-underline decoration-foreground hover:underline hover:decoration-8">
-		<Logo />
-	</a>
+<header class="mx-auto flex h-28 max-w-screen-md items-center pt-8">
+	<div class="flex h-full grow items-center pl-8">
+		<a href="/" class="text-center no-underline decoration-foreground hover:underline hover:decoration-8">
+			<Logo />
+		</a>
 	</div>
-	<nav class="w-20 h-20 flex justify-center items-center border-2 border-l-0 border-black border-solid">
+	<nav class="flex h-20 w-20 items-center justify-center">
 		<a
 			href="/about"
-			class="text-xs text-black no-underline hover:underline hover:decoration-[3px] underline-offset-4 md:text-base"
+			class="text-xs text-black no-underline underline-offset-4 hover:underline hover:decoration-[3px] md:text-base"
 			>About</a
 		>
 	</nav>
@@ -38,11 +38,9 @@ import Logo from '../components/LogoText.astro'
 	<slot />
 </main>
 
-<div class="h-16 border-solid border-x-2 border-y-0 border-black max-w-screen-md mx-auto"/>
+<div class="mx-auto h-16 max-w-screen-md"></div>
 
-<footer
-	class="flex h-16 border-solid border-2 border-b-0 px-8 border-black items-center text-xs sm:mx-auto sm:max-w-screen-md sm:text-sm"
->
+<footer class="flex h-16 items-center px-8 text-xs sm:mx-auto sm:max-w-screen-md sm:text-sm">
 	<span>
 		Roberto Tonino &mdash; 2021&ndash;2024 &mdash; <a href="/rss.xml" title="RSS Feed" class="text-foreground">RSS</a>, <a
 			rel="me"

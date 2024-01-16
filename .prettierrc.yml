@@ -9,3 +9,6 @@ printWidth: 120
 arrowParens: avoid
 vueIndentScriptAndStyle: false
 #astroSortOrder: styles | markup
+plugins:
+  - prettier-plugin-astro
+  - prettier-plugin-tailwindcss
