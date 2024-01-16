@@ -29,9 +29,13 @@ const headProps = {
 }
 ---
 
-<html lang="en" data-theme="brutal">
+<html lang="en" data-theme="typewriter">
 	<head>
 		<BaseHead {...headProps} />
+
+		<link rel="preload" href="/assets/fonts/montserrat-v29-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="preload" href="/assets/fonts/lora-v32-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="preload" href="/assets/fonts/MartianMonoVF.woff2" as="font" type="font/woff2" crossorigin />
 
 		<style lang="scss">
 			.published-post {
@@ -57,11 +61,13 @@ const headProps = {
 			<div class="h-16 border-solid border-x-2 border-y-0 border-black max-w-screen-md mx-auto"/>
 
 			<section class="mx-auto max-w-screen-md border-x-black border-solid border-t-2 border-b-2 border-x-2">
-				<div class="h-20">
-					<h1 class="px-2 sm:px-8 h-full flex items-center">Blog posts</h1>
+				<!--
+				<div class="h-20 ">
+					<h1 class="_px-2 _sm:px-8 _h-full _flex _items-center">Blog posts</h1>
 				</div>
 
 				<div>
+				-->
 					{
 						publishablePosts.map(({ title, href, date }) => (
 							<a
@@ -69,14 +75,16 @@ const headProps = {
 								href={href}
 								class="published-post min-h-16 block border-solid border-t-2 border-b-0 border-x-0 py-4 px-8 text-foreground no-underline hover:bg-white hover:bg-opacity-10"
 							>
-								<h3>{title}</h3>
+								<span class="block uppercase text-2xl" style="font-family: Montserrat, sans-serif;">{title}</span>
 								<time datetime={date} class="published-post__date text-xs capitalize text-opacity-75">
 									{date}
 								</time>
 							</a>
 						))
 					}
+				<!--
 				</div>
+				-->
 			</section>
 		</BaseLayout>
 

@@ -19,6 +19,14 @@
 	--color-background: #f8f0c6;
 }
 
+[data-theme='typewriter'] {
+	--color-primary: #000;
+	--color-secondary: #000;
+	--color-secondary-1: #000;
+	--color-foreground: #000;
+	--color-background: #fff;
+}
+
 :root {
-	@apply font-mono;
+	font-family: 'Lora', serif;
 }

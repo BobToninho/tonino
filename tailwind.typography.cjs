@@ -21,13 +21,13 @@ module.exports = theme => {
 				'a:hover': {
 					color: theme('colors.primary.dark'),
 				},
-				h1: {
-					fontWeight: 700,
-				},
 				code: {
 					color: theme('colors.primary.600'),
 				},
 				'h1, h2, h3, h4': {
+					fontFamily: 'Montserrat, sans-serif',
+					// fontFamily: 'Lora, serif',
+					fontWeight: 700,
 					color: base,
 				},
 				'h1, h2, h3, h4, p, ol, ul': {
