@@ -19,18 +19,17 @@ import Logo from '../components/LogoText.astro'
 	</a>
 </aside>
 
-<header class="mx-auto flex h-28 max-w-screen-md items-center pt-8">
-	<div class="flex h-full grow items-center pl-8">
-		<a href="/" class="text-center no-underline decoration-foreground hover:underline hover:decoration-8">
+<header class="prose mx-auto flex h-28 max-w-prose items-center pt-8 lg:prose-2xl">
+	<div class="flex h-full grow items-center pl-4 sm:pl-8">
+		<a
+			href="/"
+			class="_no-underline _hover:underline _hover:decoration-8 text-center decoration-foreground decoration-dotted decoration-4 underline-offset-4 hover:decoration-solid"
+		>
 			<Logo />
 		</a>
 	</div>
 	<nav class="flex h-20 w-20 items-center justify-center">
-		<a
-			href="/about"
-			class="text-xs text-black no-underline underline-offset-4 hover:underline hover:decoration-[3px] md:text-base"
-			>About</a
-		>
+		<a href="/about" class="text-black no-underline underline-offset-4 hover:underline hover:decoration-[3px]">About</a>
 	</nav>
 </header>
 
@@ -40,7 +39,7 @@ import Logo from '../components/LogoText.astro'
 
 <div class="mx-auto h-16 max-w-screen-md"></div>
 
-<footer class="flex h-16 items-center px-8 text-xs sm:mx-auto sm:max-w-screen-md sm:text-sm">
+<footer class="prose flex h-16 max-w-prose items-center px-4 lg:prose-2xl sm:mx-auto sm:px-8">
 	<span>
 		Roberto Tonino &mdash; 2021&ndash;2024 &mdash; <a href="/rss.xml" title="RSS Feed" class="text-foreground">RSS</a>, <a
 			rel="me"

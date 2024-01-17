@@ -29,6 +29,7 @@ const headProps = {
 		<link rel="preload" href="/assets/fonts/MartianMonoVF.woff2" as="font" type="font/woff2" crossorigin />
 
 		<style lang="scss">
+			// This causes the margin of the paragraphs to NOT collapse, therfore having too much space in between the paragraphs
 			.wrapper {
 				--gap: clamp(1rem, 6vw, 3rem);
 				--full: minmax(var(--gap), 1fr);
@@ -54,7 +55,7 @@ const headProps = {
 	</head>
 	<body>
 		<BaseLayout>
-			<section class="wrapper prose prose-black px-8 pt-8 lg:prose-2xl">
+			<section class="_wrapper prose prose-black mx-auto max-w-prose px-4 pt-8 lg:prose-2xl sm:px-8">
 				<h1 class="uppercase tracking-wider">{title}</h1>
 
 				{
