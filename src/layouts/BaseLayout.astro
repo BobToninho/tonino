@@ -23,15 +23,19 @@ import Logo from '../components/LogoText.astro'
 	<div class="flex h-full grow items-center pl-4 sm:pl-8">
 		<a
 			href="/"
-			class="_no-underline _hover:underline _hover:decoration-8 text-center decoration-foreground decoration-dotted decoration-4 underline-offset-4 hover:decoration-solid"
+			class="text-center decoration-foreground decoration-dotted decoration-4 underline-offset-4 hover:decoration-solid"
 		>
 			<Logo />
 		</a>
 	</div>
 	<nav class="flex h-20 w-20 items-center justify-center">
-		<a href="/about" class="text-black no-underline underline-offset-4 hover:underline hover:decoration-[3px]">About</a>
+		<a href="/about" class="text-black decoration-dashed underline-offset-4 hover:decoration-solid hover:decoration-2">
+			About
+		</a>
 	</nav>
+	<div class="border-0 border-t-2 border-solid border-black"></div>
 </header>
+<div class="border-0 border-t-2 border-solid border-black"></div>
 
 <main>
 	<slot />
