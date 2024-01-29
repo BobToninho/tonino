@@ -40,8 +40,5 @@
 	"dependencies": {
 		"open-props": "1.6.17",
 		"prism-themes": "1.9.0"
-	},
-	"resolutions": {
-		"rollup": "npm:@rollup/wasm-node@*"
 	}
 }
