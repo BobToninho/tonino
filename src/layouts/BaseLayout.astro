@@ -19,7 +19,7 @@ import Logo from '../components/LogoText.astro'
 	</a>
 </aside>
 
-<header class="prose mx-auto flex max-w-prose items-center pt-12 lg:prose-2xl">
+<header class="prose mx-auto flex max-w-prose items-center h-28 pt-8 lg:prose-2xl">
 	<div class="flex grow items-center pl-4 sm:pl-8">
 		<a href="/" class="text-center no-underline hover:underline">
 			<Logo />
@@ -31,13 +31,12 @@ import Logo from '../components/LogoText.astro'
 	</nav>
 </header>
 
-<main>
+<!-- footer - header - padding-header - aside -->
+<main style="min-height: calc(100vh - 64px - 112px - 32px - 32px);">
 	<slot />
 </main>
 
-<div class="mx-auto h-16 max-w-screen-md"></div>
-
-<footer class="prose prose-2xl flex h-16 max-w-prose items-center px-4 sm:mx-auto sm:px-8">
+<footer class="prose prose-2xl flex h-16 mt-auto max-w-prose items-center px-4 sm:mx-auto sm:px-8">
 	<span>
 		Roberto Tonino &ndash; 2021 &ndash; <a href="/rss.xml" title="RSS Feed" class="text-foreground">RSS</a>, <a
 			rel="me"

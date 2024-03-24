@@ -9,7 +9,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 // import withDasha from '../assets/with_dasha_1.jpg'
 
 const mds = await Astro.glob<BlogPost>('./blog/*.(md|mdx)')
-const publishablePosts = List(mds)
+const lastPost = List(mds)
 	.map(post => ({
 		title: post.frontmatter.title,
 		href: post.url,
@@ -23,7 +23,7 @@ const publishablePosts = List(mds)
 
 		return dateB.valueOf() - dateA.valueOf()
 	})
-	.toJS()
+	.first()
 
 const headProps = {
 	title: "Roberto Tonino's corner",
@@ -84,7 +84,7 @@ const headProps = {
 			}
 		</style>
 	</head>
-	<body>
+	<body class="min-h-[100vh]">
 		<BaseLayout>
 			<!--
 			<div class="mx-auto h-16 max-w-screen-md"></div>
@@ -114,8 +114,8 @@ const headProps = {
 				<div class="text text-2xl">Quote goes here</div>
 			</div>
         -->
-			<section class="mt-16 prose mx-auto max-w-prose lg:prose-2xl">
-				<p class="pl-4 sm:pl-8">My last blog post was posted on March 24th and has title: Profiling Neovim</p>
+			<section class="prose mx-auto mt-16 max-w-prose lg:prose-2xl">
+				<p class="pl-4 sm:pl-8">My last blog post was posted on {lastPost.date} and has title: {lastPost.title}</p>
 
 				<p class="pl-4 sm:pl-8">
 					Currently I am reading <a href="https://www.goodreads.com/book/show/2457487.Infinite_Jest"
@@ -125,7 +125,9 @@ const headProps = {
 					>
 				</p>
 
-				<p class="pl-4 sm:pl-8">Charles Leclerc last finishing position is 2<sup>nd</sup> in the 2024 Australian Gran Prix</p>
+				<p class="pl-4 sm:pl-8">
+					Charles Leclerc last finishing position is 2<sup>nd</sup> in the 2024 Australian Gran Prix
+				</p>
 			</section>
 
 			<script>
