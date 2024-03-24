@@ -21,17 +21,13 @@ import Logo from '../components/LogoText.astro'
 
 <header class="prose mx-auto flex h-28 max-w-prose items-center pt-8 lg:prose-2xl">
 	<div class="flex h-full grow items-center pl-4 sm:pl-8">
-		<a
-			href="/"
-			class="text-center decoration-foreground decoration-dotted decoration-4 underline-offset-4 hover:decoration-solid"
-		>
+		<a href="/" class="text-center no-underline hover:underline">
 			<Logo />
 		</a>
 	</div>
-	<nav class="flex h-20 w-20 items-center justify-center">
-		<a href="/about" class="text-black decoration-dashed underline-offset-4 hover:decoration-solid hover:decoration-2">
-			About
-		</a>
+	<nav class="flex h-20 w-20 items-center justify-center gap-4">
+		<a href="/blog/" class="text-black no-underline hover:underline font-medium">Blog</a>
+		<a href="/about" class="text-black no-underline hover:underline font-medium">About</a>
 	</nav>
 	<div class="border-0 border-t-2 border-solid border-black"></div>
 </header>
