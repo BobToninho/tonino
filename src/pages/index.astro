@@ -4,6 +4,9 @@ import { List } from 'immutable'
 import { DateTime } from 'luxon'
 import BaseHead from '../components/BaseHead.astro'
 import BaseLayout from '../layouts/BaseLayout.astro'
+// import { Picture } from 'astro:assets'
+// import withThem from '../assets/with-them.jpg'
+// import withDasha from '../assets/with_dasha_1.jpg'
 
 const mds = await Astro.glob<BlogPost>('./blog/*.(md|mdx)')
 const publishablePosts = List(mds)
@@ -38,6 +41,31 @@ const headProps = {
 		<link rel="preload" href="/assets/fonts/MartianMonoVF.woff2" as="font" type="font/woff2" crossorigin />
 
 		<style lang="scss">
+			.hero {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				grid-template-rows: 600px 1fr;
+				gap: 0px 0px;
+				grid-auto-flow: row;
+				grid-template-areas:
+					'left-picture right-picture'
+					'text right-picture';
+				width: 100%;
+				height: 100%;
+			}
+
+			.right-picture {
+				grid-area: right-picture;
+			}
+
+			.left-picture {
+				grid-area: left-picture;
+			}
+
+			.text {
+				grid-area: text;
+			}
+
 			.published-post {
 				&[data-new] {
 					// border-color: gold;
@@ -58,61 +86,72 @@ const headProps = {
 	</head>
 	<body>
 		<BaseLayout>
+			<!--
 			<div class="mx-auto h-16 max-w-screen-md"></div>
+			<div class="hero _flex _flex-row mx-auto max-w-screen-2xl">
+				<Picture
+					pictureAttributes={{ class: 'z-20 left-picture' }}
+					width={withThem.width}
+					height={withThem.height}
+					src={withThem}
+					widths={[300, 600, 900, 1200]}
+					formats={['avif', 'webp']}
+					class="h-auto max-w-screen-md -rotate-6"
+					alt="The owner of this website with his girlfriend and some of his best friends, posing for a picture together in a balcony."
+					title="SIUMMM"
+				/>
+				<Picture
+					pictureAttributes={{ class: 'z-10 right-picture' }}
+					width={withDasha.width}
+					height={withDasha.height}
+					src={withDasha}
+					widths={[300, 600, 900, 1200]}
+					formats={['avif', 'webp']}
+					class="h-auto max-w-screen-sm rotate-6"
+					alt="The owner of this website with his girlfriend and some of his best friends, posing for a picture together in a balcony."
+					title="SIUMMM"
+				/>
+				<div class="text text-2xl">Quote goes here</div>
+			</div>
+        -->
+			<section class="mt-16 prose mx-auto max-w-prose lg:prose-2xl">
+				<p class="pl-4 sm:pl-8">My last blog post was posted on March 24th and has title: Profiling Neovim</p>
 
-			<section class="mx-auto max-w-screen-md">
-				<!--
-				<div class="h-20 ">
-					<h1 class="_px-2 _sm:px-8 _h-full _flex _items-center">Blog posts</h1>
-				</div>
+				<p class="pl-4 sm:pl-8">
+					Currently I am reading <a href="https://www.goodreads.com/book/show/2457487.Infinite_Jest"
+						><strong>Infinite Jest</strong></a
+					> and <a href="https://www.goodreads.com/book/show/11584280-how-to-win-friends-and-influence-people"
+						><strong>How to Win Friends and Influence People</strong></a
+					>
+				</p>
 
-				<div>
-				-->
-				{
-					publishablePosts.map(({ title, href, date }) => (
-						<a
-							rel="prefetch"
-							href={href}
-							class="published-post block min-h-16 border-x-0 border-b-0 border-t-2 border-solid px-8 py-4 text-foreground no-underline hover:bg-white hover:bg-opacity-10"
-						>
-							<span class="block text-2xl uppercase" style="font-family: Montserrat, sans-serif;">
-								{title}
-							</span>
-							<time datetime={date} class="published-post__date text-xs capitalize text-opacity-75">
-								{date}
-							</time>
-						</a>
-					))
-				}
-				<!--
-				</div>
-				-->
+				<p class="pl-4 sm:pl-8">Charles Leclerc last finishing position is 2<sup>nd</sup> in the 2024 Australian Gran Prix</p>
 			</section>
+
+			<script>
+				const ONE_WEEK = 1000 * 60 * 60 * 24 * 7
+				const $dateEls = document.querySelectorAll('.published-post__date') as unknown as HTMLTimeElement[]
+
+				$dateEls.forEach($dateEl => {
+					const $parent = $dateEl.parentElement
+					const date = $dateEl.getAttribute('datetime')
+					const epoch = new Date(date).valueOf()
+					const isNew = epoch > Date.now() - ONE_WEEK
+					const options = {
+						weekday: 'long',
+						year: 'numeric',
+						month: 'long',
+						day: 'numeric',
+					}
+					const localeDate = new Date(date).toLocaleString(window.navigator.language, options)
+
+					$dateEl.innerText = localeDate
+
+					if (isNew) {
+						$parent.dataset.new = ''
+					}
+				})
+			</script>
 		</BaseLayout>
-
-		<script>
-			const ONE_WEEK = 1000 * 60 * 60 * 24 * 7
-			const $dateEls = document.querySelectorAll('.published-post__date') as unknown as HTMLTimeElement[]
-
-			$dateEls.forEach($dateEl => {
-				const $parent = $dateEl.parentElement
-				const date = $dateEl.getAttribute('datetime')
-				const epoch = new Date(date).valueOf()
-				const isNew = epoch > Date.now() - ONE_WEEK
-				const options = {
-					weekday: 'long',
-					year: 'numeric',
-					month: 'long',
-					day: 'numeric',
-				}
-				const localeDate = new Date(date).toLocaleString(window.navigator.language, options)
-
-				$dateEl.innerText = localeDate
-
-				if (isNew) {
-					$parent.dataset.new = ''
-				}
-			})
-		</script>
 	</body>
 </html>
