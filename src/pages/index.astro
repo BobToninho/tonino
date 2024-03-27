@@ -7,6 +7,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 // import { Picture } from 'astro:assets'
 // import withThem from '../assets/with-them.jpg'
 // import withDasha from '../assets/with_dasha_1.jpg'
+// TODO Links with hover
 
 const mds = await Astro.glob<BlogPost>('./blog/*.(md|mdx)')
 const lastPost = List(mds)
@@ -24,6 +25,7 @@ const lastPost = List(mds)
 		return dateB.valueOf() - dateA.valueOf()
 	})
 	.first()
+console.log({ lastPost })
 
 const headProps = {
 	title: "Roberto Tonino's corner",
@@ -115,18 +117,14 @@ const headProps = {
 			</div>
         -->
 			<section class="prose mx-auto mt-16 max-w-prose lg:prose-2xl">
-				<p class="pl-4 sm:pl-8">My last blog post was posted on {lastPost.date} and has title: {lastPost.title}</p>
+				<p class="pl-4 sm:pl-8">
+					My last blog post was posted on {lastPost.date} and has title: <a href={lastPost.href}>{lastPost.title}</a>
+				</p>
 
 				<p class="pl-4 sm:pl-8">
 					Currently I am reading <a href="https://www.goodreads.com/book/show/2457487.Infinite_Jest"
 						><strong>Infinite Jest</strong></a
-					> and <a href="https://www.goodreads.com/book/show/11584280-how-to-win-friends-and-influence-people"
-						><strong>How to Win Friends and Influence People</strong></a
 					>
-				</p>
-
-				<p class="pl-4 sm:pl-8">
-					Charles Leclerc last finishing position is 2<sup>nd</sup> in the 2024 Australian Gran Prix
 				</p>
 			</section>
 
