@@ -3,6 +3,7 @@ import { BlogPost } from '../../types'
 import BaseHead from '../../components/BaseHead.astro'
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import { List } from 'immutable'
+import { DateTime } from 'luxon'
 
 const permalink = new URL(Astro.url.pathname, Astro.site)
 
@@ -12,21 +13,21 @@ const publishablePosts = List(mds)
 		title: post.frontmatter.title,
 		href: post.url,
 		draft: post.frontmatter.draft,
-		date: post.frontmatter.date,
+		date: DateTime.fromISO(post.frontmatter.date).toISODate(),
 	}))
 	.filter(post => !post.draft)
 	.sort((postA, postB) => {
 		const dateA = new Date(postA.date)
 		const dateB = new Date(postB.date)
 
-		return dateB.getDate() - dateA.getDate()
+		return dateB.valueOf() - dateA.valueOf()
 	})
 	.toJS()
 
 const headProps = {
 	title: "Roberto Tonino's Blog",
-	description: '',
-	permalink,
+	description: "The blog page of Roberto Tonino's website.",
+	permalink: new URL(Astro.url.pathname, Astro.site),
 }
 ---
 
@@ -36,22 +37,20 @@ const headProps = {
 	</head>
 	<body>
 		<BaseLayout>
-			<section class="container mb-8">
-				<p>This is still under construction :)</p>
-			</section>
+			<section class="prose mx-auto mt-16 max-w-prose lg:prose-2xl">
+				<p class="pl-4 sm:pl-8">Blog posts</p>
 
-			<section class="container">
-				<h2>Blog posts</h2>
-
-				<ul>
-					{
-						publishablePosts.map(({ title, href }) => (
-							<li>
-								<a href={href}>{title}</a>
-							</li>
-						))
-					}
-				</ul>
+				<div class="ml-4 sm:ml-8">
+					<ul class="pl-4 sm:pl-8">
+						{
+							publishablePosts.map(({ title, href }) => (
+								<li>
+									<a href={href}>{title}</a>
+								</li>
+							))
+						}
+					</ul>
+				</div>
 			</section>
 		</BaseLayout>
 	</body>
