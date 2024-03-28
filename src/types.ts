@@ -1,5 +1,21 @@
 export interface BlogPost {
-	draft: boolean
-	date: string
-	title: string
+  file: string
+  frontmatter: Frontmatter
+  url: string
+}
+
+export interface Frontmatter {
+  title: string
+  date: string
+  description: string
+  pubDate?: string
+  lang?: string
+  categories?: string[]
+  meta?: Meta
+  layout?: string
+  draft?: boolean
+}
+
+export interface Meta {
+  keywords: string[]
 }
