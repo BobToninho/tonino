@@ -10,7 +10,7 @@ module.exports = {
 			center: true,
 		},
 		colors: {
-      ...colors,
+			...colors,
 			transparent: 'transparent',
 			current: 'currentColor',
 			white: '#fff',

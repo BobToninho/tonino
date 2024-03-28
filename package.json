@@ -5,9 +5,9 @@
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",
-		"build": "yarn format && astro build",
+		"build": "astro build",
 		"preview": "wrangler pages dev dist",
-		"format": "yarn prettier -w .",
+		"format": "prettier -w .",
 		"release": "standard-version"
 	},
 	"devDependencies": {

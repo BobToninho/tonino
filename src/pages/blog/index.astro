@@ -5,8 +5,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro'
 import { List } from 'immutable'
 import { DateTime } from 'luxon'
 
-const permalink = new URL(Astro.url.pathname, Astro.site)
-
 const mds = await Astro.glob<BlogPost>('./*.(md|mdx)')
 const publishablePosts = List(mds)
 	.map(post => ({
