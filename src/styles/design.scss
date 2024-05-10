@@ -16,7 +16,8 @@
 	--color-secondary: #ff0000;
 	--color-secondary-1: color-mix(in srgb, var(--color-secondary) 70%, white);
 	--color-foreground: #000;
-	--color-background: #f8f0c6;
+	// --color-background: #f8f0c6;
+	--color-background: var(--color-primary);
 }
 
 [data-theme='typewriter'] {
@@ -27,6 +28,6 @@
 	--color-background: #fff;
 }
 
-:root {
-	font-family: 'Lora', serif;
-}
+// :root {
+// 	font-family: 'Lora', serif;
+// }

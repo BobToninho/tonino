@@ -7,8 +7,8 @@ import prefetch from '@astrojs/prefetch'
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://www.tonino.xyz',
-	integrations: [sitemap(), tailwind(), mdx(), prefetch()],
+	integrations: [sitemap(), mdx(), prefetch()],
 	markdown: {
-		syntaxHighlight: 'shiki',
+		syntaxHighlight: false
 	},
 })

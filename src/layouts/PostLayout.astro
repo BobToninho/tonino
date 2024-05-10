@@ -1,8 +1,7 @@
 ---
 import { DateTime } from 'luxon'
 
-import BaseLayout from './BaseLayout.astro'
-import BaseHead from '../components/BaseHead.astro'
+import BaseLayout2 from './BaseLayout2.astro'
 
 const { title, description, date, revisionDate = null, lang = 'en-us' } = Astro.props.content
 const permalink = new URL(Astro.url.pathname, Astro.site)
@@ -20,69 +19,74 @@ const headProps = {
 }
 ---
 
-<html lang="en" data-theme="typewriter">
-	<head>
-		<BaseHead {...headProps} />
+<style>
+	.intro,
+	.content,
+	.title {
+		font-family: sans-serif;
+		font-weight: 600;
+		font-size: 3rem;
+		padding-left: 1rem;
+	}
 
-		<!--<link rel="preload" href="/assets/fonts/montserrat-v29-latin-700.woff2" as="font" type="font/woff2" crossorigin />-->
-		<link rel="preload" href="/assets/fonts/lora-v32-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
-		<link rel="preload" href="/assets/fonts/MartianMonoVF.woff2" as="font" type="font/woff2" crossorigin />
+	.title {
+		font-size: 4rem;
+		text-transform: uppercase;
+	}
 
-		<style lang="scss">
-			// This causes the margin of the paragraphs to NOT collapse, therfore having too much space in between the paragraphs
-			.wrapper {
-				--gap: clamp(1rem, 6vw, 3rem);
-				--full: minmax(var(--gap), 1fr);
-				--content: min(65ch, 100% - var(--gap) * 2);
-				--popout: minmax(0, 2rem);
-				--feature: minmax(0, 5rem);
+	.intro {
+		text-transform: uppercase;
+		margin-top: 2rem;
+	}
 
-				display: grid;
-				grid-template-columns:
-					1fr
-					min(65ch, 100%)
-					1fr;
-				grid-template-columns:
-					[full-start] var(--full)
-					[feature-start] var(--feature)
-					[popout-start] var(--popout)
-					[content-start] var(--content) [content-end]
-					var(--popout) [popout-end]
-					var(--feature) [feature-end]
-					var(--full) [full-end];
-			}
-		</style>
-	</head>
-	<body>
-		<BaseLayout>
-			<section class="_wrapper prose prose-black mx-auto max-w-prose px-4 pt-8 lg:prose-2xl sm:px-8">
-				<h1 class="uppercase tracking-wider">{title}</h1>
+	.content {
+		font-family: 'Lora', serif;
+		margin-top: 2rem;
+		font-weight: 500;
+		font-size: 2rem;
+		margin-bottom: 5rem;
+	}
+</style>
 
-				{
-					date && (
-						// !important overrides the prose class
-						<p class:list={[{ '!mb-0': !!revisionDate }]}>
-							<span>Posted on:</span>
-							<time id="date" datetime={isoDate} class="font-bold">
-								{formattedDate}
-							</time>
-						</p>
-					)
-				}
-				{
-					revisionDate && (
-						// !important overrides the prose class
-						<p class="!mt-0 italic">
-							<span>Updated on:</span>
-							<time id="date" datetime={isoRevisionDate} class="font-bold">
-								{formattedRevisionDate}
-							</time>
-						</p>
-					)
-				}
+<style is:inline>
+	.content {
+		a {
+      color: var(--color-foreground);
 
-				<slot />
-			</section>
-		</BaseLayout>
-	</body>
-</html>
+      &:hover {
+      color: var(--color-secondary);
+      }
+		}
+	}
+</style>
+
+<BaseLayout2>
+	<h1 class="title">{title}</h1>
+
+	<section class="intro">
+		{
+			date && (
+				<p>
+					<span>Posted on:&nbsp;</span>
+					<time id="date" datetime={isoDate}>
+						{formattedDate}
+					</time>
+				</p>
+			)
+		}
+		{
+			revisionDate && (
+				<p>
+					<span>Updated on:</span>
+					<time id="date" datetime={isoRevisionDate}>
+						{formattedRevisionDate}
+					</time>
+				</p>
+			)
+		}
+	</section>
+
+	<section class="content">
+		<slot />
+	</section>
+</BaseLayout2>

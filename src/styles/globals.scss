@@ -1,21 +1,50 @@
-// @import 'prism-themes/themes/prism-shades-of-purple.css';
-@import 'tailwind';
+// @import 'tailwind';
 // @import "open-props/masks/corner-cuts";
 // @import "open-props/src/props.masks.corner-cuts.css";
 // @import "open-props/masks.corner-cuts.min.css";
 
 html {
-	background-color: var(--color-background);
-	color: var(--color-foreground);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
 }
 
 abbr[title] {
-	cursor: help;
+  cursor: help;
 }
 
-::selection {
-	background-color: color-mix(in srgb, var(--color-primary) 50%, white);
-	// color: var(--color-foreground);
-	// color: color-mix(in srgb, var(--color-foreground) 30%, white);
-	color: #fff;
+// ::selection {
+//   background-color: color-mix(in srgb, var(--color-primary) 50%, white);
+//   // color: var(--color-foreground);
+//   // color: color-mix(in srgb, var(--color-foreground) 30%, white);
+//   // color: #fff;
+// }
+
+.page {
+  display: grid;
+  grid-template-columns: 25rem 1fr;
+  grid-template-rows: 1fr;
+
+  &__left-placeholder {
+    border-right: 7px solid var(--color-foreground);
+  }
+
+  &__left {
+    position: fixed;
+    font-family: sans-serif;
+    font-weight: 900;
+    font-size: 6rem;
+    text-transform: uppercase;
+    display: flex;
+    gap: 10rem;
+    width: calc(25rem - 7px);
+
+    &:has(a:hover) {
+      background-color: var(--color-secondary);
+    }
+
+    a {
+      color: var(--color-foreground);
+      text-decoration: none;
+    }
+  }
 }

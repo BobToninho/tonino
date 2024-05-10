@@ -1,6 +1,3 @@
-dev:
-  bun run dev
-
 update:
 	bun x npm-check-updates -u
 	bun i
