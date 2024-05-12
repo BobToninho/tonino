@@ -28,6 +28,7 @@ abbr[title] {
   display: grid;
   grid-template-columns: 25rem 1fr;
   grid-template-rows: 1fr;
+  block-size: 100vh;
 
   &__left-placeholder {
     border-right: 7px solid var(--color-foreground);
