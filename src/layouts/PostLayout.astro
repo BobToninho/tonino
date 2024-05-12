@@ -31,21 +31,22 @@ const headProps = {
 
 	.title {
 		font-size: 4rem;
+		font-size: var(--font-size-fluid-3);
 		text-transform: uppercase;
 		padding-top: 1rem;
 	}
 
 	.intro {
-		font-size: 2rem;
+		font-size: var(--font-size-5);
 		text-transform: uppercase;
-		margin-top: 2rem;
+		margin-top: var(--size-7);
 	}
 
 	.content {
 		font-family: 'Lora', serif;
-		margin-top: 2rem;
+		margin-top: var(--size-7);
 		font-weight: 500;
-		font-size: 2rem;
+		font-size: var(--font-size-5);
 		margin-bottom: 5rem;
 	}
 </style>
@@ -56,7 +57,7 @@ const headProps = {
 			color: var(--color-foreground);
 
 			&:hover {
-				color: var(--color-secondary);
+				background-color: var(--color-secondary);
 			}
 		}
 
@@ -80,6 +81,10 @@ const headProps = {
 		code {
 			overflow-x: scroll;
 			white-space: pre-wrap;
+		}
+
+		p {
+      margin-top: .75rem;
 		}
 	}
 </style>
