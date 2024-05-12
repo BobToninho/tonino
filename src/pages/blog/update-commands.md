@@ -16,13 +16,13 @@ Quick note: for some update commands I prepend a command to inspect the
 current state of the tool. This is useful especially for package
 managers.
 
-## Windows specific
-
-Update [wsl]:
+## [WSL]
 
 ```powershell
 wsl --update
 ```
+
+## [PowerShell][pwsh-update-packages]
 
 There is no easy way to update the PowerShell modules installed via
 `Install-Module`, but [this script][pwsh-update-packages] does the job
@@ -34,23 +34,21 @@ Update [PowerShell help modules][pwsh-help-modules]:
 Update-Help [-UICulture en-US]
 ```
 
-Update package managers' installed packages:
-
-- [winget]
+## [winget]
 
 ```powershell
 winget upgrade
 winget upgrade --all
 ```
 
-- [chocolatey]
+## [chocolatey]
 
 ```powershell
 choco outdated -l
 choco upgrade all
 ```
 
-- [scoop]
+## [scoop]
 
 ```powershell
 scoop status
@@ -80,6 +78,18 @@ cargo install cargo-watch
 
 ```bash
 deno upgrade
+```
+
+## Bun
+
+```bash
+bun upgrade
+```
+
+## Homebrew
+
+```bash
+brew upgrade
 ```
 
 ## Python
