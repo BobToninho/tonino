@@ -9,3 +9,4 @@
 - right border of logo needs to always go to the end of the page
 - blog post: improve spacing among paragraphs and headers
 - pre and code blocks in blog post make the page scroll right
+- selection color
