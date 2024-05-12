@@ -51,11 +51,33 @@ const headProps = {
 <style is:inline>
 	.content {
 		a {
-      color: var(--color-foreground);
+			color: var(--color-foreground);
 
-      &:hover {
-      color: var(--color-secondary);
-      }
+			&:hover {
+				color: var(--color-secondary);
+			}
+		}
+
+		pre {
+			/* Default value I found with devtools */
+			--margin: 32px;
+			margin-top: var(--margin);
+			margin-bottom: var(--margin);
+			/* Needed for "Copy" button */
+			position: relative;
+
+			.copy {
+				font-size: 1rem;
+				height: var(--margin);
+				position: absolute;
+				right: 0.5rem;
+				top: calc(-1 * var(--margin));
+			}
+		}
+
+		code {
+			overflow-x: scroll;
+			white-space: pre-wrap;
 		}
 	}
 </style>
@@ -89,4 +111,30 @@ const headProps = {
 	<section class="content">
 		<slot />
 	</section>
+
+	<script>
+		const $preBlocks = document.querySelectorAll('pre')
+
+		for (const $preBlock of $preBlocks.values()) {
+			console.log($preBlock)
+			const copyButton = document.createElement('button')
+			copyButton.classList.add('copy')
+			copyButton.textContent = 'Copy'
+
+			copyButton.addEventListener('click', () => {
+				const $codeBlock = $preBlock.querySelector('code')
+				const textToCopy = $codeBlock.textContent
+				const invisibleInput = document.createElement('input')
+				invisibleInput.style.opacity = '0'
+				invisibleInput.setAttribute('value', textToCopy)
+				document.body.append(invisibleInput)
+				invisibleInput.select()
+
+				document.execCommand('copy')
+				invisibleInput.remove()
+			})
+
+			$preBlock.prepend(copyButton)
+		}
+	</script>
 </BaseLayout2>

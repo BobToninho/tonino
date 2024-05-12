@@ -24,11 +24,24 @@ abbr[title] {
 //   // color: #fff;
 // }
 
+button {
+  border: 3px solid black;
+  background-color: var(--color-background);
+  text-transform: uppercase;
+  font-weight: 900;
+
+  &:hover {
+    background-color: var(--color-secondary);
+  }
+}
+
+
+
 .page {
   display: grid;
   grid-template-columns: 25rem 1fr;
   grid-template-rows: 1fr;
-  block-size: 100vh;
+  height: 100vh;
 
   &__left-placeholder {
     border-right: 7px solid var(--color-foreground);
