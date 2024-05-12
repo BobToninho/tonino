@@ -5,6 +5,14 @@
 
 html {
   background-color: var(--color-background);
+  background-image: radial-gradient(circle at center,
+    #ff0000 0,
+    color-mix(in srgb, #ff0000, var(--color-background) ) 50%,
+    var(--color-background) 100%);
+  // background-position: fixed;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  background-attachment: fixed;
   color: var(--color-foreground);
 }
 
