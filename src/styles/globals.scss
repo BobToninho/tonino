@@ -11,18 +11,25 @@ html {
       var(--color-background) 100%);
   background-attachment: fixed;
   color: var(--color-foreground);
+
+  &:has(header.page__left a:hover) {
+  background-image: radial-gradient(circle at center left,
+      #ff0000 0,
+      color-mix(in srgb, #ff0000 40%, var(--color-background) 50%) 75%,
+      var(--color-background) 100%);
+  }
 }
 
 abbr[title] {
   cursor: help;
 }
 
-// ::selection {
-//   background-color: color-mix(in srgb, var(--color-primary) 50%, white);
-//   // color: var(--color-foreground);
-//   // color: color-mix(in srgb, var(--color-foreground) 30%, white);
-//   // color: #fff;
-// }
+::selection {
+  // background-color: color-mix(in srgb, var(--color-primary) 50%, white);
+  background-color: var(--color-primary);
+  // color: color-mix(in srgb, var(--color-foreground) 30%, white);
+  color: #fff;
+}
 
 button {
   border: 3px solid black;
