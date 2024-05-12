@@ -25,7 +25,6 @@ const headProps = {
 	.title {
 		font-family: sans-serif;
 		font-weight: 600;
-		font-size: 3rem;
 		padding-left: 1rem;
 	}
 
@@ -35,6 +34,7 @@ const headProps = {
 	}
 
 	.intro {
+		font-size: 2rem;
 		text-transform: uppercase;
 		margin-top: 2rem;
 	}
@@ -77,7 +77,7 @@ const headProps = {
 		{
 			revisionDate && (
 				<p>
-					<span>Updated on:</span>
+					<span>Updated on:&nbsp;</span>
 					<time id="date" datetime={isoRevisionDate}>
 						{formattedRevisionDate}
 					</time>
