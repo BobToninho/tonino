@@ -3,9 +3,5 @@ const postcssJitProps = require('postcss-jit-props')
 const OpenProps = require('open-props')
 
 module.exports = {
-  plugins: [
-    postcssJitProps(OpenProps),
-    postCssCustomMedia(),
-    require('autoprefixer')
-  ],
+	plugins: [postcssJitProps(OpenProps), postCssCustomMedia(), require('autoprefixer')],
 }
