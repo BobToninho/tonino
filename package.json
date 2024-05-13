@@ -11,16 +11,16 @@
 		"release": "standard-version"
 	},
 	"devDependencies": {
-		"@astrojs/mdx": "2.3.1",
+		"@astrojs/mdx": "3.0.0",
 		"@astrojs/prefetch": "0.4.1",
 		"@astrojs/rss": "4.0.5",
 		"@astrojs/sitemap": "3.1.4",
 		"@astrojs/tailwind": "5.1.0",
-		"@tailwindcss/typography": "0.5.12",
+		"@tailwindcss/typography": "0.5.13",
 		"@types/lodash-es": "4.17.12",
 		"@types/luxon": "3.4.2",
 		"@types/sanitize-html": "2.11.0",
-		"astro": "4.6.3",
+		"astro": "4.8.3",
 		"astro-seo": "0.8.3",
 		"autoprefixer": "10.4.19",
 		"immutable": "5.0.0-beta.5",
@@ -32,14 +32,15 @@
 		"prettier-plugin-astro": "0.13.0",
 		"prettier-plugin-tailwindcss": "0.5.14",
 		"sanitize-html": "2.13.0",
-		"sass": "1.75.0",
+		"sass": "1.77.1",
 		"standard-version": "9.5.0",
 		"tailwindcss": "3.4.3",
 		"typescript": "5.4.5",
-		"wrangler": "3.51.2"
+		"wrangler": "3.55.0"
 	},
 	"dependencies": {
-		"open-props": "1.7.3",
+		"open-props": "1.7.4",
+		"postcss-custom-media": "10.0.6",
 		"prism-themes": "1.9.0"
 	}
 }

@@ -9,6 +9,6 @@ export default defineConfig({
 	site: 'https://www.tonino.xyz',
 	integrations: [sitemap(), mdx(), prefetch()],
 	markdown: {
-		syntaxHighlight: false
+		syntaxHighlight: false,
 	},
 })

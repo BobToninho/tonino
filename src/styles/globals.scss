@@ -1,76 +1,96 @@
 // @import 'tailwind';
-// @import "open-props/masks/corner-cuts";
-// @import "open-props/src/props.masks.corner-cuts.css";
-// @import "open-props/masks.corner-cuts.min.css";
+@import "media";
+
 
 html {
-  background-color: var(--color-background);
-  background-image: radial-gradient(circle at center left,
-      #ff0000 0,
-      color-mix(in srgb, #ff0000 40%, var(--color-background) 50%) 50%,
-      var(--color-background) 100%);
-  background-attachment: fixed;
-  color: var(--color-foreground);
+	background-color: var(--color-background);
+	background-image: radial-gradient(
+		circle at center left,
+		#ff0000 0,
+		color-mix(in srgb, #ff0000 40%, var(--color-background) 50%) 50%,
+		var(--color-background) 100%
+	);
+	background-attachment: fixed;
+	color: var(--color-foreground);
 
-  &:has(header.page__left a:hover) {
-  background-image: radial-gradient(circle at center left,
-      #ff0000 0,
-      color-mix(in srgb, #ff0000 40%, var(--color-background) 50%) 75%,
-      var(--color-background) 100%);
-  }
+	&:has(header.page__left a:hover) {
+		background-image: radial-gradient(
+			circle at center left,
+			#ff0000 0,
+			color-mix(in srgb, #ff0000 40%, var(--color-background) 50%) 75%,
+			var(--color-background) 100%
+		);
+	}
 }
 
 abbr[title] {
-  cursor: help;
+	cursor: help;
 }
 
 ::selection {
-  // background-color: color-mix(in srgb, var(--color-primary) 50%, white);
-  background-color: var(--color-primary);
-  // color: color-mix(in srgb, var(--color-foreground) 30%, white);
-  color: #fff;
+	// background-color: color-mix(in srgb, var(--color-primary) 50%, white);
+	background-color: var(--color-primary);
+	// color: color-mix(in srgb, var(--color-foreground) 30%, white);
+	color: #fff;
 }
 
 button {
-  border: 3px solid black;
-  background-color: var(--color-background);
-  text-transform: uppercase;
-  font-weight: 900;
+	border: 3px solid black;
+	background-color: var(--color-background);
+	text-transform: uppercase;
+	font-weight: 900;
 
-  &:hover {
-    background-color: var(--color-secondary);
-  }
+	&:hover {
+		background-color: var(--color-secondary);
+	}
 }
 
-
-
 .page {
-  display: grid;
-  grid-template-columns: 25rem 1fr;
-  grid-template-rows: 1fr;
-  height: 100vh;
+	display: grid;
+	grid-template-columns: 25rem 1fr;
+	grid-template-rows: 1fr;
+	height: 100vh;
 
-  &__left-placeholder {
-    border-right: 7px solid var(--color-foreground);
-  }
+	&__left-placeholder {
+		border-right: 7px solid var(--color-foreground);
+	}
 
-  &__left {
-    position: fixed;
-    font-family: sans-serif;
-    font-weight: 900;
-    font-size: 6rem;
-    text-transform: uppercase;
-    display: flex;
-    gap: 10rem;
-    width: calc(25rem - 7px);
+	&__left {
+		position: fixed;
+		font-family: sans-serif;
+		font-weight: 900;
+		font-size: 6rem;
+		text-transform: uppercase;
+		display: flex;
+		gap: 10rem;
+		width: calc(25rem - 7px);
 
-    &:has(a:hover) {
-      background-color: var(--color-secondary);
-    }
+		&:has(a:hover) {
+			background-color: var(--color-secondary);
+		}
 
-    a {
-      color: var(--color-foreground);
-      text-decoration: none;
-    }
-  }
+		a {
+			color: var(--color-foreground);
+			text-decoration: none;
+		}
+	}
+}
+
+@media (--xs-only) {
+  // .page {
+  //   grid-template-columns: 1fr;
+  //   grid-template-rows: 10rem 1fr;
+
+  // }
+
+  // .page__left {
+  //   position: static;
+  //   display: inline-flex;
+  //   font-size: 2rem;
+  //   gap: 0;
+
+  //   br {
+  //     display: none;
+  //   }
+  // }
 }
