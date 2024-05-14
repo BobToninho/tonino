@@ -34,9 +34,9 @@
 		--color-foreground: #fff;
 		--color-background: #000;
 
-    @media (prefers-color-scheme: light) {
-      --color-background: #fff;
-      --color-foreground: #000;
-    }
+		@media (prefers-color-scheme: light) {
+			--color-background: #fff;
+			--color-foreground: #000;
+		}
 	}
 }

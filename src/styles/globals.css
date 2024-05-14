@@ -4,18 +4,22 @@
 
 		background-color: var(--color-background);
 		color: var(--color-foreground);
-    font-family: var(--font-sans);
-
+		font-family: var(--font-sans);
 	}
 
-  h1,h2,h3,h4,h5,h6 {
-    font-size: 1rem;
-  }
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-size: 1rem;
+	}
 
-  a {
-    text-decoration: none;
-    color: var(--color-foreground);
-  }
+	a {
+		text-decoration: none;
+		color: var(--color-foreground);
+	}
 
 	abbr[title] {
 		cursor: help;
@@ -27,15 +31,15 @@
 	}
 
 	#page {
-    --space-lateral: var(--size-5);
+		--space-lateral: var(--size-5);
 
 		margin: 0 var(--space-lateral) var(--size-10) var(--space-lateral);
 		padding-top: calc(var(--size-7) + var(--space-lateral));
-    min-height: 100vh;
-    max-width: max(var(--size-content-3), 720px);
+		min-height: 100vh;
+		max-width: max(var(--size-content-3), 720px);
 
-    @media (--lg-n-above) {
-		margin: 0 var(--space-lateral) var(--size-10) var(--size-13);
-    }
+		@media (--lg-n-above) {
+			margin: 0 var(--space-lateral) var(--size-10) var(--size-13);
+		}
 	}
 }

@@ -4,29 +4,29 @@ import BaseLayout3 from '../layouts/BaseLayout3.astro'
 // Maybe I can pass this to BaseLayout2
 // It's not so important...
 //const headProps = {
-	// title: "Roberto Tonino's corner",
-	// description: "The homepage of Roberto Tonino's website.",
-	// permalink: new URL(Astro.url.pathname, Astro.site),
+// title: "Roberto Tonino's corner",
+// description: "The homepage of Roberto Tonino's website.",
+// permalink: new URL(Astro.url.pathname, Astro.site),
 // }
 ---
 
 <style>
-section:not(:last-child) {
-  margin-bottom: var(--size-8);
-}
+	section:not(:last-child) {
+		margin-bottom: var(--size-8);
+	}
 </style>
 
 <BaseLayout3>
-  <section>
-    <h1>Homepage</h1>
-  </section>
+	<section>
+		<h1>Homepage</h1>
+	</section>
 
 	<section>
 		<h2>Sitemap</h2>
-    <ul>
-      <li><a href="/blog">Writing</a></li>
-      <li><a href="/about">About</a></li>
-    </ul>
+		<ul>
+			<li><a href="/blog">Writing</a></li>
+			<li><a href="/about">About</a></li>
+		</ul>
 	</section>
 
 	<section>
