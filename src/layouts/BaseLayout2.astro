@@ -20,22 +20,71 @@ import BaseHead from '../components/BaseHead.astro'
 		<!--<link rel="preload" href="/assets/fonts/montserrat-v29-latin-700.woff2" as="font" type="font/woff2" crossorigin />-->
 		<link rel="preload" href="/assets/fonts/lora-v32-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
 		<!-- <link rel="preload" href="/assets/fonts/MartianMonoVF.woff2" as="font" type="font/woff2" crossorigin /> -->
+		<style>
+			#page {
+				padding-top: var(--size-7);
+				display: grid;
+				grid-template-columns: 25rem 1fr;
+				grid-template-rows: 1fr;
+				height: 100vh;
+			}
+
+			#page__left-placeholder {
+				border-right: 7px solid var(--color-foreground);
+			}
+
+			#page__left {
+				position: fixed;
+				font-family: sans-serif;
+				font-weight: 900;
+				font-size: 6rem;
+				text-transform: uppercase;
+				display: flex;
+				gap: 10rem;
+				width: calc(25rem - 7px);
+
+				&:has(a:hover) {
+					background-color: var(--color-secondary);
+				}
+
+				a {
+					color: var(--color-foreground);
+					text-decoration: none;
+				}
+			}
+
+			#header {
+				font-family: sans-serif;
+				position: fixed;
+				z-index: 50;
+				display: flex;
+				height: var(--size-7);
+				width: 100%;
+				align-items: center;
+				justify-content: center;
+				background-color: #fcdf51;
+
+				a {
+					display: flex;
+					font-weight: bold;
+					color: #0071ce;
+				}
+			}
+		</style>
 	</head>
 	<body>
-		<!--
-<aside class="fixed z-50 flex h-8 w-full items-center justify-center bg-[#fcdf51]">
-	<a class="font-bold text-[#0071ce] hover:text-[#0071ce]/50" href="https://u24.gov.ua/"
-		><CountryFlag code="ua" alt="Ukraine flag" class="inline" /> Support Ukraine here. Thank you! <CountryFlag
-			code="ua"
-			alt="Ukraine flag"
-			class="inline"
-		/>
-	</a>
-</aside>
--->
+		<aside id="header" class="fixed z-50 flex h-8 w-full items-center justify-center bg-[#fcdf51]">
+			<a class="font-bold text-[#0071ce] hover:text-[#0071ce]/50" href="https://u24.gov.ua/"
+				><CountryFlag code="ua" alt="Ukraine flag" class="inline" /> Support Ukraine here. Thank you! <CountryFlag
+					code="ua"
+					alt="Ukraine flag"
+					class="inline"
+				/>
+			</a>
+		</aside>
 
-		<div class="page">
-			<header class="page__left">
+		<main id="page">
+			<header id="page__left">
 				<a href="/">
 					<div>
 						R<br />o<br />b<br />e<br />r<br />t<br />o
@@ -47,12 +96,12 @@ import BaseHead from '../components/BaseHead.astro'
 					</div>
 				</a>
 			</header>
-			<div class="page__left-placeholder"></div>
+			<div id="page__left-placeholder"></div>
 
-			<section class="page__right">
+			<section id="page__right">
 				<slot />
 			</section>
-		</div>
+		</main>
 		<!--
 		<nav class="">
 			<a href="/blog/" class="">Blog</a>
