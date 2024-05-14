@@ -9,5 +9,3 @@
 - blog post: improve spacing among paragraphs and headers
 - variable header size, use the current one as max
 - copy button needs to respect new lines
-- remove sass
-- use css layers
