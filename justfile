@@ -1,4 +1,4 @@
-dev:
+default:
   bun run dev
 
 update:
