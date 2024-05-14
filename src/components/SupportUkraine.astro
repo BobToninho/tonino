@@ -1,0 +1,30 @@
+---
+import CountryFlag from '../components/CountryFlag.astro'
+---
+
+<style>
+	aside {
+		position: fixed;
+		font-family: sans-serif;
+		z-index: 50;
+		display: flex;
+		height: var(--size-7);
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+		background-color: #fcdf51;
+
+		a {
+			display: flex;
+      align-items: center;
+			font-weight: bold;
+			color: #0071ce;
+		}
+	}
+</style>
+
+<aside id="header" class="">
+	<a class="" href="https://u24.gov.ua/">
+		<CountryFlag code="ua" alt="Ukraine flag" style="display: inline;" />&nbsp;Support Ukraine here. Thank you!&nbsp;<CountryFlag code="ua" alt="Ukraine flag" style="display: inline;" />
+	</a>
+</aside>

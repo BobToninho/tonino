@@ -1,133 +1,36 @@
 ---
-import { BlogPost } from '../types'
-import { List } from 'immutable'
-import { DateTime } from 'luxon'
-import BaseHead from '../components/BaseHead.astro'
-import BaseLayout2 from '../layouts/BaseLayout2.astro'
-// import { Picture } from 'astro:assets'
-// import withThem from '../assets/with-them.jpg'
-// import withDasha from '../assets/with_dasha_1.jpg'
-// TODO Links with hover
-
-const mds = await Astro.glob<BlogPost>('./blog/*.(md|mdx)')
-const lastPost = List(mds)
-	.map(post => ({
-		title: post.frontmatter.title,
-		href: post.url,
-		draft: post.frontmatter.draft,
-		date: DateTime.fromISO(post.frontmatter.date).toISODate(),
-	}))
-	.filter(post => !post.draft)
-	.sort((postA, postB) => {
-		const dateA = new Date(postA.date)
-		const dateB = new Date(postB.date)
-
-		return dateB.valueOf() - dateA.valueOf()
-	})
-	.first()
-
-const publishablePosts = List(mds)
-	.map(post => ({
-		title: post.frontmatter.title,
-		href: post.url,
-		draft: post.frontmatter.draft,
-		date: DateTime.fromISO(post.frontmatter.date).toISODate(),
-	}))
-	.filter(post => !post.draft)
-	.sort((postA, postB) => {
-		const dateA = new Date(postA.date)
-		const dateB = new Date(postB.date)
-
-		return dateB.valueOf() - dateA.valueOf()
-	})
-	.toJS()
+import BaseLayout3 from '../layouts/BaseLayout3.astro'
 
 // Maybe I can pass this to BaseLayout2
 // It's not so important...
-const headProps = {
-	title: "Roberto Tonino's corner",
-	description: "The homepage of Roberto Tonino's website.",
-	permalink: new URL(Astro.url.pathname, Astro.site),
-}
+//const headProps = {
+	// title: "Roberto Tonino's corner",
+	// description: "The homepage of Roberto Tonino's website.",
+	// permalink: new URL(Astro.url.pathname, Astro.site),
+// }
 ---
 
 <style>
-	@layer globals {
-		ul {
-			font-family: sans-serif;
-			font-weight: 600;
-			font-size: var(--font-size-7);
-			font-size: var(--font-size-3);
-			text-transform: uppercase;
-			gap: 10rem;
-			margin: 0;
-			padding: 0;
-			list-style: none;
-
-			li {
-				padding: 1rem;
-
-				&:not(:last-child) {
-					border-bottom: 7px solid var(--color-foreground);
-				}
-
-				&:has(a:hover) {
-					background-color: var(--color-secondary);
-				}
-
-				a {
-					color: var(--color-foreground);
-					text-decoration: none;
-				}
-			}
-		}
-	}
+section:not(:last-child) {
+  margin-bottom: var(--size-8);
+}
 </style>
 
-<BaseLayout2>
-	<ul>
-		{
-			publishablePosts.map(post => (
-				<li>
-					<a href={post.href}>{post.title}</a>
-				</li>
-			))
-		}
-	</ul>
-</BaseLayout2>
-<!--
-	<section class="prose mx-auto mt-16 max-w-prose lg:prose-2xl">
-		<p class="">
-			My last blog post was posted on {lastPost.date} and has title: <a href={lastPost.href}>{lastPost.title}</a>
-		</p>
+<BaseLayout3>
+  <section>
+    <h1>Homepage</h1>
+  </section>
 
-		<h2>Currently reading</h2>
-
-		<a href="https://www.goodreads.com/book/show/2457487.Infinite_Jest"><strong>Infinite Jest</strong></a>
+	<section>
+		<h2>Sitemap</h2>
+    <ul>
+      <li><a href="/blog">Writing</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
 	</section>
 
-<script>
-	const ONE_WEEK = 1000 * 60 * 60 * 24 * 7
-	const $dateEls = document.querySelectorAll('.published-post__date') as unknown as HTMLTimeElement[]
-
-	$dateEls.forEach($dateEl => {
-		const $parent = $dateEl.parentElement
-		const date = $dateEl.getAttribute('datetime')
-		const epoch = new Date(date).valueOf()
-		const isNew = epoch > Date.now() - ONE_WEEK
-		const options = {
-			weekday: 'long',
-			year: 'numeric',
-			month: 'long',
-			day: 'numeric',
-		}
-		const localeDate = new Date(date).toLocaleString(window.navigator.language, options)
-
-		$dateEl.innerText = localeDate
-
-		if (isNew) {
-			$parent.dataset.new = ''
-		}
-	})
-</script>
-    -->
+	<section>
+		<h2>Credits</h2>
+		<p>All the credits for the design go to <a href="https://56.digital/">56.digital</a>.</p>
+	</section>
+</BaseLayout3>

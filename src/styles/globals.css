@@ -1,116 +1,41 @@
 @layer globals {
 	html {
-		background-color: var(--color-background);
-		background-image: radial-gradient(
-			circle at center left,
-			#ff0000 0,
-			color-mix(in srgb, #ff0000 40%, var(--color-background) 50%) 50%,
-			var(--color-background) 100%
-		);
-		background-attachment: fixed;
-		color: var(--color-foreground);
+		--page-left-size: min(30vw, 25rem);
 
-		&:has(header.page__left a:hover) {
-			background-image: radial-gradient(
-				circle at center left,
-				#ff0000 0,
-				color-mix(in srgb, #ff0000 40%, var(--color-background) 50%) 75%,
-				var(--color-background) 100%
-			);
-		}
+		background-color: var(--color-background);
+		color: var(--color-foreground);
+    font-family: var(--font-sans);
+
 	}
+
+  h1,h2,h3,h4,h5,h6 {
+    font-size: 1rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--color-foreground);
+  }
 
 	abbr[title] {
 		cursor: help;
 	}
 
 	::selection {
-		/* background-color: color-mix(in srgb, var(--color-primary) 50%, white); */
-		background-color: var(--color-primary);
-		/* color: color-mix(in srgb, var(--color-foreground) 30%, white); */
-		color: #fff;
-	}
-
-	button {
-		border: 3px solid black;
-		background-color: var(--color-background);
-		text-transform: uppercase;
-		font-weight: 900;
-
-		&:hover {
-			background-color: var(--color-secondary);
-		}
+		background-color: var(--color-foreground);
+		color: var(--color-background);
 	}
 
 	#page {
-		padding-top: var(--size-7);
+    --space-lateral: var(--size-5);
 
-		@media (--sm-n-above) {
-			height: 100vh;
-			display: grid;
-			grid-template-columns: 25rem 1fr;
-			grid-template-rows: 1fr;
-		}
-	}
+		margin: 0 var(--space-lateral) var(--size-10) var(--space-lateral);
+		padding-top: calc(var(--size-7) + var(--space-lateral));
+    min-height: 100vh;
+    max-width: max(var(--size-content-3), 720px);
 
-	#page__left-placeholder {
-		border-right: 7px solid var(--color-foreground);
-	}
-
-	.page__left {
-		font-family: sans-serif;
-		font-weight: 900;
-		font-size: 2rem;
-		text-transform: uppercase;
-
-		&:has(a:hover) {
-			background-color: var(--color-secondary);
-		}
-
-		a {
-			color: var(--color-foreground);
-			text-decoration: none;
-		}
-	}
-
-	#header {
-		position: fixed;
-		font-family: sans-serif;
-		z-index: 50;
-		display: flex;
-		height: var(--size-7);
-		width: 100%;
-		align-items: center;
-		justify-content: center;
-		background-color: #fcdf51;
-
-		a {
-			display: flex;
-			font-weight: bold;
-			color: #0071ce;
-		}
-	}
-}
-
-@layer utilities {
-	/* I'm sure there is a better way to do this */
-	.page__left.sm-n-above {
-		display: none;
-	}
-
-	@media (--sm-n-above) {
-		.page__left.until-sm {
-			display: none;
-		}
-
-		.page__left.sm-n-above {
-			position: fixed;
-			display: flex;
-			gap: 10rem;
-			display: flex;
-			font-size: 6rem;
-			height: 100vh;
-			width: calc(25rem - 7px);
-		}
+    @media (--lg-n-above) {
+		margin: 0 var(--space-lateral) var(--size-10) var(--size-13);
+    }
 	}
 }

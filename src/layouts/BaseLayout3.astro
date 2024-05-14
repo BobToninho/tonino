@@ -1,0 +1,40 @@
+---
+import BaseHead from '../components/BaseHead.astro'
+import SupportUkraine from '../components/SupportUkraine.astro'
+---
+
+<html lang="en" data-theme="black">
+	<head>
+		<BaseHead title={undefined} description={undefined} />
+
+		<style>
+			header {
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: var(--size-8);
+			}
+		</style>
+	</head>
+	<body>
+		<SupportUkraine />
+
+		<main id="page">
+			<header>
+				<div>
+					<p><a href="/">Roberto Tonino</a></p>
+					<p>Vienna</p>
+				</div>
+
+				<div>
+					<p>
+						<a href="https://x.com/robtonino" target="_blank">TW</a>&nbsp;
+						<a href="https://www.linkedin.com/in/roberto-tonino/" target="_blank">LIN</a>&nbsp;
+						<a href="https://www.goodreads.com/user/show/145647316?ref=nav_profile_l" target="_blank">GOODREADS</a>
+					</p>
+				</div>
+			</header>
+
+			<slot />
+		</main>
+	</body>
+</html>

@@ -1,7 +1,6 @@
 ---
 import { BlogPost } from '../../types'
-import BaseHead from '../../components/BaseHead.astro'
-import BaseLayout from '../../layouts/BaseLayout.astro'
+import BaseLayout3 from '../../layouts/BaseLayout3.astro'
 import { List } from 'immutable'
 import { DateTime } from 'luxon'
 
@@ -29,27 +28,20 @@ const headProps = {
 }
 ---
 
-<html lang="en" data-theme="brutal">
-	<head>
-		<BaseHead {...headProps} />
-	</head>
-	<body>
-		<BaseLayout>
-			<section class="prose mx-auto mt-16 max-w-prose lg:prose-2xl">
-				<p class="pl-4 sm:pl-8">Blog posts</p>
+<BaseLayout3>
+	<section>
+		<h1>Blog posts</h1>
 
-				<div class="ml-4 sm:ml-8">
-					<ul class="pl-4 sm:pl-8">
-						{
-							publishablePosts.map(({ title, href }) => (
-								<li>
-									<a href={href}>{title}</a>
-								</li>
-							))
-						}
-					</ul>
-				</div>
-			</section>
-		</BaseLayout>
-	</body>
-</html>
+		<div>
+			<ul>
+				{
+					publishablePosts.map(({ title, href }) => (
+						<li>
+							<a href={href}>{title}</a>
+						</li>
+					))
+				}
+			</ul>
+		</div>
+	</section>
+</BaseLayout3>

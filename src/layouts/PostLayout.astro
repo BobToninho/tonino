@@ -1,7 +1,7 @@
 ---
 import { DateTime } from 'luxon'
 
-import BaseLayout2 from './BaseLayout2.astro'
+import BaseLayout3 from './BaseLayout3.astro'
 
 const { title, description, date, revisionDate = null, lang = 'en-us' } = Astro.props.content
 const permalink = new URL(Astro.url.pathname, Astro.site)
@@ -20,34 +20,10 @@ const headProps = {
 ---
 
 <style>
-	.intro,
-	.content,
-	.title {
-		font-family: sans-serif;
-		font-weight: 600;
-		padding-left: 1rem;
-		padding-right: 1rem;
-	}
-
-	.title {
-		font-size: 4rem;
-		font-size: var(--font-size-fluid-3);
-		text-transform: uppercase;
-		padding-top: 1rem;
-	}
-
-	.intro {
-		font-size: var(--font-size-5);
-		text-transform: uppercase;
-		margin-top: var(--size-7);
-	}
-
-	.content {
-		font-family: 'Lora', serif;
-		margin-top: var(--size-7);
-		font-weight: 500;
-		font-size: var(--font-size-5);
-		margin-bottom: 5rem;
+	@layer globals {
+		section:not(:last-child) {
+			margin-bottom: var(--size-8);
+		}
 	}
 </style>
 
@@ -63,9 +39,9 @@ const headProps = {
 
 		pre {
 			/* Default value I found with devtools */
-			--margin: 32px;
-			margin-top: var(--margin);
-			margin-bottom: var(--margin);
+			--margin: 1.25rem;
+
+			margin: 0 0 var(--margin) 0;
 			/* Needed for "Copy" button */
 			position: relative;
 
@@ -84,13 +60,15 @@ const headProps = {
 		}
 
 		p {
-			margin-top: 0.75rem;
+			margin-bottom: 1.25rem;
 		}
 	}
 </style>
 
-<BaseLayout2>
-	<h1 class="title">{title}</h1>
+<BaseLayout3>
+	<section>
+		<h1>{title}</h1>
+	</section>
 
 	<section class="intro">
 		{
@@ -119,29 +97,29 @@ const headProps = {
 		<slot />
 	</section>
 
-	<script>
-		const $preBlocks = document.querySelectorAll('pre')
+	<!-- <script> -->
+	<!-- 	const $preBlocks = document.querySelectorAll('pre') -->
 
-		for (const $preBlock of $preBlocks.values()) {
-			console.log($preBlock)
-			const copyButton = document.createElement('button')
-			copyButton.classList.add('copy')
-			copyButton.textContent = 'Copy'
+	<!-- 	for (const $preBlock of $preBlocks.values()) { -->
+	<!-- 		console.log($preBlock) -->
+	<!-- 		const copyButton = document.createElement('button') -->
+	<!-- 		copyButton.classList.add('copy') -->
+	<!-- 		copyButton.textContent = 'Copy' -->
 
-			copyButton.addEventListener('click', () => {
-				const $codeBlock = $preBlock.querySelector('code')
-				const textToCopy = $codeBlock.textContent
-				const invisibleInput = document.createElement('input')
-				invisibleInput.style.opacity = '0'
-				invisibleInput.setAttribute('value', textToCopy)
-				document.body.append(invisibleInput)
-				invisibleInput.select()
+	<!-- 		copyButton.addEventListener('click', () => { -->
+	<!-- 			const $codeBlock = $preBlock.querySelector('code') -->
+	<!-- 			const textToCopy = $codeBlock.textContent -->
+	<!-- 			const invisibleInput = document.createElement('input') -->
+	<!-- 			invisibleInput.style.opacity = '0' -->
+	<!-- 			invisibleInput.setAttribute('value', textToCopy) -->
+	<!-- 			document.body.append(invisibleInput) -->
+	<!-- 			invisibleInput.select() -->
 
-				document.execCommand('copy')
-				invisibleInput.remove()
-			})
+	<!-- 			document.execCommand('copy') -->
+	<!-- 			invisibleInput.remove() -->
+	<!-- 		}) -->
 
-			$preBlock.prepend(copyButton)
-		}
-	</script>
-</BaseLayout2>
+	<!-- 		$preBlock.prepend(copyButton) -->
+	<!-- 	} -->
+	<!-- </script> -->
+</BaseLayout3>
