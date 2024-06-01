@@ -12,6 +12,10 @@ import SupportUkraine from '../components/SupportUkraine.astro'
 				display: flex;
 				justify-content: space-between;
 				margin-bottom: var(--size-8);
+
+				a {
+					text-decoration: none;
+				}
 			}
 		</style>
 	</head>
@@ -25,13 +29,11 @@ import SupportUkraine from '../components/SupportUkraine.astro'
 					<p>Vienna</p>
 				</div>
 
-				<div>
-					<p>
-						<a href="https://x.com/robtonino" target="_blank">TW</a>&nbsp;
-						<a href="https://www.linkedin.com/in/roberto-tonino/" target="_blank">LIN</a>&nbsp;
-						<a href="https://www.goodreads.com/user/show/145647316?ref=nav_profile_l" target="_blank">GOODREADS</a>
-					</p>
-				</div>
+				<nav>
+					<a href="https://x.com/robtonino" target="_blank">TW</a>&nbsp;
+					<a href="https://www.linkedin.com/in/roberto-tonino/" target="_blank">LIN</a>&nbsp;
+					<a href="https://www.goodreads.com/user/show/145647316?ref=nav_profile_l" target="_blank">GOODREADS</a>
+				</nav>
 			</header>
 
 			<slot />
