@@ -1,7 +1,9 @@
 ---
 title: 'Now'
-layout: ../layouts/PostLayout.astro
+layout: ../layouts/PageLayout.astro
 ---
+
+# Now
 
 _Last updated on June 1st, 2024._
 

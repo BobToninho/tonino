@@ -1,47 +1,14 @@
 ---
-import { BlogPost } from '../../types'
-import BaseLayout3 from '../../layouts/BaseLayout3.astro'
-import { List } from 'immutable'
-import { DateTime } from 'luxon'
-
-const mds = await Astro.glob<BlogPost>('./*.(md|mdx)')
-const publishablePosts = List(mds)
-	.map(post => ({
-		title: post.frontmatter.title,
-		href: post.url,
-		draft: post.frontmatter.draft,
-		date: DateTime.fromISO(post.frontmatter.date).toISODate(),
-	}))
-	.filter(post => !post.draft)
-	.sort((postA, postB) => {
-		const dateA = new Date(postA.date)
-		const dateB = new Date(postB.date)
-
-		return dateB.valueOf() - dateA.valueOf()
-	})
-	.toJS()
-
-const headProps = {
-	title: "Roberto Tonino's Blog",
-	description: "The blog page of Roberto Tonino's website.",
-	permalink: new URL(Astro.url.pathname, Astro.site),
-}
+import PageLayout from '../../layouts/PageLayout.astro'
 ---
 
-<BaseLayout3>
+<PageLayout>
 	<section>
-		<h1>Blog posts</h1>
+		<h1>Writing</h1>
 
-		<div>
-			<ul>
-				{
-					publishablePosts.map(({ title, href }) => (
-						<li>
-							<a href={href}>{title}</a>
-						</li>
-					))
-				}
-			</ul>
-		</div>
+		<ul>
+			<li><a href="/blog/focus-on-the-system-not-the-tool">Focus on the system not the tool</a></li>
+			<li><a href="/blog/single-tasking">Single tasking</a></li>
+		</ul>
 	</section>
-</BaseLayout3>
+</PageLayout>

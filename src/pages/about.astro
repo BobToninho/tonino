@@ -1,6 +1,6 @@
 ---
 import { Picture } from 'astro:assets'
-import BaseLayout3 from '../layouts/BaseLayout3.astro'
+import PageLayout from '../layouts/PageLayout.astro'
 import withThem from '../assets/with-them.jpg'
 
 const headProps = {
@@ -28,7 +28,7 @@ const headProps = {
 	}
 </style>
 
-<BaseLayout3>
+<PageLayout>
 	<section>
 		<h1>About</h1>
 	</section>
@@ -79,4 +79,4 @@ const headProps = {
 			<li><p>I switched back to light theme in all my devices and apps</p></li>
 		</ul>
 	</section>
-</BaseLayout3>
+</PageLayout>

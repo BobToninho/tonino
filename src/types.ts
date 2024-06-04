@@ -6,7 +6,6 @@ export interface BlogPost {
 
 export interface Frontmatter {
 	title: string
-	date: string
 	description: string
 	pubDate?: string
 	lang?: string

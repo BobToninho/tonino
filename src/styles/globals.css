@@ -5,6 +5,7 @@
 		background-color: var(--color-background);
 		color: var(--color-foreground);
 		font-family: var(--font-sans);
+		font-size: 20px;
 	}
 
 	h1,
@@ -14,10 +15,14 @@
 	h5,
 	h6 {
 		font-size: 1rem;
+		margin-top: var(--size-8);
+		margin-bottom: var(--size-3);
 	}
 
-	a {
-		color: var(--color-foreground);
+	p,
+	time {
+		margin-top: var(--size-3);
+		margin-bottom: var(--size-3);
 	}
 
 	abbr[title] {

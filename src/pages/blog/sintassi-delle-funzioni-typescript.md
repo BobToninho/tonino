@@ -13,8 +13,10 @@ meta:
     - type definitions
     - type declarations
     - function type annotations
-layout: ../../layouts/PostLayout.astro
+layout: ../../layouts/PageLayout.astro
 ---
+
+# Sintassi delle funzioni Typescript
 
 _Nota 1: questo articolo è stato tradotto dall'aricolo originale "[TypeScript Function Syntaxes](https://kentcdodds.com/blog/typescript-function-syntaxes)" di [Kent C. Dodds](https://twitter.com/kentcdodds)._
 
